@@ -11,7 +11,7 @@ const config = {
 	mode: 'development',
 	entry: './src/index.jsx',
 	output: {
-		path: path.join(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js'
 	},
 	module: {
@@ -47,7 +47,8 @@ const config = {
 		]
 	},
 	devServer: {
-		contentBase: path.join(__dirname, 'public')
+      contentBase: path.resolve(__dirname, 'public'),
+      historyApiFallback: true
 	},
 	resolve: {
 		extensions: ['*', '.js', '.jsx', '.json', '.svg', '.css']
