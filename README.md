@@ -20,3 +20,10 @@ Ejecute
 or
 
 >`npm run dev`
+
+### Router config
+Router is configured. To add a new one open Main.jsx file and into the Switch tag add:
+
+    <Switch>
+      <Route path="/example-url" component={component_name}/>
+    </Switch>
