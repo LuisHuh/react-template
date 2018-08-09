@@ -1,6 +1,6 @@
 # React-template
 
-Download this project to start with React.js quickly.
+Download this project to start with React.js quickly, this is configured to work with react-scripts and webpack.
 
 ### Installation
 1. Download or clone the project.
