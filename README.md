@@ -4,9 +4,12 @@ Download this project to start with React.js quickly, this is configured to work
 
 ### Installation
 1. Download or clone the project.
-2. Switch to folder.
 
->`$ cd react-template`
+>`$ git clone git@github.com:LuisHuh/react-template.git your_project`
+
+3. Switch to folder.
+
+>`$ cd your_project`
 
 3. Install libraries.
 
