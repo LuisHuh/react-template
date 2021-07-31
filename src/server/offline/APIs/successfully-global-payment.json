@@ -1,0 +1,57 @@
+{
+	"data": {
+		"postDataResp": {
+			"authorization": "100001",
+			"merchant": "7596551",
+			"ticket": "1234567890",
+			"payment": "16731",
+			"message": "",
+			"opera_error": false,
+			"opera_message": "",
+			"amount_charged": 1000,
+			"currency": "USD",
+			"usd_conversion": 1000,
+			"card": "1111",
+			"card_type": "_OWALID",
+			"holder": "Felipe Tun",
+			"payment_service_code": 0,
+			"bank": "SANTANDER",
+			"notificacion_novia": {
+				"error": false,
+				"status": "Ok",
+				"code": "API_EMAIL_SUCCESSFUL",
+				"msg": "email was send successful",
+				"incorrectEmails": ""
+			},
+			"saldoFavor": { "error": false, "message": "", "id": "2536" }
+		},
+		"divisa": "USD",
+		"idevent_grupo": 592,
+		"idfin_cliente_interno": "1",
+		"tipo_cambio": "0",
+		"pago_online": {
+			"address": " ",
+			"idevent_billing_address": "7",
+			"name": "Felipe",
+			"zipcode": "5642",
+			"cardNumber": "4111111111111111",
+			"card": "VISA",
+			"payment": "1000",
+			"currency": "USD",
+			"exchange": "1",
+			"lastName": "Tun",
+			"email": "Felipe@11hczmKB4M.com",
+			"street": "Region 510",
+			"city": "cancun",
+			"country": "AUS",
+			"mmExp": "03",
+			"yyExp": "2025",
+			"cvc": "123",
+			"monto": "1000",
+			"typeOfPayment": 2
+		}
+	},
+	"message": "Offline mode",
+	"code": 200,
+	"error": false
+}

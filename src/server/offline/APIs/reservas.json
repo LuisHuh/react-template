@@ -1,0 +1,25 @@
+{
+   "data": [
+      {
+         "idevent_reserva_grupo_agencia": "1",
+         "id_group": "10",
+         "idclv_propiedad": "ZMNI",
+         "id_agencia": "1",
+         "aprobado": "0",
+         "usuario_aprobacion": "",
+         "folio_confirmacion": "19204924",
+         "nombre_titular_reserva": "ejemplo",
+         "nombre_agencia_reserva": "Expedia",
+         "arrival_date": "2020-06-29 00:00:00",
+         "departure_date": "2020-07-06 00:00:00",
+         "cant_adults": "1",
+         "cant_childs": "0",
+         "cant_nights": "0",
+         "cant_rooms": "0",
+         "status": "1"
+      }
+   ],
+   "message": "OK",
+   "code": 200,
+   "error": false
+}

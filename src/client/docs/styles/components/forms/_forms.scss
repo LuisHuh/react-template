@@ -1,0 +1,21 @@
+@import "text";
+@import 'checkboxes';
+@import 'dropdown';
+/* @import 'radio-buttons';
+@import 'select';
+@import 'switches';
+@import 'file-input';
+@import 'range'; */
+
+$legend-border-color: #3e3e3e !default;
+
+fieldset {
+	border: none;
+	legend {
+		border-bottom: 1px solid $legend-border-color;
+		width: 100%;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+	}
+}

@@ -1,0 +1,43 @@
+// Fuentes tipográficas
+// -------------------------
+
+$pr-font-path: '' !default;
+
+@font-face {
+    font-family: 'Palace Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url('#{$pr-font-path}/PalaceFontIcon-Regular.eot');
+    src: url('#{$pr-font-path}/PalaceFontIcon-Regular.eot?#iefix') format('embedded-opentype'),
+        url('#{$pr-font-path}/PalaceFontIcon-Regular.woff2') format('woff2'),
+        url('#{$pr-font-path}/PalaceFontIcon-Regular.woff') format('woff'),
+        url('#{$pr-font-path}/PalaceFontIcon-Regular.ttf') format('truetype'),
+        url('#{$pr-font-path}/PalaceFontIcon-Regular.svg#PalaceFontIcon-Regular') format('svg');
+}
+
+@font-face {
+    font-family: 'Palace Icons';
+    font-style: normal;
+    font-weight: 600;
+    font-display: auto;
+    src: url('#{$pr-font-path}/PalaceFontIconBrand-Regular.eot');
+    src: url('#{$pr-font-path}/PalaceFontIconBrand-Regular.eot?#iefix') format('embedded-opentype'),
+        url('#{$pr-font-path}/PalaceFontIconBrand-Regular.woff2') format('woff2'),
+        url('#{$pr-font-path}/PalaceFontIconBrand-Regular.woff') format('woff'),
+        url('#{$pr-font-path}/PalaceFontIconBrand-Regular.ttf') format('truetype'),
+        url('#{$pr-font-path}/PalaceFontIconBrand-Regular.svg#PalaceFontIconBrand-Regular') format('svg');
+}
+
+@font-face {
+    font-family: 'Palace Icons';
+    font-style: normal;
+    font-weight: 900;
+    font-display: auto;
+    src: url('#{$pr-font-path}/PalaceFontIcon-Solid.eot');
+    src: url('#{$pr-font-path}/PalaceFontIcon-Solid.eot?#iefix') format('embedded-opentype'),
+        url('#{$pr-font-path}/PalaceFontIcon-Solid.woff2') format('woff2'),
+        url('#{$pr-font-path}/PalaceFontIcon-Solid.woff') format('woff'),
+        url('#{$pr-font-path}/PalaceFontIcon-Solid.ttf') format('truetype'),
+        url('#{$pr-font-path}/PalaceFontIcon-Solid.svg#PalaceFontIcon-Solid') format('svg');
+}

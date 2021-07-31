@@ -1,0 +1,185 @@
+[component="commonlinks"] {
+    background-color: var(--melon-footer-commonlinks); //#2e2e2e;
+    position: relative;
+    font-family: Avenir; //PlayfairDisplay;//Miso
+
+    .resort-list-ul {
+        list-style: none;
+        color: $white;
+        margin: unset;
+        padding: unset;
+
+        b {
+
+            margin: auto;
+        }
+
+        span {
+            //float: right;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        a {
+            position: relative;
+            cursor: pointer;
+            transition: .5s;
+        }
+
+        a:hover {
+            color: var(--dark-melon); //$rosy-pink;
+        }
+
+        a:hover:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    @media (max-width : 1024px) {
+        .slider {
+            position: relative;
+            @include vwvh("top", -28);
+            @include vwvh("margin-right", 14);
+            margin-left: auto;
+            width: max-content;
+        }
+
+        .position {
+            float: right;
+            @include vwvh("margin-top", -25);
+            @include vwvh("margin-right", 3);
+        }
+
+        .list-item-icon {
+            margin: auto;
+            width: fit-content;
+            display: flex;
+
+            span {
+                @include vwvh("padding-left", 11.5);
+                @include vwvh("padding-right", 11.5);
+            }
+        }
+
+        .privacypolices {
+            position: absolute;
+            @include vwvh("top", 8);
+            right: 0px;
+        }
+
+        .privacy-policies {
+            @include vwvh("height", 35, "!important");
+            position: relative;
+        }
+
+        .other-logo-resorts {
+            @include vwvh("padding-top", 24);
+        }
+
+        .content-ourawards {
+            @include vwvh("padding-top", 14);
+        }
+
+        .list-hotel-resorts {
+            @include vwvh("padding-top", 20);
+        }
+
+        .logo-resorts {
+            @include vwvh("padding-top", 23);
+        }
+
+        .list-social {
+            @include vwvh("padding-top", 21);
+        }
+
+        li {
+            position: relative;
+            @include vwvh("margin-bottom", 7);
+
+            [component="iconwedd"] {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+        }
+
+        //height: (420/3.2)+vw;
+        @include vwvh("height", 420);
+
+        .resort-list-ul {
+            @include vwvh("width", 160);
+            @include vwvh("padding-right", 5);
+            margin: auto;
+
+            a {
+                @include vwvh("font-size", 10); //16
+                font-weight: 900;
+            }
+
+            a:hover:after {
+                @include vwvh("border-bottom-width", 2);
+                border-color: $rosy-pink;
+                border-bottom-style: solid;
+                @include vwvh("bottom", -2);
+            }
+        }
+
+        .links-extras {
+            position: absolute;
+            width: 100%;
+            bottom: 140px;
+            left: 0;
+            border-radius: 0.625vw;
+            font-size: 4.375vw;
+        }
+
+    }
+
+    @media (min-width: 1025px) {
+        height: 210px;
+        margin-bottom: 50px;
+
+        .privacy-policies {
+            height: 35px;
+        }
+
+        .other-logo-resorts {
+            padding-top: 24px;
+        }
+
+        .content-ourawards {
+            padding-top: 14px;
+        }
+
+        .list-hotel-resorts {
+            padding-top: 20px;
+        }
+
+        .logo-resorts {
+            padding-top: (23/3.2)+vw;
+        }
+
+        .list-social {
+            padding-top: 21px;
+        }
+
+        .resort-list-ul {
+            font-size: 16px;
+            position: relative;
+
+            a:hover:after {
+                border-bottom: 2px solid var(--dark-melon);
+                bottom: -2px;
+            }
+        }
+
+        .resort-list-ul .resort-list {
+            line-height: 34px;
+            position: relative;
+        }
+    }
+}

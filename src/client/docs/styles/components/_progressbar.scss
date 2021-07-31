@@ -1,0 +1,87 @@
+/**
+ * @mixin horizontal-progressbar; progressbar-circle;
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Progressbars.
+ */
+
+////
+/// @group progressbar
+////
+
+$progressbar-height: 1.3rem !default;
+$progressbar-border-radius: 3px !default;
+$progressbar-background-color: #32b8b2 !default;
+$progressbar-loaded-color: #017ba0 !default;
+$progressbar-circle-width-desktop: 160px !default;
+$progressbar-circle-width-medium: 132px !default;
+$progressbar-circle-radius-desktop: $progressbar-circle-width-desktop / 2 !default;
+$progressbar-circle-radius-medium: $progressbar-circle-width-medium / 2 !default;
+
+@mixin horizontal-progressbar {
+	[component="progressbar"][position="horizontal"] {
+		position: relative;
+		@include flex;
+		height: $progressbar-height;
+		width: 100%;
+		border-radius: $progressbar-border-radius;
+		background-color: $progressbar-background-color;
+
+		[widget="loaded"] {
+			position: relative;
+			display: block;
+			width: 0;
+			height: 100%;
+			background-color: $progressbar-loaded-color;
+			border-radius: $progressbar-border-radius;
+			transition: width 0.3s ease;
+		}
+	}
+}
+
+@mixin progressbar-circle {
+	[component="progressbar"][design="circle"] {
+		border-radius: 100%;
+		padding: 1rem;
+		position: relative;
+
+		svg {
+			display: block;
+			@include medium-screen() {
+				width: rem-calc($progressbar-circle-width-medium);
+				height: rem-calc($progressbar-circle-width-medium);
+			}
+
+			@include large-screen {
+				width: rem-calc($progressbar-circle-width-desktop);
+				height: rem-calc($progressbar-circle-width-desktop);
+			}
+
+			circle {
+				stroke-dashoffset: 0;
+				transition: stroke-dashoffset 1s linear;
+				stroke: $progressbar-background-color;
+				@include medium-screen() {
+					r: rem-calc($progressbar-circle-radius-medium - 5);
+					cx: rem-calc($progressbar-circle-radius-medium);
+					cy: rem-calc($progressbar-circle-radius-medium);
+				}
+
+				@include large-screen() {
+					r: rem-calc($progressbar-circle-radius-desktop - 5);
+					cx: rem-calc($progressbar-circle-radius-desktop);
+					cy: rem-calc($progressbar-circle-radius-desktop);
+				}
+
+				&:last-child {
+					stroke: $progressbar-loaded-color;
+				}
+			}
+		}
+
+		.progressbar-content {
+			@include position-absolute($margin: 1rem);
+			@include flex(center, center, column);
+		}
+	}
+}

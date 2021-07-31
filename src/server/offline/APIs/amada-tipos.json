@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "item_order": "1",
+      "idservice_servicio_tipo": "1",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "descripcion": "Bouquet",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/bloom_bouquet.jpg"
+    },
+    {
+      "item_order": "2",
+      "idservice_servicio_tipo": "2",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "descripcion": "LADY CORSAGE",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/bloom_lady_corsage.jpg"
+    },
+    {
+      "item_order": "3",
+      "idservice_servicio_tipo": "3",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "descripcion": "HAIR ACCESORY",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/bloom_hair_accesories.jpg"
+    },
+    {
+      "item_order": "4",
+      "idservice_servicio_tipo": "4",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "descripcion": "ARRANGEMENT",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/bloom_arrangement.jpg"
+    },
+    {
+      "item_order": "5",
+      "idservice_servicio_tipo": "6",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "descripcion": "BOUTONNIERE",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/bloom_boutonniere.jpg"
+    },
+    {
+      "item_order": "6",
+      "idservice_servicio_tipo": "5",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "descripcion": "CENTERPIECE",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/bloom_centerpiece.jpg"
+    },
+    {
+      "item_order": "7",
+      "idservice_servicio_tipo": "7",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "descripcion": "PETALS",
+      "path": "https://owncloud.palaceresorts.com/index.php/s/rcDkMEDHpLj3inc"
+    }
+  ],
+  "error": false,
+  "message": "",
+  "extra": {
+    "warning": "Success."
+  }
+}

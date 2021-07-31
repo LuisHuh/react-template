@@ -1,0 +1,43 @@
+// CSS Framework for Sites by Palace Resorts
+// https://www.palaceresorts.com/
+// Licensed under MIT Open Source
+
+////
+/// @group base
+////
+
+// --- Dependencies ---
+@import '../vendor/normalize';
+
+// --- Components ---
+// Utilities
+@import '../util/util';
+
+// Default variables
+@import '../base/variables';
+
+// Clases adicionales
+@import '../base/extras';
+
+// Global styles
+@import '../base/global';
+@import '../components/forms/forms';
+@import '../base/typography';
+@import '../base/transitions';
+
+// Icons
+@import '../icons/awesome/fontawesome';
+@import '../icons/foundation/foundation';
+@import '../icons/palace/palace-icons';
+
+// Grids
+@import '../components/grid/xy-grid';
+
+// Components
+@import '../components/components';
+
+// Habilitar la visibilidad del sitio tras la carga
+html {
+  visibility: visible;
+  opacity: 1;
+}

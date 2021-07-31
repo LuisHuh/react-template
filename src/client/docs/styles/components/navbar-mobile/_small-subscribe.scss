@@ -1,0 +1,14 @@
+>.contact-footer {
+  background-color: $dark-gray;
+  color: #fff;
+  padding: 0.5em 0.5em 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+
+  >a {
+    color: $pinktext;
+  }
+  >span{
+    font-size: .75rem
+  }
+}

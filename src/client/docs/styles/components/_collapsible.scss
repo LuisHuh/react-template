@@ -1,0 +1,94 @@
+/**
+ * @mixin web-collapsible
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Collapsible.
+ */
+
+////
+/// @group component
+////
+
+$collapsible-header-background: #00ac9d !default;
+$collapsible-disabled-background: grey !default;
+$collapsible-header-color: white !default;
+$collapsible-body-background: #ffffff !default;
+$collapsible-header-padding: 0.5rem !default;
+$collapsible-content-padding: 1rem !default;
+$collapsible-border: 1px solid #cecece !default;
+$collapsible-content-border: 1px solid #ebebeb !default;
+
+@mixin element-collapsible($shadow: true) {
+	position: relative;
+	border: $collapsible-border;
+
+	@if $shadow {
+		@include box-shadow;
+	}
+}
+
+@mixin is-open {
+	.is-open i {
+		transform: rotateZ(180deg);
+	}
+}
+
+@mixin element-collapsible-header {
+	display: flex;
+	position: relative;
+	background: $collapsible-header-background;
+	color: $collapsible-header-color;
+	text-decoration: none;
+	padding: $collapsible-header-padding;
+
+	[component="collapsible-block"] {
+		display: flex;
+		align-items: center;
+	}
+
+	[component="trigger-icon"] {
+		padding: 0 1rem;
+	}
+
+	[component="content-header"] {
+		cursor: pointer;
+	}
+
+	i {
+		transition: all 0.3s ease-in-out;
+		vertical-align: middle;
+		@extend [component="content-header"];
+	}
+
+	&.is-disabled {
+		opacity: 0.5;
+		background-color: $collapsible-disabled-background;
+	}
+}
+@mixin element-collapsible-body {
+	position: relative;
+	border: $collapsible-content-border;
+}
+@mixin element-collapsible-content {
+	position: relative;
+	padding: $collapsible-content-padding;
+}
+
+@mixin web-collapsible($shadow: true) {
+	@include is-open;
+	[component="collapsible"] {
+		@include element-collapsible($shadow);
+
+		[component="collapsible-header"] {
+			@include element-collapsible-header;
+		}
+
+		[component="collapsible-body"] {
+			@include element-collapsible-body;
+		}
+
+		[component="collapsible-content"] {
+			@include element-collapsible-content;
+		}
+	}
+}

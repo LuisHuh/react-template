@@ -1,0 +1,326 @@
+{
+  "data": [{
+      "idservice_servicio_tipo": "106",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream Art bodas sin extras",
+      "item_order": "1",
+      "description": "A la carte photography packs",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "4",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "item_order": "4",
+      "description": "ARRANGEMENT",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/bloom_arrangement.jpg",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "120",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream art Eventos y Bodas Asiáticas",
+      "item_order": "1",
+      "description": "Asian wedding & social event prices",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "6",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "item_order": "5",
+      "description": "BOUTONNIERE",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/bloom_boutonniere.jpg",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "1",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "item_order": "1",
+      "description": "Bouquet",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/bloom_bouquet.jpg",
+      "material_group": "SRV35",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "5",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "item_order": "6",
+      "description": "CENTERPIECE",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/bloom_centerpiece.jpg",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "121",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream art Lifestyle",
+      "item_order": "1",
+      "description": "Dream art Lifestyle",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga%20%282%29.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "112",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream art Extras de bodas",
+      "item_order": "1",
+      "description": "Extras photography",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "113",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream art Extras de bodas",
+      "item_order": "1",
+      "description": "Extras video",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "114",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream art Eventos y Bodas Asiáticas",
+      "item_order": "1",
+      "description": "General Event Coverage",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "117",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream art Eventos y Bodas Asiáticas",
+      "item_order": "1",
+      "description": "General Event Coverage event books",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "115",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream art Eventos y Bodas Asiáticas\t",
+      "item_order": "1",
+      "description": "General Event Coverage extra options",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "116",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream art Eventos y Bodas Asiáticas",
+      "item_order": "1",
+      "description": "General Event Coverage prints & frames",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "3",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "item_order": "3",
+      "description": "HAIR ACCESORY",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/bloom_hair_accesories.jpg",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "105",
+      "idservice_unidad_negocio": "9",
+      "nombre": "Desayunos lunamieleros",
+      "item_order": "6",
+      "description": "Honeymooner's breakfast",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/images.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "2",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "item_order": "2",
+      "description": "LADY CORSAGE",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/bloom_lady_corsage.jpg",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "134",
+      "idservice_unidad_negocio": "1",
+      "nombre": "NUEVO",
+      "item_order": "1",
+      "description": "NUEVO",
+      "path": "URL",
+      "material_group": "NUEVO",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "7",
+      "idservice_unidad_negocio": "1",
+      "nombre": "Weddings",
+      "item_order": "7",
+      "description": "PETALS",
+      "path": "https://owncloud.palaceresorts.com/index.php/s/rcDkMEDHpLj3inc",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "107",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream Art bodas sin extras\t",
+      "item_order": "1",
+      "description": "Perfume photography pack",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "133",
+      "idservice_unidad_negocio": "11",
+      "nombre": "Prepagos",
+      "item_order": "1",
+      "description": "Prepagos",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/images.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "103",
+      "idservice_unidad_negocio": "9",
+      "nombre": "Private Events",
+      "item_order": "1",
+      "description": "Private events",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.jpg",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "9",
+      "idservice_unidad_negocio": "2",
+      "nombre": "Signature Cakes",
+      "item_order": "2",
+      "description": "Signature Cakes",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/delight_signature_cakes.jpg",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "108",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream Art bodas sin extras\t",
+      "item_order": "1",
+      "description": "Special moments photography",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "10",
+      "idservice_unidad_negocio": "2",
+      "nombre": "Sugar Delights",
+      "item_order": "3",
+      "description": "Sugar Delights",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/delight_sugar_delights.jpg",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "8",
+      "idservice_unidad_negocio": "2",
+      "nombre": "Sweet Cakes",
+      "item_order": "1",
+      "description": "Sweet Cakes",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/delight_sweet_cakes.jpg",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "11",
+      "idservice_unidad_negocio": "2",
+      "nombre": "Sweet Tables",
+      "item_order": "4",
+      "description": "Sweet Tables",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/delight_sweet_tables.jpg",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "104",
+      "idservice_unidad_negocio": "7",
+      "nombre": "Vendor Fee",
+      "item_order": "9",
+      "description": "Vendor Fee",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.jpg",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "119",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream art Eventos y Bodas Asiáticas",
+      "item_order": "1",
+      "description": "Video + Drone + livestreaming extra options",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "118",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream art Eventos y Bodas Asiáticas",
+      "item_order": "1",
+      "description": "Video + Drone + livestreaming services",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "111",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream Art bodas sin extras\t",
+      "item_order": "1",
+      "description": "Video packages Jamaica",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "110",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream Art bodas sin extras\t",
+      "item_order": "1",
+      "description": "Video packages Riviera, Cancun & Cabos",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    },
+    {
+      "idservice_servicio_tipo": "109",
+      "idservice_unidad_negocio": "10",
+      "nombre": "Dream Art bodas sin extras\t",
+      "item_order": "1",
+      "description": "Wedding books",
+      "path": "https://s3.amazonaws.com/webfiles_palace/clever/products/assets/descarga.png",
+      "material_group": "",
+      "status": "1"
+    }
+  ],
+  "status": 200,
+  "error": false,
+  "message": "Resource Found"
+}

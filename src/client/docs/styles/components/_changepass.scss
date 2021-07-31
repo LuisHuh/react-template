@@ -1,0 +1,36 @@
+@mixin change_password {
+    [component='changepass'] {
+        .user-profile {
+            padding-top: 1rem;
+            font-weight: lighter;
+            span { font-weight: 900; }
+        }
+        .input-field i { color: #ea8685; }
+        .input-view {
+            position: relative;
+            margin: 0 auto;
+        }
+        .input-view .inside {
+            position: absolute;
+            top: 50%;
+            left: 90%;
+        }
+        .form-profile {
+            place-content: center;
+            [component='cell'] {
+                @include small-screen-down { width: 280px; }
+                @include medium-screen { width: 100%; padding: 0 18%; }
+            }
+        }
+        input {
+            outline: none;
+        }
+    }
+    [page='changepass']{
+        @include medium-screen-down {
+            .profile-border {
+                border: unset;
+            }
+        }
+    }
+}

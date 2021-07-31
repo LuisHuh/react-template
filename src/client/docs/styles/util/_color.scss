@@ -1,0 +1,34 @@
+// CSS Framework for Sites by Palace Resorts
+// https://www.palaceresorts.com/
+// Licensed under MIT Open Source
+
+////
+/// @group functions
+////
+
+/// Obtiene el color de la paleta de colores
+///
+/// @param {key} color nombre del color
+///
+/// @returns {Color} Regresa el color elegido
+@function get-color($key) {
+	@if map-has-key($web-palette, $key) {
+		@return map-get($web-palette, $key);
+	} @else {
+		@error 'given #{$key} is not available in #{$web-palette}';
+	}
+}
+
+@mixin create-colors($colors) {
+	// Colores
+	//====================
+	@each $key, $value in $colors {
+		.bg-#{$key}{
+			background-color: $value !important;
+		}
+
+		.text-#{$key}{
+			color: $value !important;
+		}
+	}
+}

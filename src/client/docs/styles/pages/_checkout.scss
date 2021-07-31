@@ -1,0 +1,518 @@
+@mixin ellipsis-text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin billingAddressCard {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	width: 428px;
+	height: 190px;
+	border-radius: 4px;
+	border: solid 1px #644a49;
+
+	[component="panel"] {
+		border: none;
+	}
+}
+
+[page="checkout"] {
+	.checkout-s {
+		// div estado del pago
+		// text-align: -webkit-center;
+
+		[component="SuccessPayment"],
+		[component="ErrorPayment"] {
+			text-align: center;
+			margin: 0 auto;
+
+			[component="panel"] {
+				margin: 32px 0 40px 0;
+
+				[component="grid-x"] {
+					[component="cell"]:nth-child(1) {
+						text-align: right;
+					}
+
+					[component="cell"]:nth-child(2) {
+						text-align: left;
+					}
+				}
+			}
+
+			@include medium-screen {
+				width: calc(10em + 500px);
+			}
+		}
+	}
+
+    [component="collapsible"]{
+        text-align: left;
+        border: none;
+
+        [component="collapsible-header"]{
+            background-color: transparent;
+            color: get-color("brown");
+            justify-content: center;
+            text-decoration: underline;
+
+            [component="trigger-icon"]{
+                order: 2;
+            }
+        }
+    }
+
+	// Fuente Avenir de 20px
+	@mixin textAvenir20px {
+		font-size: 20px;
+		font-family: "Avenir";
+	}
+
+	// Fuente Avenir de 30px
+	@mixin textAvenir30px {
+		font-size: 30px;
+		font-family: "Avenir";
+	}
+
+	// Fuente PlayFairDisplay a 30px
+	@mixin textPlayfair30px {
+		font-family: "PlayfairDisplay";
+		font-size: 30px;
+	}
+
+	// Padding vertical de media M
+	@mixin vPaddingHalfEm {
+		margin: 0.5em 0;
+	}
+
+	.confirmation-step {
+		color: get-color("brown");
+
+		.step-title {
+			font-size: 48px;
+		}
+
+		.billing-information {
+			[component="panel"] {
+				height: 160px;
+
+				@include large-screen() {
+					height: 235px;
+				}
+			}
+
+			.holder-fullname,
+			.billing-address-title {
+				@include vPaddingHalfEm();
+			}
+
+			.billing-address-title {
+				text-transform: uppercase;
+			}
+
+			.billing-address-title,
+			address {
+				font-family: "Avenir";
+				font-weight: 500;
+				font-style: normal;
+			}
+		}
+	}
+
+	.checkout-panel {
+		padding-top: 2em;
+		max-width: 1086px;
+		margin: 0 auto;
+
+		@include small-screen-down() {
+			border: none;
+		}
+
+		h3.text-center {
+			margin-bottom: 1em;
+		}
+
+		.total-amount {
+			text-transform: uppercase;
+			text-align: right;
+			padding-right: 30px;
+			margin-top: 40px;
+			h5 {
+				font-family: "Avenir";
+				display: inline-flex;
+			}
+		}
+
+		.order-details-title {
+			@include textAvenir20px();
+			margin-top: 2em;
+		}
+
+		.order-sub-desc {
+			@include textPlayfair30px();
+			@include vPaddingHalfEm();
+			font-size: 40px;
+		}
+
+		.grid-order-items {
+			margin: 15px 0;
+
+			@include large-screen() {
+				margin: 12px 0;
+			}
+		}
+
+		[component="list-view"] {
+			[component="list-item"] {
+				height: 100px;
+
+				.order-item-description span {
+					font-family: "Avenir";
+					font-weight: 500;
+					@include ellipsis-text();
+				}
+			}
+		}
+		.amount-selector .helper-text {
+			margin-top: -1.4rem;
+		}
+	}
+
+	.input-group {
+		color: get-color("brown");
+	}
+
+	.checkout-holdername {
+		margin-bottom: 15px;
+		display: block;
+		font-size: 14px;
+		color: $label-color;
+		padding-bottom: 1em;
+
+		span {
+			font-weight: 900;
+			font-weight: bold;
+		}
+
+		@include large-screen() {
+			font-size: 20px;
+		}
+	}
+
+	.card-thumb-container {
+		@include medium-screen() {
+			margin-top: 1em;
+		}
+
+		text-align: center;
+		padding-left: 3em;
+
+		.card-thumb-visa {
+			background-image: url("../../../../../public/cards/visa.png");
+		}
+
+		.card-thumb-mastercard {
+			background-image: url("../../../../../public/cards/mastercard.png");
+			margin: 0 4px;
+		}
+
+		.card-thumb-amex {
+			background-image: url("../../../../../public/cards/amex.png");
+		}
+
+		.card-thumb-visa,
+		.card-thumb-mastercard,
+		.card-thumb-amex {
+			background-size: contain;
+			padding: 5px;
+			background-repeat: no-repeat;
+			background-position: center;
+			display: inline-flex;
+			width: 4em;
+			height: 4em;
+			border-radius: 5px;
+		}
+	}
+
+	.credit-card {
+		@include small-screen-down() {
+			margin-top: 2em;
+		}
+	}
+
+	.credit-card-holder {
+		@include medium-screen {
+			float: right;
+		}
+	}
+
+	.custom-label-select {
+		position: absolute;
+		margin-top: -1rem;
+		font-size: 14px;
+
+		@include medium-screen() {
+			font-size: 20px;
+		}
+	}
+
+	.total-payment-amount {
+		margin-top: 2em;
+		text-align: right;
+		// font-size: 1.25rem;
+
+		h3 {
+			font-family: "Avenir";
+			// font-size: 1.25rem;
+			display: inline-flex;
+			font-size: inherit;
+			align-items: baseline;
+
+			span {
+				// font-size: 2.5em;
+			}
+		}
+	}
+
+	.order-item-description {
+		text-align: left;
+	}
+
+	.order-item-price {
+		text-align: right;
+	}
+
+	// Cards de Address
+	[component="cell"] {
+		.address {
+			[component="panel"] {
+				font-family: "Avenir";
+
+				h3 {
+					font-weight: bold;
+					font-size: 1.3rem !important;
+				}
+			}
+
+			&:not(.selected) {
+				background: #fff;
+				color: #ea8685;
+			}
+
+			&.selected {
+				[component="panel"] {
+					border: none !important;
+				}
+
+				background: #ea8685;
+				color: #fff;
+			}
+		}
+	}
+
+	//#region Select address billing cards
+	[component="billingAddressCard"] {
+		user-select: none;
+		cursor: pointer;
+		line-height: normal;
+		border: 1px solid get-color("brown");
+		padding: 18px;
+		height: 110px;
+		border-radius: 4px;
+		font-style: normal;
+		@include textAvenir20px();
+
+		input[type="radio"] {
+			height: 0;
+		}
+
+		address {
+			font-style: initial;
+		}
+
+		&.active {
+			background-color: get-color("primary");
+			color: #fff;
+			border: none;
+			.check-area {
+				color: inherit !important;
+			}
+		}
+
+		.contact-detail,
+		.address-detail {
+			color: inherit;
+		}
+		.check-area {
+			color: get-color("primary");
+		}
+
+		.contact-detail {
+			padding-left: 6px;
+
+			@include large-screen {
+				padding-left: 11px;
+			}
+		}
+
+		.contact-area {
+			font-family: "PlayfairDisplay";
+			font-size: 18px;
+			padding-bottom: 6px;
+			i {
+				font-size: 20px;
+			}
+
+			@include large-screen {
+				font-size: 30px;
+				padding-bottom: 17px;
+				i {
+					font-size: 30px;
+				}
+			}
+		}
+
+		.address-detail {
+			font-size: 14px;
+
+			p {
+				white-space: break-spaces;
+				max-height: 46px;
+				overflow: hidden;
+				font-weight: 500;
+			}
+
+			@include large-screen {
+				font-size: 20px;
+				p {
+					max-height: 66px;
+				}
+			}
+		}
+
+		@include large-screen {
+			height: 190px;
+			padding: 42px 20px 20px;
+		}
+
+		// #endregion
+	}
+
+	.col-add-address {
+		/* @include billingAddressCard();
+    min-height: 190px; */
+		[component="panel"] {
+			@include flex(center, center);
+			padding: 18px;
+			height: 110px;
+
+			@include large-screen {
+				height: 190px;
+				padding: 20px;
+			}
+		}
+		small {
+			border-bottom: solid 1px;
+			font-family: "Avenir";
+			font-weight: 500;
+			font-style: normal;
+			font-size: 14px;
+			@include large-screen {
+				font-size: 20px;
+			}
+		}
+	}
+	[component="modal"].modalTypePayment {
+		.modal-content {
+			padding: 0;
+			min-height: 230px;
+			width: 312px;
+			.close {
+				display: none;
+			}
+
+			> .modal-flex {
+				.body {
+					width: 100%;
+					padding: 0;
+					padding-bottom: 30px;
+					.title {
+						margin-top: 10.5px;
+					}
+					h2 {
+						margin: 12px auto 22.5px auto;
+					}
+					.message {
+						margin-bottom: 24.5px;
+					}
+
+					.container-body {
+						padding-top: 30px;
+					}
+					.container-body,
+					.footer {
+						width: 80%;
+						margin-left: auto;
+						margin-right: auto;
+						text-align: center;
+					}
+					.footer {
+						bottom: 0;
+						margin-top: 32.5px;
+					}
+				}
+			}
+		}
+		@include medium-screen-down {
+			.modal-content {
+				max-height: 275px;
+				.footer {
+					display: flex;
+					button {
+						width: 100%;
+					}
+				}
+			}
+		}
+		@include large-screen {
+			.modal-content {
+				width: 690px;
+				height: 310px;
+
+				.close {
+					right: 30px;
+					top: 30px;
+					font-size: 30px;
+				}
+
+				> .modal-flex {
+					.body {
+						padding-bottom: 30px;
+
+						.title {
+							margin-top: -25.5px;
+						}
+						h2 {
+							margin: 25px auto 40px auto;
+						}
+						.message {
+							margin-bottom: 40px;
+						}
+						.container-body {
+							padding-top: 90px;
+						}
+						.container-body,
+						.footer {
+							width: 90%;
+						}
+						.footer {
+							margin-bottom: 85px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,100 @@
+/**
+ * @mixin credit-card
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Concentra las etiquetas y clases del componente.
+ */
+
+////
+/// @group credit-card
+////
+
+@mixin credit-card($append: false) {
+	#{append-element("[component=\"credit-card\"]", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-wrapper-element($append: false) {
+	#{append-element("[component=\"cd-wrapper\"]", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-chip-element($append: false) {
+	#{append-element("[widget=\"cd-chip\"]", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-cvc-element($append: false) {
+	#{append-element("[component=\"cd-cvc\"]", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-number-element($append: false) {
+	#{append-element("[component=\"cd-number\"]", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-holder-element($append: false) {
+	#{append-element("[component=\"cd-holder\"]", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-expiry-element($append: false) {
+	#{append-element("[component=\"cd-expiry\"]", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-bar-element($append: false) {
+	#{append-element("[widget=\"cd-bar\"]", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-signature-element($append: false) {
+	#{append-element("[widget=\"cd-signature\"]", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-identified-element($append: false) {
+	#{append-element(".identified", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-flipped-element($append: false) {
+	#{append-element(".flipped", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-front-element($append: false) {
+	#{append-element(".cd-front", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-back-element($append: false) {
+	#{append-element(".cd-back", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-group-element($append: false) {
+	#{append-element(".cd-group", $append)} {
+		@content;
+	}
+}
+
+@mixin cd-badges-element($append: false) {
+	#{append-element(".cd-badges", $append)} {
+		@content;
+	}
+}

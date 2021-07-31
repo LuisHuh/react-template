@@ -1,0 +1,25 @@
+// Tamaño de iconos
+// -------------------------
+
+@mixin icon-sizes($prefix) {
+  // makes the font 33% larger relative to the icon container
+  .#{$prefix}-lg {
+    font-size: (4em / 3);
+    line-height: (3em / 4);
+    vertical-align: -.0667em;
+  }
+  
+  .#{$prefix}-xs {
+    font-size: .75em;
+  }
+  
+  .#{$prefix}-sm {
+    font-size: .875em;
+  }
+  
+  @for $i from 1 through 10 {
+    .#{$prefix}-#{$i}x {
+      font-size: $i * 1em;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[component="rectangle-image"] {
+  display: grid;
+  grid-template-areas: "image caption";
+  grid-template-columns: 5em auto;
+  grid-gap: 0.5em;
+  align-items: center;
+  border-bottom: 1px solid #DDD;
+  padding: 0.3em 0 .3em .5em;
+
+  img {
+    max-width: 100%;
+    grid-area: image;
+    height: auto;
+  }
+
+  span {
+    color: get-color('primary');
+    height: auto;
+    grid-area: caption;
+    display: flow-root;
+  }
+}

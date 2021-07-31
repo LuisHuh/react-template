@@ -1,0 +1,36 @@
+/* 
+ * Palace Icons v 1.0.0
+ * Made by Luis Enrique Huh Puc
+ * Private License
+ */
+ 
+$pr-solid: (
+	alert: \f0a0,
+	calendar: \f0a1,
+	camera: \f0a2,
+	cancel: \f0a3,
+	caret-down: \f0a4,
+	caret-left: \f0a5,
+	caret-right: \f0a6,
+	caret-up: \f0a7,
+	checked-circle: \f0a8,
+	checked: \f0a9,
+	chevron-down: \f0aa,
+	chevron-left: \f0ab,
+	chevron-right: \f0ac,
+	chevron-up: \f0ad,
+	edit: \f0ae,
+	eye-slash: \f0af,
+	eye: \f0b0,
+	globe-americas: \f0b1,
+	heart: \f0b2,
+);
+
+@mixin icon-style-solid {
+	.#{$pr-css-prefix}s {
+		font-family: "Palace Icons";
+		font-weight: 900;
+		@include icon-core;
+		@include generate-contents($pr-css-prefix, $pr-solid);
+	}
+}

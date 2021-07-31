@@ -1,0 +1,13 @@
+// Convenience function used to set content property
+@function fi-content($icon) {
+   @return unquote("\"#{ $icon }\"");
+}
+
+@function fi-icons($icon){
+   @if map-has-key($fi-icons, $icon) {
+      @return map-get($fi-icons, $icon);
+   }
+
+   @warn "Unknown `#{$icon}` in $fi-icons.";
+   @return null;
+}

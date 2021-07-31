@@ -1,0 +1,42 @@
+@mixin third-party {
+    tr td {
+        .status { color: #b49400; }
+    }
+    .group-button {
+        text-align: center;
+    }
+
+    #myCollaps_add_bk .itemContent {
+        @include menu-icon-triangle(up, $dark-gray, $white);
+        &::before,
+        &::after {
+            left: 60px;
+        }
+    }
+
+    .itemHeading button.add-bk { float: left; }
+
+    @include large-screen {
+        .text-info {
+            text-align: right;
+            padding-right: 10px;
+            font-size: 21px;
+        }
+        tr td {
+            &:not(.text-left):not(.text-right) {
+                text-align: center;
+            }
+        }
+        .itemHeading button.add-bk { float: right; margin: 21.33333px 0 12.8px 0; }
+        .group-button {
+            float: right;
+        }
+
+        #myCollaps_add_bk .itemContent {
+            &::before,
+            &::after {
+                left: 95%;
+            }
+        }
+    }
+}

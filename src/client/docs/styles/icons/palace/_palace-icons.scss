@@ -1,0 +1,57 @@
+
+/* 
+ * Palace Icons v 1.0.0
+ * Made by Luis Enrique Huh Puc
+ * Private License
+ */
+
+// Variables
+@import "variables";
+
+// Mixins
+@import "mixins";
+
+// Fuentes
+@import "fonts";
+
+// Tamaños de iconos
+@import "sizes";
+
+// Iconos regulares
+@import "regular";
+
+// Iconos tipo logos
+@import "brands";
+
+// Iconos solidos
+@import "solid";
+
+
+// Para incluir que tipo se desea cargar
+@mixin palace-icons(
+	$include-regular: true,
+	$include-solid: false,
+    $include-brand: false,
+    $include-size: true
+) {
+    @if $include-regular {
+        @include icon-style-regular;
+    }
+
+    @if $include-solid {
+        @include icon-style-solid;
+    }
+
+    @if $include-brand {
+        @include icon-style-brand;
+    }
+
+    @if $include-size {
+        @include icon-sizes($pr-css-prefix);
+    }
+}
+
+// Carga todo
+@mixin all-palace-icons {
+    @include palace-icons(true, true, true);
+}

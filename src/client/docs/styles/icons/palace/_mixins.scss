@@ -1,0 +1,33 @@
+// Mixins generales
+// -------------------------
+
+@function icon-content($value) {
+	@return unquote('"#{ $value }"');
+}
+
+@mixin generate-contents($prefix, $map) {
+	@each $key, $value in $map {
+		&.#{$prefix}-#{$key}::before {
+			content: icon-content($value);
+		}
+	}
+}
+
+@mixin icon-core {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+}
+
+
+@mixin icon-size($prefix, $sizes) {
+	@each $key, $value in $sizes {
+		.#{$prefix}-#{$key}x {
+			font-size: $value * 1em;
+		}
+	}
+}

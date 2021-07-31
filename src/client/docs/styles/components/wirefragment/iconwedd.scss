@@ -1,0 +1,436 @@
+$light-melon: #ea8685 !default;
+$dark-gray: #6d6d6d !default;
+$light-gray: #f1edeee6 !default;
+$white: #fefefe !default;
+$dark-gray-md: #5a5a5a !default;
+$pale-pink: #ffc6da !default;
+$light-pink: #f984a8 !default;
+$dark-melon: #644a49 !default;
+$gray-nav: #6d6d6d !default;
+
+
+[component="iconwedd"] {
+
+    .svg-icon-pink {
+        color: $light-melon;
+        fill: $light-melon;
+    }
+
+    .svg-icon-dark-gray {
+        color: #5A5A5A;
+        fill: #5A5A5A;
+    }
+
+    .svg-icon-light-gray {
+        color: $dark-gray;
+        fill: $dark-gray;
+    }
+
+    .svg-icon-light-gray {
+        color: $light-gray;
+        fill: $light-gray;
+    }
+
+    .svg-icon-white {
+        color: $white;
+        fill: $white;
+    }
+
+    .svg-icon-pale-pink {
+        color: $pale-pink;
+        fill: $pale-pink;
+    }
+
+    .svg-icon-light-pink {
+        color: $light-pink;
+        fill: $light-pink;
+    }
+
+    .svg-icon-light-melon {
+        color: $light-melon;
+        fill: $light-melon;
+    }
+
+    .svg-icon-dark-gray-md {
+        color: $dark-gray-md;
+        fill: $dark-gray-md;
+    }
+    .svg-icon-dark-melon {
+        color: $dark-melon;
+        fill: $dark-melon;
+    }
+
+    @media (max-width : 1024px) {
+        .width-icon {
+            position: absolute;
+            @include vwvh("margin-top", 10);
+            @include vwvh("margin-left", 15);
+        }
+
+        .five-diamond {
+            @include vwvh("height", 40);
+            @include vwvh("width", 46);
+        }
+
+        .tripadvisor-award {
+            @include vwvh("height", 52);
+            @include vwvh("width", 52);
+        }
+
+        /*45 42*/
+        .four-diamond {
+            @include vwvh("width", 47);
+            @include vwvh("height", 38);
+        }
+
+        .pinterest-circled,
+        .facebook-circled,
+        .instagram-circled,
+        .twitter-circled,
+        .youtube-circled,
+        .envelope-circled {
+            @include vwvh("height", 30.5);
+            @include vwvh("width", 30.5);
+        }
+
+        .palace-resorts {
+            @include vwvh("height", 21);
+            @include vwvh("width", 47);
+        }
+
+        .leblanc-resorts,.le-blanc-resorts {
+            @include vwvh("width", 45);
+            @include vwvh("height", 25);
+        }
+
+        .moon-palace-cancun,.moon-palace-awe-inclusive {
+            @include vwvh("height", 18.5);
+            @include vwvh("width", 60);
+        }
+
+        .chevron-none,
+        .chevron-left,
+        .chevron-right,
+        .chevron-down,
+        .chevron-up {
+            @include vwvh("height", 10);
+            @include vwvh("width", 10);
+        }
+
+        .alt-hamburguer-menu,
+        .alt-close,
+        .close-menu,
+        .hamburguer-menu {
+            @include vwvh("height", 25);
+            @include vwvh("width", 25);
+        }
+
+        .phone-circled,
+        .chat-circled,
+        .back-circled {
+            @include vwvh("width", 32);
+            @include vwvh("height", 32);
+        }
+
+        .folder-closed {
+            @include vwvh("width", 15);
+            @include vwvh("height", 15);
+        }
+
+        .folder-open {
+            @include vwvh("width", 15);
+            @include vwvh("height", 15);
+        }
+
+        .wifi-room {
+            @include vwvh("width", 45);
+            @include vwvh("height", 45);
+        }
+
+        .phone-calls {
+            @include vwvh("width", 45);
+            @include vwvh("height", 45);
+        }
+
+        .wine-room {
+            @include vwvh("width", 45);
+            @include vwvh("height", 45);
+        }
+
+        .tv-set {
+            @include vwvh("width", 45);
+            @include vwvh("height", 45);
+        }
+
+        .bathtub-room {
+            @include vwvh("width", 45);
+            @include vwvh("height", 45);
+        }
+
+        .hour-room {
+            @include vwvh("width", 45);
+            @include vwvh("height", 45);
+        }
+
+        .virtual-tour {
+            @include vwvh("width", 20);
+            @include vwvh("height", 20);
+        }
+
+        // .chevron-carousel-left {
+        //     width: (13/3.2)+vw;
+        //     height: (30/3.2)+vw;
+        // }
+        // .chevron-carousel-right {
+        //     width: (13/3.2)+vw;
+        //     height: (30/3.2)+vw;
+        // }
+
+        .palace-crown {
+            @include vwvh("width", 41.5);
+            @include vwvh("height", 9);
+        }
+
+        .heart-empty{
+            @include vwvh("width", 25);
+            @include vwvh("height", 25);
+            --color-1: #ea8685;
+            --color-2: #ffffff;
+        }
+        
+        .heart-full {
+            @include vwvh("width", 25);
+            @include vwvh("height", 25);
+            //background-color: white;
+        }
+
+        .checkbox-selected,
+        .checkbox {
+            @include vwvh("width", 16);
+            @include vwvh("height", 16);
+            background-color: white;
+        }
+
+        .radio,
+        .round-checkbox-selected,
+        .radio-selected {
+            @include vwvh("width", 17);
+            @include vwvh("height", 17);
+            background-color: white;
+            border-radius: 100%;
+        }
+
+        .scroll-down,
+        .scroll-up {
+            @include vwvh("width", 30);
+            @include vwvh("height", 30);
+        }
+
+        .group-size,
+        .floor-size {
+            @include vwvh("width", 15);
+            @include vwvh("height", 15);
+        }
+
+        .calendar{
+            @include vwvh("width", 15);
+            @include vwvh("height", 15);
+        }
+
+        .hotel {
+            width: (20/16)+rem;
+            height: (11/16)+rem;
+        }
+
+        .hotel-plane {
+            width: (40/16)+rem;
+            height: (14/16)+rem;
+        }
+        
+        .alt-close{
+            width: (11.5/16)+rem;
+            height: (11.5/16)+rem;
+        }
+
+        .palace-weddings-logo{
+            width: 3.4375rem;
+            height: 2.125rem;
+            fill: $light-melon;
+            margin-top: .46875rem;
+            margin-left: .46875rem;
+        }
+
+    }
+
+    @media (min-width : 1025px) {
+        .width-icon {
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 25px;
+        }
+
+        .five-diamond {
+            width: 81px;
+        }
+
+        .tripadvisor-award {
+            width: 104px;
+        }
+
+        .four-diamond {
+            width: 90px;
+        }
+
+        .chevron-right,
+        .chevron-down,
+        .chevron-up {
+            width: 14px;
+            height: 10px;
+        }
+
+        .folder-closed {
+            width: 33px;
+            height: 22px;
+        }
+
+        .folder-open {
+            width: 33px;
+            height: 22px;
+        }
+
+        .chevron-left {
+            width: 10px;
+            height: 14px;
+        }
+
+        .chevron-none {
+            display: none;
+        }
+
+        .palace-crown {
+            width: 83px;
+            height: 18px;
+        }
+
+        .checkbox-selected,
+        .checkbox {
+            width: 26px;
+            height: 26px;
+           
+            background-color: white;
+        }
+
+        .heart-empty{
+            --color-1: #ea8685;
+            --color-2: #ffffff;
+             width: 35px;
+            height: 35px;
+        }
+        .heart-full {
+            width: 35px;
+            height: 35px;
+        }
+
+        .radio,
+        .round-checkbox-selected,
+        .radio-selected {
+            width: 28px;
+            height: 28px;
+            background-color: white;
+            border-radius: 100px;
+        }
+
+        .wifi-room {
+            width: 57px;
+            height: 54px;
+        }
+
+        .phone-calls {
+            width: 57px;
+            height: 54px;
+        }
+
+        .wine-room {
+            width: 57px;
+            height: 54px;
+        }
+
+        .tv-set {
+            width: 57px;
+            height: 54px;
+        }
+
+        .bathtub-room {
+            width: 57px;
+            height: 54px;
+        }
+
+        .virtual-tour {
+            width: 26px;
+            height: 42px;
+        }
+
+        .hour-room {
+            width: 57px;
+            height: 54px;
+        }
+
+        .group-size,
+        .floor-size {
+            width: 31px;
+            height: 27px;
+        }
+
+        .calendar {
+            width: 14px;
+            height: 12px;
+        }
+
+        .hotel {
+            width: 29px;
+            height: 16px;
+        }
+
+        .hotel-plane {
+            width: 62px;
+            height: 21px;
+        }
+
+        .palace-weddings,
+        .leblanc-resorts,
+        .palace-resorts,
+        .moon-palace-cancun,.moon-palace-awe-inclusive,.le-blanc-resorts {
+            width: 110px;
+            height: 69px;
+        }
+
+        .pinterest-circled,
+        .facebook-circled,
+        .instagram-circled,
+        .twitter-circled,
+        .youtube-circled,
+        .envelope-circled {
+            height: 25px;
+            width: 25px;
+        }
+
+        .phone,
+        .lang-button,
+        .envelope {
+            width: 20px;
+            height: 15px;
+        }
+
+        .palace-weddings-logo{
+            width: 110px;
+            height: 69px;
+            fill: $gray-nav;
+        }
+    }
+
+    .chevron-carousel-left,
+    .chevron-carousel-right {
+        width: 15px;
+        height: 46px;
+    }
+}

@@ -1,0 +1,63 @@
+[page="prepayments"] {
+	.prepayment-title {
+		@extend .container;
+		padding-bottom: 0;
+
+		+ .container {
+			padding-top: 0;
+		}
+
+		h3 {
+			margin: 0;
+		}
+	}
+
+	.service-column [component="trigger-icon"] {
+		display: none;
+	}
+	div.controls {
+		display: none;
+	}
+	section.controls {
+		margin-top: 1rem;
+	}
+	@mixin large {
+		width: 100%;
+		max-width: 1920px;
+		height: 300px;
+		background-color: #fcded7;
+	}
+	.header {
+		font-family: "Playfair Display";
+	}
+	.head {
+		@include medium-screen-down {
+			margin: 20px 0;
+		}
+		@include large-screen {
+			margin: 53px 0;
+		}
+		@include extra-large-screen {
+			margin: 53px 0;
+		}
+	}
+	.banner {
+		padding-top: unset;
+		@include medium-screen-down {
+			width: 100%;
+			max-width: 320px;
+			height: 125.5px;
+			background-color: #fcded7;
+			background-image: unset !important;
+		}
+		@include large-screen {
+			@include large();
+		}
+		@include extra-large-screen {
+			@include large();
+		}
+	}
+	[component="progressbar"] {
+		height: 10px !important;
+	}
+}

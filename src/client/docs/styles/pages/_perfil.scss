@@ -1,0 +1,26 @@
+[page="perfil"]{
+     min-height:0;
+
+     .imagen{
+     width: 70px;
+     height: 69.5px;
+     object-fit: contain;
+     }
+
+    @include large-screen(){
+          .imagen{
+               width: 140px;
+               height: 139px;
+               object-fit: contain;
+          }
+     }
+     @include medium-screen(){
+          .imagen{
+               width: 140px;
+               height: 139px;
+               object-fit: contain;
+          }
+     }
+
+     
+}

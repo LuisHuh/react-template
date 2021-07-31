@@ -1,0 +1,31 @@
+{
+   "data": {
+      "blockcode": "9864W10762",
+      "email": "jalcantar@palaceresorts.com",
+      "event": "W  test pos login  weddings  usa agencia",
+      "date_start": "2021-06-01 00:00:00",
+      "date_end": "2021-06-08 00:00:00",
+      "wedding_date": "2023-10-13",
+      "bride": "Li, Amy",
+      "groom": " Anderson, Knolis",
+      "cover": "",
+      "id_resort": "ZMNI",
+      "id": "99",
+      "id_planner": "apena",
+      "partnership": "HER",
+      "id_opera":"7310211",
+      "folio": "12456798",
+      "token": "4pa8mFgHQznGeQbkUBJpFdqlzc0Ew5XPOU2jBuFpw8eIIibiN7a7tY/zA89ZSSahRSkSUgi1ARIYkigRjj50wJ+GiWgbJ78Afj+5LjsW9UQVqQ2jj/5aNgfgvZrt88n3TvB4lZpSvPWeP19JfQflj9bIS8H9K18zC4w7fUMw9Ca0t0+dBT3WYsdy4r24IHXStpnEm1RwF7yKAfUGvPo/SUEdLCQw3V2y2mEn1qhieuaB7jUtTgLYITXtT9wd441Q5ODF3gSuMPzGt29iupHNQ8lVZKPjeAQuv4va/gA5VRfnMiuSIcy5ziTmr9ekd+4aFeppkAovE68F91WxqE0ImVLwnt5TacA+0Z5o1mWx7N0B0dbTVW5p9u6JO6IHxg+mIUYEDywlOeELNHaxd+YXmLNdpqV8TPCy2z0UHiiTDKiIQgY8K2UI5J5IorU6jJX7FWsZxFN02eC3CVyD9a2tkjdPPSgoqP5lO2s5ktake/dX2l4yasQQBY0OrE6xrzSpcdAKVNV/ZWZlLU48s8URLKUAu4fO9DHNgOKmAg0XyRao8q3Uoa2oyyfWiYaLd6CQ/9YOm177+wGR/D+da5kpfPouBifYik4Y4NxdTem9kMsd016bnRWY44IE2PHf8YhHAjGw3j6u8eA8ThOwRk1iYT3ufeS3SwDxAS7haRLhb/JHySTW7QxH2orJ1eiJvDYjTfx6BsWemlJ3AdF2Q8U7LvCOIhSbUQQhQKf1//+oN/NsDL16AI21C+3Fkdk3soZoOZvNcOVef46/PqBcn4xe5YUfXeZfO8t6fK9uYHOtBgOwGbUfXjQaWVXytfuihtHOQFvxJ9CDxzK4AFOe579llWC2gc+qKhhd8ESnZSmwr8juyQX8Z03OVsz5Ygu8R25T7UVSrlLigSQEeWwDvLZT8Fe++K1Jik51yDGB6zHOG+jHOfilntJJj35uWlGp06DGRYrwj+EsgQfih7bKsXwGnWn/otAsJuc5lmM3PJ3pG8tbkxS7YiYfimM7APV6NwfrGGGQKQInXYrTTi9eEZPTmXla+XGjnSLmLuy9De/QDXoxmWgIp+ZGZAmsN6ta2XBCQntkLdE3v5g7rPsUDS1WrqJcJpK7q1tJTOCouwC6wuEcKMTmF21hYicshmP27q+ONltXRLJqUZ1zRzz58KQKbTpaVlBEs307exIQ4DpUwPyx7OPIvGb8MPGAQGwFI+Dk+KVRPIVUonMt3EI5vbN6WWv3GTztWSRG7h54PRD5cBT0pgskwiJyU+0VduiZliCzscdOky3jFvJYZ+aNWU5kvYoiY7T8Udd+5POuKsyZO8m8u/76cLd8Tu+qz3vGyVJIh+oE4FhyXxj6shlknaY/cDVYI4fCTPvog77dYR4SS+U0tHccg56HzLVubArQURRfbV7wmABF/cG5dpUHgwe67J1hoqyFdqR+S3wag95QdpebaiarQeoGT/Q7a8c2OAYW",
+      "resort": "Moon Palace Cancun",
+      "wedding_planner": {
+         "name": "Adan Peña",
+         "email": "apena@palaceresorts.com",
+         "ctry_code": "",
+         "phone_number": "",
+         "ext": ""
+      }
+   },
+   "message": "OK",
+   "code": 200,
+   "error": false
+}

@@ -1,0 +1,738 @@
+// CSS Framework for Sites by Palace Resorts
+// https://www.palaceresorts.com/
+// Licensed under MIT Open Source
+
+////
+/// @group global
+////
+
+/// Colores usados para botones, hipervinculos, etc.
+/// @type Map
+$web-palette: (
+	primary: #ea8685,
+	secondary: #fcded7,
+	third: #f2f2f2,
+	info: #2196f3,
+	success: #26a69a,
+	warning: #ff9800,
+	alert: #f44336,
+	"brown": #644a49,
+	"gray": #6d6d6d,
+	"white": #fefefe,
+	"black": #323232,
+);
+
+@import "../../util/color";
+@import "../../components/grid/unit";
+
+////
+// Avaliable fonts
+////
+// Miso
+// Roboto [default]
+// Avenir
+// Avenir Book
+// Avenir Next Condensed
+// Avenir LT Std
+// Open Sans Condensed
+// Open Sans Condensed
+// Parisienne
+// Playfair Display
+////
+
+/// Tipografia para toda la pagina web
+/// @type Font
+$global-font-family: "Avenir";
+
+/// Tipografia para los encabezados de la pagina web
+/// @type Font
+$global-font-headers: "Playfair Display";
+
+/// Tipografia para los parágrafos
+/// @type Font
+$global-font-body: $global-font-family;
+
+/// Font Size attributo para el tamaño de las letras de la pagina web
+/// @type Number
+//$global-font-size: 100%;
+
+/// Line Height establece el espacio entre las linas de la pagina web
+/// @type Number
+//$global-line-height: 1.5;
+
+/// Global value used for margin on components.
+/// @type Number
+//$global-margin: 1rem;
+
+/// Global value used for padding on components.
+/// @type Number
+//$global-padding: 1rem;
+
+/// Global value used for positioning on components.
+/// @type Number
+//$global-position: 1rem;
+
+/// Global value used for all elements that have a border radius.
+/// @type Number
+$global-radius: 3px;
+
+/// Global value used for max width in a container.
+/// @type Number
+$global-width: rem-calc(1400);
+
+// $global-flexbox: true;
+
+/// Sets the text direction of the CSS. Can be either `ltr` or `rtl`.
+/// @type Keyword
+// $global-text-direction: ltr;
+
+// Internal variables used for text direction
+// $global-left: if($global-text-direction == rtl, right, left);
+// $global-right: if($global-text-direction == rtl, left, right);
+
+////
+/// @group breakpoints
+////
+
+/// A list of named breakpoints. You can use these with the `breakpoint()` mixin to quickly create media queries.
+/// @type Map
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1025px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+
+$breakpoint-classes: (small medium large);
+
+/// Color usado para los elementos de la interfaz del usuario
+/// @type Color
+$dark-gray: #6d6d6d;
+
+/// Color usado para los elementos de la interfaz del usuario
+/// @type Color
+//$light-gray: #f1edeee6;
+
+/// Color usado para los elementos de la interfaz del usuario
+/// @type Color
+//$gold: #bf914d;
+
+/// Color usado para los elementos de la interfaz del usuario
+/// @type Color
+$white: #fefefe;
+
+/// Color usado para los elementos de la interfaz del usuario
+/// @type Color
+//$gray: #3a3a3a;
+
+/// Color usado para los elementos de la interfaz del usuario
+/// @type Color
+//$black: #0a0a0a;
+
+/// Color de fondo para el cuerpo de la interfaz.
+/// @type Color
+//$body-background: $white;
+
+/// Color de texto para el cuerpo de la interfaz.
+/// @type Color
+$body-font-color: #644a49;
+
+/// Estilos de encabezados
+/// @type Number
+$fontsize-headers: (
+	h1: 48px,
+	h2: 36px,
+	h3: 24px,
+	h4: 18px,
+	h5: 14px,
+	h6: 12px,
+);
+
+$fontsize-headers-desktop: (
+	h1: 64px,
+	h2: 48px,
+	h3: 40px,
+	h4: 32px,
+	h5: 28px,
+	h6: 20px,
+);
+
+/// Estilos de titulos y subtitulos mobile
+/// @type Number
+$fontsize-body: (
+	title1: (
+		24px,
+		20px,
+	),
+	title2: (
+		18px,
+		14px,
+	),
+	title3: (
+		12px,
+		10px,
+	),
+);
+
+/// Estilos de titulos y subtitulos desktop
+/// @type Number
+$fontsize-body-desktop: (
+	title1: (
+		40px,
+		30px,
+	),
+	title2: (
+		28px,
+		20px,
+	),
+	title3: (
+		20px,
+		14px,
+	),
+);
+
+/////
+/// @group forms
+/////
+
+/// Establece el espacio entre columnas
+/// @type Number
+//$input-gutter: 30px;
+
+/// Establece la altura del input
+/// @type Number
+$input-height: 30px;
+
+/// Establece la altura del input en escritorios
+/// @type Number
+$input-desktop-height: 40px;
+
+/// Establece el color del borde
+/// @type Color
+$input-border-color: get-color("primary");
+//@debug $input-border-color;
+
+/// Establece el estilos del borde
+/// @type Border
+$input-border: 1px solid $input-border-color;
+
+/// Establece el estilo de las esquinas del elemento
+/// @type Border
+$input-border-radius: $global-radius;
+
+/// Establece el fondo de color
+/// @type Color
+$input-background: #fff;
+
+/// Establece el color de error
+/// @type Color
+$input-error-color: get-color("alert");
+
+/// Establece el color cuando es valido
+/// @type Color
+$input-success-color: get-color("success");
+
+/// Establece el color cuando se hace focus en el elemento
+/// @type Color
+$input-focus-color: get-color("primary");
+
+/// Establece el tamaño del texto
+/// @type Number
+//$input-font-size: 16px;
+
+/// Establece la distancia del margen hacia abajo
+/// @type Number
+$input-margin-bottom: 8px;
+
+/// Establece el margen
+/// @type number
+$input-margin: 0 0 $input-margin-bottom 0;
+
+/// Establece el padding
+/// @type Number
+$input-padding: 0 0.7rem;
+
+/// Establece el tamaño del texto para el label
+/// @type Number
+$label-font-size: 14px;
+
+/// Establece el tamaño del texto en escritorio
+/// @type Number
+$label-desktop-font-size: 20px !default;
+
+/// Establece el color de texto cuando el elemento esta deshabilitado
+/// @type Color
+$input-disabled-color: lighten($body-font-color, 40%);
+
+/// Establece el color del borde cuando el elemento esta deshabilitado
+/// @type Color
+$input-disabled-solid-color: $input-border-color;
+
+/// Establece el borde cuando el elemento esta deshabilitado
+/// @type Border
+$input-disabled-border: 1px dotted $input-disabled-solid-color;
+
+/// Establece el estilo del borde cuando el elemento es invalido
+/// @type Border
+//$input-invalid-border: 1px solid $input-error-color;
+
+/// Establece el nivel de sombreado de un elemento
+/// @type Box Shadow
+$input-box-shadow: 0 0 0 1px;
+
+/// Calcula el ancho y alto total de un elemento.
+/// @type Box Sizing
+$input-box-sizing: border-box;
+
+/// Establece el tamaño del icono
+/// @type Number
+$input-icon-size: 2rem;
+
+/// Establece el color del texto como marcador
+/// @type Color
+$placeholder-text-color: lighten($body-font-color, 40%);
+
+/// Establece el color de la etiqueta del input
+/// @type Color
+$label-color: get-color("brown");
+
+/// Permite modificar el espacio de coordenadas del modelo de formato visual
+/// @type Transform
+$label-transform: translate(11px, 8px);
+
+/// Permite modificar el espacio de coordenadas del modelo de formato visual
+/// @type Transform
+$label-active-transform: translateY(-25px) scale(0.9);
+
+/////
+/// @group navbar
+/////
+
+/// Color de fondo de la barra de navegacion principal
+/// @type Color
+$navbar-background-color: rgba(241, 237, 238, 0.90196);
+
+/// Color de los enlances principales
+/// @type Color
+$navbar-link-color: $dark-gray;
+
+/// Color del resaltado de los enlaces
+/// @type Color
+$navbar-hover-color: $navbar-link-color;
+
+/// Color del logotipo
+/// @type Color
+$navbar-brand-color: $navbar-link-color;
+
+/// Color de los enlaces superiores
+/// @type Color
+$navbar-action-color: get-color("primary");
+
+/// Color de los enlaces del submenu
+/// @type Color
+$navbar-submenu-color: $navbar-action-color;
+
+/// Color del resaltado de los enlaces del submenu
+/// @type Color
+$navbar-submenu-hover-color: $navbar-action-color;
+
+////
+/// @group menubar
+////
+
+/// Fuente para el menu
+/// @type Font
+// $menubar-family: 'Avenir';
+
+/// Tamaño de la fuente
+/// @type Number
+$menubar-font-size: 0.7rem;
+
+/// Estilo de la fuente
+/// @type Number
+// $menubar-font-weight: 200;
+
+/// Espacio entre cada caracter del texto
+/// @type Number
+// $menubar-font-spacing: 0rem;
+
+/// Color de la fuente del menu
+/// @type Color
+$menubar-color: $white;
+
+/// Fondo de los elementos del menu
+/// @type Background
+$menubar-background: get-color("primary");
+
+////
+/// @group menulateral
+////
+
+/// Fuente para el menu
+/// @type Font
+// $menu-lateral-family: 'Avenir';
+
+/// Tamaño de la fuente
+/// @type Number
+$menu-lateral-font-size: 1.3rem;
+
+/// Estilo de la fuente
+/// @type Number
+// $menu-lateral-font-weight: 200;
+
+/// Espacio entre cada caracter del texto
+/// @type Number
+// $menu-lateral-font-spacing: 0rem;
+
+/// Color de la fuente del menu
+/// @type Color
+$menu-lateral-color: $white;
+
+/// Fondo de los elementos del menu
+/// @type Background
+$menu-lateral-background: get-color("primary");
+
+////
+/// @group button
+////
+
+/// Font family for button elements.
+/// @type Font
+$button-font-family: "Avenir";
+
+/// Font weight for button elements.
+/// Ignored if null (default)
+/// @type Font-Weight
+$button-font-weight: bold;
+
+/// Padding inside buttons.
+/// @type List
+$button-padding: 0.75em 1em 0.55em 1em;
+
+/// Padding inside buttons desktop.
+/// @type List
+$button-desktop-padding: 0.635em 1em 0.435em 1em;
+
+/// Margin around buttons.
+/// @type List
+//$button-margin: 0 0 $global-margin 0;
+
+/// Default fill for buttons. Can either be `solid` or `hollow`.
+/// @type Keyword
+//$button-fill: solid;
+
+/// Default background color for buttons.
+/// @type Color
+// $button-background: get-color('primary');
+
+/// Default background color for buttons.
+/// @type Color
+$button-hollow-background: #ffffff;
+
+/// Background color on hover for buttons.
+/// @type Color
+//$button-background-hover: scale-color($button-background, $lightness: -15%);
+
+/// Font color for buttons.
+/// @type List
+//$button-color: $white;
+
+/// Alternative font color for buttons.
+/// @type List
+//$button-color-alt: $black;
+
+/// Border radius for buttons, defaulted to global-radius.
+/// @type Number
+//$button-radius: $global-radius;
+
+/// Border for buttons, transparent by default
+/// @type List
+//$button-border: 1px solid transparent;
+
+/// Border width for hollow outline buttons
+/// @type Number
+//$button-hollow-border-width: 1px;
+
+/// Sizes for button in mobile.
+/// @type Map
+/* $button-sizes: (
+  tiny: 0.58rem,
+  small: 0.73rem,
+  default: 0.88rem,
+  large: 1.23rem,
+); */
+
+/// Sizes for button in desktop.
+/// @type Map
+$button-desktop-sizes: (
+	tiny: 0.95rem,
+	small: 1.1rem,
+	default: 1.25rem,
+	large: 1.6rem,
+);
+
+/// Coloring classes. A map of classes to output in your CSS, like `.secondary`, `.success`, and so on.
+/// @type Map
+//$button-palette: $web-palette;
+
+/// opacity for a disabled button.
+/// @type List
+//$button-opacity-disabled: 0.25;
+
+/// Background color lightness on hover for buttons.
+/// @type Number
+//$button-background-hover-lightness: -20%;
+
+/// Color lightness on hover for hollow buttons.
+/// @type Number
+//$button-hollow-hover-lightness: -50%;
+
+// Internal: flip from margin-right to margin-left for defaults
+/* @if $global-text-direction == 'rtl' {
+  $button-margin: 0 0 $global-margin $global-margin;
+} */
+
+/// transitions for buttons.
+/// @type List
+//$button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+
+/// Additional responsive classes for .expanded
+/// @type Boolean
+//$button-responsive-expanded: false;
+
+////
+/// @group card
+////
+
+$card-background: get-color("secondary");
+$card-color: inherit;
+$card-border: none;
+$card-border-radius: 0;
+
+$card-panel-background: transparent;
+$card-panel-color: inherit;
+$card-panel-border: 1px solid get-color("brown");
+$card-panel-border-radius: 3px;
+
+////
+/// @group progressbar
+////
+
+$progressbar-height: 0.5rem;
+$progressbar-border-radius: 0;
+$progressbar-background-color: #808080;
+$progressbar-loaded-color: get-color("primary");
+
+$legend-border-color: get-color("brown");
+
+////
+/// @group collapsible
+////
+
+$collapsible-disabled-background: grey;
+
+$collapsible-header-background: get-color("brown");
+$collapsible-header-color: white;
+$collapsible-body-background: #ffffff;
+$collapsible-header-padding: 0.5rem;
+$collapsible-content-padding: 1rem;
+$collapsible-border: 1px solid get-color("brown");
+$collapsible-content-border: none;
+
+////
+/// @group Table
+////
+
+/// Nombre del contenedor de la tabla
+/// @type string
+// $table-container: "table-container";
+
+/// Tamaño de la fuente en modo mobile
+/// @type number
+// $table-font-size: 12px;
+
+/// Tamaño de la fuente de los encabezados en modo escritorio
+/// @type number
+$table-thead-font-size: inherit;
+
+/// Tamaño de la fuente en modo escritorio
+/// @type number
+$table-font-size-desktop: 20px;
+
+/// Color de la fila de la tabla
+/// @type color
+// $table-row-background: #f2f2f2;
+
+/// Color de borde para la tabla
+/// @type color
+// $table-border-color: #5c3c3c;
+
+////
+/// @group listview
+////
+
+/// Establece si el color de los elementos se alternaran
+/// @type Boolean
+$listview-collapse: true;
+
+/// Establece el tamaño de redondeado del borde de la lista
+/// @type Color
+$listview-border-radius: 0px;
+
+/// Color de fondo de la lista
+/// @type Color
+$listview-background: get-color("third");
+
+/// Color de text de la lista
+/// @type Color
+$listview-color: inherit;
+
+/// Color de las lineas divisoras de la lista
+/// @type Color
+$listview-color-line: get-color("brown");
+
+/// Color de border del contenedor de la lista
+/// @type Color
+$listview-border-color: $listview-color-line;
+
+/// Color de fondo del icono de la lista
+/// @type Color
+$listview-background-icon: transparent;
+
+/// Color de texto del icono de la lista
+/// @type Color
+$listview-color-icon: inherit;
+
+/// Color de fondo del elemento seleccionado de la lista
+/// @type Color
+$listview-active-background: #26a69a;
+
+/// Color de texto del elemento seleccionado de la lista
+/// @type Color
+$listview-active-color: #eafaf9;
+
+/// Color de los enlaces de la lista
+/// @type Color
+$listview-link-color: #26a69a;
+
+/// Color de fondo del encabezado de la lista
+/// @type Color
+$listview-header-background: $listview-background;
+
+/// Color de texto del encabezado de la lista
+/// @type Color
+$listview-header-color: $listview-color;
+
+/// Color de texto del encabezado de la lista
+/// @type Color
+$listview-header-color-line: $listview-color-line;
+
+////
+/// @group dropdown
+////
+
+/// Default text color for dropdown button.
+/// @type Color
+$dropdown-trigger-color: #fff;
+
+/// Default text color for hover dropdown button.
+/// @type Color
+$dropdown-trigger-hover-color: $dropdown-trigger-color;
+
+/// Default background color for dropdown button.
+/// @type Color
+$dropdown-trigger-background: get-color("primary");
+
+/// Default background color for dropdown list.
+/// @type Color
+$dropdown-background-color: #fff;
+
+/// Default text color for dropdown list.
+/// @type Color
+$dropdown-color: get-color("brown");
+
+/// Default background color for divider list on dropdown.
+/// @type Color
+$dropdown-divider-color: #e0e0e0;
+
+/// Default background color for hover on dropdown list.
+/// @type Color
+$dropdown-hover-color: #000;
+
+/// Default border for dropdown and list.
+/// @type List
+$dropdown-border: 1px solid get-color("primary");
+
+/// Default border radius for dropdown button and list.
+/// @type List
+$dropdown-border-radius: 2px;
+
+/// Default font size for dropdown trigger.
+/// @type Number
+$dropdown-trigger-font-size: 14px;
+
+/// Default font size for dropdown list.
+/// @type Number
+$dropdown-font-size: 16px;
+
+/// Default size for caret on dropdown trigger.
+/// @type Number
+$dropdown-caret-size: 32px;
+
+/// Set if box shadow will be included on dropdown button and list.
+/// @type Boolean
+$dropdown-include-shadow: false;
+
+////
+/// @group wizard
+////
+
+/// Color de fondo del encabezado del wizard
+/// @type color
+$wizard-header-background: #f2f2f2;
+
+/// Color de fondo en cada step del encabezado
+/// @type color
+$wizard-step-icon-background: rgba(#323232, 0.5);
+
+/// Color de texto en cada step del encabezado
+/// @type color
+$wizard-step-icon-color: #ffffff;
+
+/// Color de la etiqueta en cada step del encabezado
+/// @type color
+$wizard-step-color: rgba(50, 50, 50, 0.5);
+
+/// Color del step activo
+/// @type Color
+$wizard-active-color: get-color("primary");
+
+/// Color de fondo activo del step en el encabezado
+/// @type color
+$wizard-active-icon-background: $wizard-active-color;
+
+////
+/// @group Checkboxes
+///
+
+$checkbox-fill-color: get-color("primary");
+$checkbox-empty-color: $checkbox-fill-color;
+$checkbox-disable-color: get-color("gray");
+$checkbox-active-color: get-color("success");
+
+////
+/// @group Toast
+///
+
+/// Color de fondo del Toast.
+/// @type Color
+$toast-background-color: rgba(get-color("primary"), 0.9);
+
+/// Color de texto del Toast.
+/// @type Color
+$toast-color: white;
+
+/// Tamaño de las esquinas de los bordes del Toast.
+/// @type Number
+$toast-border-radius: $global-radius;

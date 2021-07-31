@@ -1,0 +1,433 @@
+$pink: get-color("primary") !default;
+$white: get-color("white") !default;
+$black: get-color("black") !default;
+$rosy-pink: #ea8685;
+$dark-gray:#644a49;
+
+
+[component="footer"] {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1em;
+
+  section.awards-section {
+    margin-bottom: 1.5rem;
+    .our {
+      padding-top: 29px;
+      .hr-pink {
+        top: 2px;
+        border-top: .03125rem solid $rosy-pink;
+        position: relative;
+        border-color: $pink;
+      }
+      span.our-awards {
+        font-size: .875rem;
+        display: inline-flex;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: condensed;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $dark-gray;
+      }
+    }
+    .logos {
+      padding-top: 1.5rem;
+      text-align: center;
+      i {
+        text-align: center;
+        font-size: 3.3em;
+        color: #5a5a5a;
+
+      }
+    }
+
+    @include large-screen {
+      margin-bottom: 15px;
+
+      .hr-pink {
+        top: 10px !important;
+        border-top: 1px solid $rosy-pink;
+      }
+
+      span.our-awards {
+        font-size: 24px !important;
+      }
+
+
+      .logos {
+        padding-top: 47px;
+        i {
+          font-size: 6em;
+          color: $black;
+        }
+      }
+    }
+  }
+
+  section.resort-section {
+    margin-bottom: 45px;
+    position: relative;
+    background-color: #ff8788;
+
+    .resorts-icons {
+      padding-top: 45px;
+      .logo-social{
+        order: 2;
+        i {
+          font-size: 3.3em;
+          line-height: 0;
+          color: $white;
+        }
+        @media screen and (max-width: 64em) and (min-width: 40em) {
+          i{
+            font-size: 5.15em;
+          }
+        }
+      }
+
+      .social-icon-list {
+        order: 1;
+        >div {
+          margin: auto;
+          top: -2em;
+          position: relative;
+          display: flex;
+          justify-content: space-evenly;
+          padding-left: 10px;
+
+          i {
+            color: $white;
+            font-size: 2.2em;
+          }
+        }
+        @media screen and (max-width: 64em) and (min-width: 40em) {
+          >div {
+          max-width: 35rem;
+            i{
+              font-size: 3.15em;
+            }
+          }
+          padding-bottom: 20px;
+        }
+      }
+    }
+
+    .resorts-links {
+      ul {
+        display: inline-grid;
+        padding: 0;
+        grid-template-columns: auto auto;
+
+        grid-column-gap: 1em;
+        grid-row-gap: 0.9em;
+        list-style-type: none;
+        text-align: left;
+
+        li {
+          color: $white;
+
+          a {
+            font-size: 12px;
+            font-weight: 500;
+            &:hover {
+              border-bottom: solid 2px $dark-gray;
+            }
+          }
+
+          &:after {
+            display: block;
+            content: '>';
+            transform: scaleX(0.6);
+            float: right;
+            margin-left: 0.1em;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 0.9em;
+          }
+        }
+
+        /* Small only */
+        @include small-screen-down {
+            li {
+              position: relative;
+              margin-bottom: .4375rem;
+
+              a {
+                font-size: 12px;
+              }
+          }
+        }
+
+        @media screen and (max-width: 64em) and (min-width: 40em) {
+          position: relative;
+          grid-column-gap: 10em;
+          li a {
+              font-size: 17px;
+          }
+        }
+
+
+        @include large-screen {
+          padding: 0;
+          display: inline-grid;
+          grid-template-columns: auto auto auto;
+          grid-column-gap: 0.5em;
+          grid-row-gap: 0.5em;
+
+          li {
+
+            a {
+              font-size: 14px;
+            }
+
+            &:after {
+              margin-left: 0.2em;
+              font-size: 1.5em;
+            }
+          }
+        }
+        @include extra-large-screen {
+          grid-column-gap: 2.5em;
+          grid-row-gap: 0.9em;
+
+          li {
+
+            a {
+              font-size: 16px;
+            }
+
+            &:after {
+              margin-left: 0.2em;
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+    }
+
+    .privacy-policies {
+      background-color: $dark-gray;
+      position: relative;
+      padding: .15625rem;
+      margin-bottom: 48px;
+      text-align: left;
+
+      .call,
+      .phoneCall {
+        font-family: Avenir;
+        margin-bottom: 0;
+        color: $rosy-pink;
+        font-weight: 900;
+        font-size: .875rem;
+        margin-top: .00391rem;
+        margin-left: .625rem;
+        text-align: left;
+      }
+      .call {
+        font-size: .8rem !important;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.7;
+        letter-spacing: normal;
+        text-align: left;
+        color:$white !important;
+      }
+      .pointsFooter {
+        top: .65rem;
+        right: 8px;
+        position: absolute;
+        display: flex;
+        color: $rosy-pink;
+      }
+    }
+
+    .modal-link-container {
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 101;
+      display: flex;
+      position: fixed;
+      min-height: 100%;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(black, 0.6);
+
+      .modal-link {
+        width: 90%;
+        padding: 1rem;
+        display: flex;
+        position: relative;
+        border-radius: 4px;
+        flex-direction: column;
+        background-color: $white;
+
+        a {
+          padding: 8px 0;
+          font-style: normal;
+          color: $rosy-pink;
+          font-weight: 700;
+          font-size: 1.1rem;
+          text-align: left;
+        }
+      }
+
+      .close-modal {
+        top: 12px;
+        border: 0;
+        z-index: 10;
+        right: 16px;
+        position: absolute;
+        font-size: 1.25rem;
+        color: $rosy-pink;
+        background-color: transparent;
+        font-style: normal;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      background-image: unset !important;
+    }
+
+    @media screen and (min-width: 1025px) {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 49vw center;
+      height: 210px;
+
+      .resorts-icons{
+        padding-top: 50px;
+
+        .logo-social i {
+          font-size: 7.5em;
+          order: 1;
+        }
+        .social-icon-list {
+          order: 2;
+          padding-top: 20px;
+
+          i {
+            font-size: 1.6em !important;
+            margin: 0 0.1em;
+          }
+        }
+      }
+      .resorts-links {
+        #link-palace{
+          order: 1;
+        }
+        #link-elite{
+          order: 2;
+        }
+        #link-moon{
+          order: 1;
+        }
+        #link-meetings{
+          order: 2;
+        }
+        #link-leblanc{
+          order: 1;
+        }
+        #link-travel{
+          order: 2;
+        }
+      }
+    }
+  }
+
+  section.bottom {
+    padding: 0.625em 0;
+    background-color: $pink;
+
+    ul {
+      display: inline;
+      padding: 0;
+      color: $white;
+      list-style: none;
+      display: inline-flex;
+      text-align: center;
+      margin: auto;
+      width: 95%;
+      font-weight: 700;
+      font-size: 0.875rem;
+      [menuitem] {
+        padding: 0 1.4375em;
+      }
+    }
+  }
+
+  .btn-chat-floating{
+    border: unset;
+    position: fixed;
+    bottom: -9px;
+    right: 18px;
+    -webkit-appearance: none;
+    min-width:auto;
+    min-height:auto;
+    background: transparent;
+    width: 75px;
+    padding: 1px 6px;
+    border-radius: 75px;
+    z-index: 3;
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1366px;
+    }
+  }
+}
+
+#bottom-mobile-menu {
+  padding: 0.2em 0;
+  background-color: $pinktext;
+  bottom: 0;
+  top: auto;
+  position: fixed;
+  width: 100vw;
+  font-size: 16px;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  height: 48px;
+  align-items: center;
+
+
+  .dial-number,
+  .profile-button,
+  .chat-button {
+    color: $white;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+
+  .dial-number {
+    grid-column: 1;
+    text-align: left;
+    >a {
+      padding-left: 12px;
+    }
+    // padding-top: .5em;
+  }
+
+  .profile-button {
+    padding-bottom: 0.1em;
+    grid-column: 2;
+
+    [menuitem="user-profile"] {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      text-align: center;
+      // margin-left: -12px;
+    }
+  }
+
+  .chat-button {
+    grid-column: 3;
+    // padding-top: .5em;
+  }
+}

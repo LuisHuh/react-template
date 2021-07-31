@@ -1,0 +1,41 @@
+@import './link-item';
+
+@mixin navbar-mobile {
+  outline: none !important;
+  color: get-color('primary');
+  display: block;
+  position: sticky;
+  padding: 0 1em 0.5em 1em !important;
+  top: 0;
+  z-index: 20;
+  background: rgba(241, 237, 238, 0.90196);
+  width: 100vw;
+  overflow: hidden;
+
+  .navbar-mobile {
+    display: grid;
+    grid-template-columns: 6em auto;
+    width: 100%;
+  }
+
+  .brand {
+    font-size: 3em;
+  }
+
+  #menu-mobile {
+    >a[menu] {
+      padding: 0 .5em;
+    }
+  }
+
+  .topbar-container {
+    display: grid;
+    grid-template-columns: min-content auto;
+    width: 100%;
+    height: 4em;
+    align-items: center;
+    text-align: right;
+  }
+
+  @include navbar-mobile-link-item;
+}

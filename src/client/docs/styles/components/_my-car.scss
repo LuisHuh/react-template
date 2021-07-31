@@ -1,0 +1,40 @@
+
+
+@mixin table-my-cart {
+    [component="my-cart"]{
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0
+
+        }
+        li {
+            border-bottom: 1px solid #ddd
+        }
+
+        li:last-child {
+            border-bottom: none
+        }
+
+
+
+        // .th{
+        //     //width: 310px;
+        //     height: 104px;
+        //     background-color: #f2f2f2;
+
+        //     .icon{
+        //         margin: 15px !important;
+        //     }
+
+        //     .imagen{
+        //         height: 50px;
+        //         width: 30px !important;
+        //         margin-left: auto;
+        //         margin-right: auto;
+        //         display: inline-block;
+        //     }
+        // }
+
+    }
+}

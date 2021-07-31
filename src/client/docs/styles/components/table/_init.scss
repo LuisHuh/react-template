@@ -1,0 +1,5 @@
+@import './base';
+
+// TODO: quitar includes desde inicializador, pasar a cada vista correspondiente
+@include classic-table;
+@include collapsible-table;

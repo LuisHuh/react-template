@@ -1,0 +1,142 @@
+/**
+ * @page My Wedding
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Sección de My Wedding
+ */
+
+////
+/// @group page
+////
+
+$table-services-checkbox-width: rem-calc(40px);
+/* $table-services-service-width: rem-calc(350px); */
+
+@mixin table-services {
+	.table-services {
+		.col-hidden {
+			display: none;
+
+			@include large-screen {
+				display: table-cell;
+			}
+		}
+
+		[widget="amount"] {
+			@include large-screen() {
+				text-align: right;
+				padding: 0 1.6rem;
+
+				&.quantity {
+					text-align: center;
+				}
+			}
+		}
+
+		.input-pay {
+			display: flex;
+			align-items: center;
+			padding: 0.5rem 1rem;
+			span {
+				margin-right: 0.5rem;
+			}
+			.input-group {
+				min-width: 120px;
+			}
+		}
+
+		.success {
+			color: #33a532;
+		}
+
+		.content .button-comment {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			/* padding: 1rem 0; */
+
+			@include large-screen() {
+				justify-content: flex-end;
+			}
+
+			button {
+				margin: 0;
+				&:not(:last-of-type) {
+					margin-right: 1rem;
+				}
+			}
+		}
+
+		[component="list-view"] {
+			border: none;
+
+			[component="list-item"] {
+				background-color: white;
+				&:not(:last-of-type) {
+					border-bottom-color: #cbcbcb;
+				}
+
+				i.avatar {
+					font-size: 37px;
+					color: get-color("primary");
+
+					&:before,
+					&::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 42px;
+						height: 28px;
+					}
+
+					&:before {
+						background-color: #ffffff;
+						top: 3px;
+						left: 2px;
+					}
+
+					&::after {
+						content: "\f059";
+					}
+				}
+
+				p {
+					word-break: break-word;
+				}
+			}
+		}
+
+		.service-checkbox {
+			max-width: $table-services-checkbox-width;
+			position: relative;
+			padding: 0.5rem;
+			text-align: left;
+
+			label{
+				display: block;
+				position: absolute;
+				top: 49%;
+				transform: translateY(-150%);
+
+				@include large-screen{
+					position: relative;
+					transform: none;
+					top: unset;
+				}
+			}
+
+			span{
+				display: inline;
+			}
+
+			@include medium-screen() {
+				text-align: center;
+			}
+		}
+
+		.service-th{
+			max-width: calc(100% - #{$table-services-checkbox-width});
+		}
+	}
+}

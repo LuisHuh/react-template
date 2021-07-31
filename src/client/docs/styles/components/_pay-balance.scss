@@ -1,0 +1,78 @@
+@mixin pay-balance {
+	[widget="pay-balance"] {
+		.hide {
+			display: none;
+		}
+		.trigger {
+			display: inline-block;
+		}
+
+		button {
+			font-weight: 400;
+		}
+
+		.input-group {
+			@include flex(center, center);
+			input {
+				order: 2;
+				position: relative;
+				margin: 0;
+				text-align: right;
+			}
+
+			label {
+				order: 1;
+				position: relative;
+				transform: none !important;
+				white-space: nowrap;
+				margin-right: 0.5rem;
+			}
+		}
+
+		.pay-content {
+			@include large-screen {
+				align-items: center;
+				position: relative;
+			}
+			button {
+				@include large-screen {
+					margin: 0;
+				}
+			}
+			.pay-input {
+				padding: 0 15%;
+				@include medium-screen {
+					padding: 0 25%;
+				}
+				@include large-screen {
+					padding: 0;
+               padding-left: 5%;
+					order: 2;
+               width: 40%;
+				}
+			}
+			.pay-cancel {
+				text-align: right;
+				padding-right: 0.75rem;
+				@include large-screen {
+					order: 1;
+               width: auto;
+
+					&::after {
+						position: absolute;
+						left: 15%;
+						top: 38%;
+						@include css-triangle(0.6rem, 0.6rem, get-color("primary"), right);
+					}
+				}
+			}
+			.pay-confirm {
+				text-align: left;
+				padding-left: 0.75rem;
+				@include large-screen {
+					order: 3;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,524 @@
+/**
+ * @page My Wedding
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Vista My Wedding
+ */
+
+////
+/// @group page
+////
+$page-my-wedding-padding: 0.5rem;
+
+[page="my-wedding"] {
+	padding: 0;
+
+	// > section:not(:last-of-type) {
+	// 	margin-bottom: 3rem;
+	// }
+	section[name="general-info"] {
+		// margin-bottom: 1rem;
+		[component="cell"] {
+			position: relative;
+		}
+
+		.general-panel-large {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		[component="countdown-timer"] {
+			font-size: 20px;
+			[widget="label"] {
+				font-size: 12px;
+			}
+
+			@include medium-screen() {
+				font-size: 30px;
+				[widget="label"] {
+					font-size: 18px;
+				}
+			}
+		}
+
+		[component="collapsible"] {
+			border: none;
+			[component="collapsible-header"] {
+				background-color: transparent;
+				color: get-color("primary");
+				flex-direction: row-reverse;
+				justify-content: center;
+
+				[component="trigger-icon"] {
+					padding: 0 0.5rem;
+				}
+
+				[component="content-header"]:not(i) {
+					text-decoration: underline;
+					text-transform: uppercase;
+					font-weight: 500;
+				}
+			}
+
+			[component="collapsible-content"] {
+				padding: 0;
+			}
+		}
+
+		@include medium-screen() {
+			.prr {
+				font-size: 46px;
+			}
+
+			.subtitle-3 {
+				font-size: 18px;
+			}
+			// margin-bottom: 3rem;
+		}
+	}
+
+	section[name="status-payment"] {
+		background: white;
+		padding: $page-my-wedding-padding;
+		margin-bottom: 0rem;
+		.textdiv {
+			position: absolute;
+			margin-left: 5%;
+		}
+		.buton1 {
+			margin-top: 20%;
+			margin-left: 5%;
+		}
+		.buton2 {
+			margin-top: 5%;
+			margin-left: -8%;
+		}
+		.buton3 {
+			margin-left: 38%;
+			margin-top: -16%;
+		}
+		.icons {
+			display: none;
+			color: #ea8685;
+		}
+		.dates {
+			color: #ea8685;
+			margin-top: 0px;
+		}
+		.days {
+			color: #ea8685;
+		}
+		p {
+			&[label] {
+				text-transform: uppercase;
+			}
+			margin: 0;
+		}
+		.buton {
+			display: flex;
+			@include flex(center);
+		}
+		.font {
+			font-family: "Avenir-Roman";
+		}
+		.txt {
+			font-weight: normal;
+		}
+		.images {
+			float: left;
+			height: 138px;
+			width: 68.5px;
+		}
+		.body {
+			padding: 10px 5px 0 5px !important;
+			margin: 10px 10px 10px 0px !important;
+		}
+		.modal-content {
+			max-width: 304px;
+			min-height: 305px;
+			height: auto;
+		}
+		.text-foot {
+			display: inline-flex;
+			margin-top: 10px;
+		}
+
+		.widget-pay-balance{
+			padding-top: 2rem;
+			// padding-bottom: 1rem;
+			@include large-screen{
+				text-align: left;
+				padding-top: 1rem;
+				// padding-bottom: 2rem;
+
+				.trigger{
+					margin-top: 1rem;
+				}
+			}
+		}
+
+		@include medium-screen() {
+			padding: 1rem 5rem;
+			.btn-inline {
+				position: relative;
+				margin-top: 1rem;
+				margin-bottom: 1rem;
+			}
+			.butonpay {
+				text-align: left;
+			}
+			.icons {
+				display: block;
+				position: absolute;
+				transform: translate(0, +40%);
+				left: 0px;
+			}
+			.textdiv {
+				position: relative;
+				margin-left: 0;
+				margin-top: 0;
+			}
+			.buton1 {
+				margin-top: 0;
+			}
+			.buton2 {
+				margin-top: auto;
+			}
+			.buton3 {
+				margin-left: 0;
+				margin-top: auto;
+				padding: 7px;
+			}
+		}
+
+		@include large-screen() {
+			.modal-content {
+				max-width: 480px;
+				height: auto;
+			}
+			.images {
+				max-width: 100%;
+				width: auto;
+				float: left;
+				height: auto;
+			}
+		}
+	}
+
+	section[name="wedding-events"] {
+		background-color: white;
+		padding: 0 $page-my-wedding-padding;
+		.card-row {
+			&:not(:last-of-type) {
+				margin-bottom: 25px;
+			}
+			[component="card"] {
+				padding: 0.7rem;
+			}
+			@include medium-screen {
+				padding: 0 0.9rem;
+			}
+		}
+
+		.unassigned-prepayment {
+			.subcontent {
+				left: 78.5%;
+				transform: translateX(-78.5%);
+				justify-content: center;
+				padding-bottom: 0;
+			}
+
+			@include medium-screen() {
+				background-size: 50%;
+				&::before {
+					background: linear-gradient(90deg, transparent 15%, #fcded7 45%);
+				}
+			}
+		}
+
+		.subcontent {
+			position: absolute;
+			left: 90%;
+			transform: translateX(-90%);
+			bottom: 0;
+			justify-content: flex-end;
+			padding-bottom: 2%;
+
+			.currency {
+				font-size: inherit !important;
+				&::before {
+					content: "(";
+				}
+				&::after {
+					content: ")";
+				}
+			}
+			.subtitle-2 {
+				display: flex;
+				align-items: baseline;
+				margin-top: -5px;
+				span {
+					font-weight: bold;
+				}
+			}
+		}
+
+		[component="card"] {
+			button {
+				font-weight: normal;
+			}
+			[widget="tag"] {
+				font-family: "Playfair Display";
+				font-size: 12px;
+			}
+		}
+
+		@include large-screen() {
+			.card-row {
+				padding: 0 1rem;
+			}
+
+			.subcontent {
+				position: absolute;
+				/* bottom: -10%; */
+			}
+
+			[component="card"] {
+				[widget="tag"] {
+					font-size: 20px;
+				}
+
+				.progress-canvas {
+					width: 190px;
+				}
+			}
+		}
+
+		.progressbar-content {
+			span {
+				font-size: rem-calc(12);
+				display: block;
+				margin: 0;
+				line-height: 1.2;
+
+				@include large-screen() {
+					font-size: rem-calc(20);
+				}
+
+				@include large-screen() {
+					font-size: rem-calc(20);
+				}
+			}
+
+			.percent-values {
+				span {
+					display: inline;
+				}
+				.value {
+					font-size: rem-calc(24);
+					@include large-screen() {
+						font-size: rem-calc(40);
+					}
+				}
+			}
+
+			/* .currency{
+				@extend .paid-label;
+			} */
+		}
+	}
+}
+
+[page="events"],
+[page="my-cart"],
+[page="my-wishlist"],
+[page="wedding-extra"],
+[page="family_gift"],
+[page="prepayments"] {
+	@include table-services;
+	@include service-column;
+
+	.controls {
+		margin-top: 1rem;
+		@include flex(center);
+
+		@include large-screen() {
+			justify-content: flex-end;
+		}
+
+		button:first-of-type {
+			margin-right: 1rem;
+		}
+	}
+
+	[type="checkbox"]:not(:checked):disabled + span:not(.lever):before {
+		border: none;
+		background-color: gray;
+	}
+
+	section[name="status-payment"] {
+		text-align: center;
+
+		.sp-paid {
+			color: get-color("primary");
+		}
+
+		[label] {
+			text-transform: uppercase;
+		}
+	}
+
+	.container{
+		margin: 0.2rem;
+		
+		@include large-screen{
+			margin: 0 auto;
+		}
+	}
+
+	.event-title{
+		text-align: center;
+		padding-bottom: 0.7rem;
+		h3{
+			margin-bottom: 0;
+		}
+
+		@include large-screen{
+			text-align: left;
+			padding-bottom: 1.2rem;
+		}
+	}
+}
+
+[page="gift-card"] {
+	.card-gift {
+		width: 280px;
+		height: 160px;
+		border-radius: 5px;
+		background-color: #fcded7;
+		position: relative;
+	}
+
+	.wedding-gift {
+		font-family: "PlayfairDisplay";
+		position: absolute;
+		top: 55%;
+		transform: translate(-50%, -60%);
+		font-size: 24px;
+	}
+
+	.image-gift {
+		width: 70px;
+		position: absolute;
+		height: 161px;
+		top: 0%;
+		mix-blend-mode: luminosity;
+		right: 0%;
+	}
+
+	.button {
+		color: #ffff;
+	}
+
+	.hollow {
+		color: #644a49;
+	}
+}
+
+[page="family_gift"] {
+	.panel-color {
+		background-color: #f3f2f2 !important;
+	}
+	.my-gifts {
+		.right {
+			text-align: right;
+			float: right;
+		}
+		.right a,
+		.gift .from span {
+			color: #ea8685;
+		}
+		.gift {
+			position: relative;
+			height: 18px;
+			margin-top: 12px;
+			margin-bottom: 12px;
+			.from {
+				position: absolute;
+				top: 0;
+			}
+			.amount {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			[widget="amount"]::after {
+				content: " *";
+			}
+		}
+		[component="paginator-last"],
+		[component="paginator-first"] {
+			display: none;
+		}
+	}
+}
+
+[page="events"],
+[page="prepayments"] {
+	.container {
+		padding: 0.5rem;
+
+		@include medium-screen {
+			padding: 1rem;
+		}
+		/* max-width: $global-width - 1.5; */
+	}
+
+	.location-title {
+		text-align: center;
+		padding-bottom: 0.7rem;
+		h3 {
+			margin-bottom: 0;
+		}
+
+		@include large-screen {
+			text-align: left;
+			padding-bottom: 1.2rem;
+		}
+	}
+}
+
+[page="wedding-extra"] {
+	.table-services .service-th {
+		max-width: 100%;
+	}
+}
+
+[page="my-wishlist"] {
+	$pad-left: 0.3rem;
+	$pad-bott: 0.1rem;
+	$pad-lg-left: 0.4rem;
+	$pad-lg-bott: 0.2rem;
+
+	.service-column {
+		.btn-link {
+			padding-left: $pad-left;
+			padding-bottom: $pad-bott;
+
+			@include large-screen {
+				padding-left: $pad-lg-left;
+				padding-bottom: $pad-lg-bott;
+			}
+		}
+
+		.txt-added {
+			padding-left: $pad-left;
+			text-transform: lowercase;
+
+			@include large-screen {
+				padding-left: $pad-lg-left;
+			}
+		}
+	}
+}

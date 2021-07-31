@@ -1,0 +1,123 @@
+@mixin profile-general-info {
+    .planner-detail {
+        .subtitle-2,
+        .subtitle-3 {
+            font-weight: 500;
+        }
+        h4 {
+            margin-top: 6px;
+            margin-bottom: 15px;
+        }
+
+        [component='cell']:nth-child(1) {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            margin-right: 5px;
+        }
+        [component='cell']:nth-child(2) {
+            width: calc(100% - 65px);
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+    .profile-border { background-color: white;}
+    @include medium-screen-down {
+        .profile-border { border: unset; }
+    }
+    @include medium-screen {
+        .planner-detail {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 10%;
+            padding-right: 10%;
+            h4 {
+                margin-top: 9px;
+                margin-bottom: 19px;
+            }
+            [component='cell']:nth-child(1) {
+                width: 140px;
+                height: 139px;
+                margin-left: 45px;
+                margin-right: 60px;
+            }
+            [component='cell']:nth-child(2) {
+                width: calc(100% - 245px);
+            }
+        }
+        .no-r-margin { margin-right: unset; width: calc(50% - 0.625em);}
+        .phone-profile fieldset { padding: unset; padding-left: 0.625em; }
+    }
+    @include large-screen {
+        .planner-detail {
+            padding-left: initial;
+            padding-right: initial;
+        }
+    }
+}
+@mixin profile-billing-address {
+    
+    [page='profile-billing-address'] {
+
+        @include medium-screen-down {
+            >h4 {
+                margin-left: 9.5px;
+            }
+        }
+        .billing-card {
+            margin: 0.5em auto;
+            padding: 0.9rem 1.2rem;
+
+            >section {
+                height: 75px;
+                .name{
+                    font-family: "PlayfairDisplay";
+                    margin-bottom: 0.3rem;
+                }
+            }
+            .address,
+            .options {
+                font-weight: 500;
+            }
+
+            .options {
+                margin-top: 0.85rem;
+                span {
+                    margin-right: 20px;
+                    cursor: pointer;
+                    text-decoration: underline;
+                    color: #ea8685;
+
+                    &.active {
+                        color: #644a49;
+                        cursor: default;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        @include medium-screen-down {
+            .profile-border { border: unset; }
+            .grid-address-card {
+                width: 100%;
+                margin-right: unset;
+                margin-left: unset;
+                > [component="cell"] {
+                    margin-right: 5px;
+                }
+            }
+        }
+        @include medium-screen {
+            .billing-card {
+                padding: 1.8rem 2.4rem;
+                >section {
+                    height: 115px;
+                    .name{
+                        margin-bottom: 0.6rem;
+                    }
+                }
+                .options span { margin-right: 40px;}
+            }
+        }
+    }
+}

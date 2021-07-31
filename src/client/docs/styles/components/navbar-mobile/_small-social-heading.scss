@@ -1,0 +1,60 @@
+.social-heading {
+  text-align: center;
+  padding: .5em 0;
+  height: $social-headings-mobile;
+  background-color: $light-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  >a {
+    display: inline-block;
+    padding-left: .1em;
+    padding-right: .1em;
+    margin-left: 2%;
+
+    &:first-child {
+      border-radius: .125rem;
+      padding: 1px 0 !important;
+      color: #FFF;
+      font-weight: 700;
+      text-transform: uppercase;
+      height: 30px;
+      line-height: 2rem;
+      width: 3.6rem;
+      font-size: .875rem;
+    }
+
+    +ul {
+      background: $pinktext;
+
+      >li>a>span {
+        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+        height: 30px;
+        line-height: 2rem;
+      }
+
+      +ul {
+        background: $pinktext;
+
+        >li>a>span {
+          color: #fff;
+          font-size: 14px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .button {
+      background-color: pink;
+      border-radius: 5px;
+      padding: .3em .6em .2em .6em;
+    }
+
+    &:not(:first-child)>i {
+      font-size: 30px;
+    }
+  }
+}

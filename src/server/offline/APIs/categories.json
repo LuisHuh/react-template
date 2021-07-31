@@ -1,0 +1,52 @@
+{
+    "data": [
+      {
+        "idCategory": "2",
+        "nombre": "Delight",
+        "idSubcategory": "8",
+        "item_order": "1",
+        "description": "SWEET CAKES",
+        "idHotel": "ZRPL",
+        "nombreespanol": ""
+      },
+      {
+        "idCategory": "2",
+        "nombre": "Delight",
+        "idSubcategory": "156",
+        "item_order": "1",
+        "description": "CAKE STANDS",
+        "idHotel": "ZRPL",
+        "nombreespanol": ""
+      },
+      {
+        "idCategory": "2",
+        "nombre": "Delight",
+        "idSubcategory": "157",
+        "item_order": "1",
+        "description": "FAVORS",
+        "idHotel": "ZRPL",
+        "nombreespanol": ""
+      },
+      {
+        "idCategory": "2",
+        "nombre": "Delight",
+        "idSubcategory": "9",
+        "item_order": "2",
+        "description": "SIGNATURE CAKES",
+        "idHotel": "ZRPL",
+        "nombreespanol": ""
+      },
+      {
+        "idCategory": "2",
+        "nombre": "Delight",
+        "idSubcategory": "10",
+        "item_order": "3",
+        "description": "Sugar Delights",
+        "idHotel": "ZRPL",
+        "nombreespanol": ""
+      }
+    ],
+    "message": "OK",
+    "code": 200,
+    "error": false
+  }

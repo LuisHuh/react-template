@@ -1,0 +1,7 @@
+// Screen Readers
+// -------------------------
+
+@mixin fa-screen-reader {
+   .sr-only { @include sr-only; }
+   .sr-only-focusable { @include sr-only-focusable; }   
+}

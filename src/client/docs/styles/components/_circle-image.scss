@@ -1,0 +1,31 @@
+[component="circle-image"] {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  width: 100px;
+  display: inline-grid;
+  height: 100px;
+  line-height: 1em;
+  padding-top: 8px;
+  clip-path: circle(50%);
+  text-align: center;
+
+  span {
+    background-color: #000000a6;
+    height: fit-content;
+    color: #FFF;
+    margin-top: -6px;
+    word-break: break-all;
+    padding: .8em .65em 0 .65em;
+    display: flow-root;
+
+    &::first-line {
+      width: calc(60px);
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+      word-break: normal;
+      word-wrap: break-word;
+    }
+  }
+}

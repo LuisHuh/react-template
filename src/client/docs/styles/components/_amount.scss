@@ -1,0 +1,36 @@
+/**
+ * @mixin amount
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Formato de cantidades.
+ */
+
+////
+/// @group amount
+////
+
+$amount-font-size: 24px;
+
+@mixin amount {
+   [widget="amount"]{
+      display: block;
+      position: relative;
+
+      > * {
+         display: inline-block;
+         /* &[currency]{
+            vertical-align: sub;
+         } */
+   
+         &[value]{
+            /* font-size: $amount-font-size; */
+            vertical-align: middle;
+         }
+   
+         &[decimal]{
+            vertical-align: super;
+         }
+      }
+
+   }
+}

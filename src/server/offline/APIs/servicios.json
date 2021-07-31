@@ -1,0 +1,366 @@
+{
+   "data": [{
+      "idProduct": "220",
+      "idSubcategory": "8",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Angelina Mellowness",
+      "price": "245.00",
+      "images": "[{ \"id\": 217, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/angelina_mellowness_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "221",
+      "idSubcategory": "8",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Artemisa Happiness",
+      "price": "245.00",
+      "images": "[{ \"id\": 218, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/artemisa_happiness_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "223",
+      "idSubcategory": "8",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Bellamira Loveliness",
+      "price": "245.00",
+      "images": "[{ \"id\": 220, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/bellamira_loveliness_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "227",
+      "idSubcategory": "8",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Christina Sweetness",
+      "price": "245.00",
+      "images": "[{ \"id\": 224, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/christina_sweetness_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "229",
+      "idSubcategory": "8",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Constanza Wish",
+      "price": "245.00",
+      "images": "[{ \"id\": 226, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/constanza_wish_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "234",
+      "idSubcategory": "8",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Emelinne Softness",
+      "price": "245.00",
+      "images": "[{ \"id\": 231, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/emelinne_softness_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "239",
+      "idSubcategory": "8",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Hellen Shine",
+      "price": "245.00",
+      "images": "[{ \"id\": 236, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/hellen_shine_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "243",
+      "idSubcategory": "8",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Juliana Gentleness",
+      "price": "245.00",
+      "images": "[{ \"id\": 240, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/juliana_gentleness_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "253",
+      "idSubcategory": "8",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Virginia Soul",
+      "price": "245.00",
+      "images": "[{ \"id\": 250, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/virginia_soul_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "255",
+      "idSubcategory": "8",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Flora blooming",
+      "price": "245.00",
+      "images": "[{ \"id\": 233, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/flora_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "257",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Genesis adventure",
+      "price": "245.00",
+      "images": "[{ \"id\": 235, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/genesis_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "258",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Anastasia brilliance",
+      "price": "245.00",
+      "images": "[{ \"id\": 216, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/anastasia_brilliance_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "259",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Emma elegance",
+      "price": "245.00",
+      "images": "[{ \"id\": 232, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/emma_elegance_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "260",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Casandra passion",
+      "price": "245.00",
+      "images": "[{ \"id\": 222, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/casandra_passion_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "261",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Margot luxury",
+      "price": "245.00",
+      "images": "[{ \"id\": 244, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/margot_luxury_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "262",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Josephine touch",
+      "price": "245.00",
+      "images": "[{ \"id\": 238, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/josephine_touch_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "263",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Leonora blissful",
+      "price": "245.00",
+      "images": "[{ \"id\": 241, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/leonora_blissful_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "264",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Proscila bling",
+      "price": "245.00",
+      "images": "[{ \"id\": 247, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/priscila_bling_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "265",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Delilah purity",
+      "price": "245.00",
+      "images": "[{ \"id\": 228, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/delilah_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "266",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Amarina sightliness",
+      "price": "245.00",
+      "images": "[{ \"id\": 215, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/amarina_sightliness_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "268",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Eliza darling",
+      "price": "245.00",
+      "images": "[{ \"id\": 230, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/eliza_darling_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "269",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Beatrice dearness",
+      "price": "245.00",
+      "images": "[{ \"id\": 219, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/beatrice_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "270",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Isabella folklor",
+      "price": "245.00",
+      "images": "[{ \"id\": 237, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/isabella_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "271",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Elizabeth interior",
+      "price": "245.00",
+      "images": "[{ \"id\": 229, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/elizabeth_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "272",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Coralia peace",
+      "price": "245.00",
+      "images": "[{ \"id\": 227, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/coralia_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "273",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Mariane finesse",
+      "price": "245.00",
+      "images": "[{ \"id\": 245, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/mariane_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "274",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Victoria love",
+      "price": "245.00",
+      "images": "[{ \"id\": 249, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/victoria_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "275",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Scarlet beauty",
+      "price": "245.00",
+      "images": "[{ \"id\": 248, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/scarlet_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "276",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Zafrina garnishee",
+      "price": "245.00",
+      "images": "[{ \"id\": 251, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/zafirina_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "277",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Judith niceness",
+      "price": "245.00",
+      "images": "[{ \"id\": 239, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/judith_thumb.jpg\"},{ \"id\": 242, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/lilian_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "278",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Margaret magnificence",
+      "price": "245.00",
+      "images": "[{ \"id\": 243, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/margaret_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "279",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Charlotte grace",
+      "price": "245.00",
+      "images": "[{ \"id\": 223, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/charlotte_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "280",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Constantina splendor",
+      "price": "245.00",
+      "images": "[{ \"id\": 225, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/constantina_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "281",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Brisara charm",
+      "price": "245.00",
+      "images": "[{ \"id\": 221, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/brisara_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "282",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Frida vision",
+      "price": "245.00",
+      "images": "[{ \"id\": 234, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/frida_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }, {
+      "idProduct": "283",
+      "idSubcategory": "9",
+      "idProvider": "1",
+      "idHotel": "ZHBP",
+      "description": "Nohra flawless",
+      "price": "245.00",
+      "images": "[{ \"id\": 246, \"img\": \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/nohra_thumb.jpg\"}]",
+      "allowOnWishlist": "1",
+      "status": "1"
+   }],
+   "status": 200,
+   "error": false,
+   "message": "Resource Found"
+}

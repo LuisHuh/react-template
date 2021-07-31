@@ -1,0 +1,26 @@
+/* 
+ * Palace Icons v 1.0.0
+ * Made by Luis Enrique Huh Puc
+ * Private License
+ */
+ 
+$pr-brands: (
+	palace-crown: \f000,
+	palace-resorts: \f001,
+	moon-palace: \f002,
+	le-blanc: \f003,
+	palace-wedding: \f004,
+	tripadvisor: \f005,
+	four-diamond: \f006,
+	five-diamond: \f007,
+);
+
+
+@mixin icon-style-brand {
+	.#{$pr-css-prefix}b {
+		font-family: "Palace Icons";
+        font-weight: 600;
+        @include icon-core;
+        @include generate-contents($pr-css-prefix, $pr-brands);
+	}
+}

@@ -1,0 +1,116 @@
+//$loader-icon: "/../../../../img/clever/rose-slider.png";
+._input_range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 3px;
+    opacity: 1;
+    outline: none;
+    margin: 12px auto;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    //margin-bottom: 100px;
+
+    &::-webkit-slider-thumb {
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        height: 35px;
+        width: 35px;
+        background: url("https://e-commercepr.s3.amazonaws.com/assets/images/takethenextstep/rose-slider.png");
+        // background: url("https://img.icons8.com/color/48/000000/flower.png");//#abcedf;//url("./rose.png");
+        background-size: cover;
+        z-index:2;
+        position:relative;
+        background-color: transparent;
+        margin-top: -.2rem;
+        border: none;
+    }
+    
+    
+    &::-moz-range-thumb {
+        cursor: pointer;
+        height: 35px;
+        width: 35px;
+        background: url("https://e-commercepr.s3.amazonaws.com/assets/images/takethenextstep/rose-slider.png");
+        background-size: cover;
+        z-index: 2;
+        position: relative;
+        background-color: transparent; // F26193
+        border: none;
+        outline: none;
+        margin-top: -.2rem;
+    }
+
+    &::-ms-thumb {
+        height: 35px;
+        width: 35px;
+        background-color: transparent;
+        background: url("https://e-commercepr.s3.amazonaws.com/assets/images/takethenextstep/rose-slider.png");
+        background-size: contain;
+        border: none;
+        outline: none;
+    }
+    &::-ms-tooltip { display:none; border: none;}
+    
+    
+    /* .keyboard-focused &:focus:not(.active)::-moz-range-thumb {
+        box-shadow: 0 0 0 10px rgba($radio-fill-color, .26);
+    } */
+}
+
+._range_two{
+
+    &::-webkit-slider-thumb {
+        background: url("https://e-commercepr.s3.amazonaws.com/assets/images/takethenextstep/slider-selector.png");
+        background-repeat: no-repeat !important;
+        background-attachment: scroll !important;
+        background-position: center center !important;
+        z-index: auto;
+        background-size: cover !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        margin-top: .25rem;
+        height: 45/16+rem;
+        width: 45/16+rem;
+    }
+    
+    
+    &::-moz-range-thumb {
+        background: url("https://e-commercepr.s3.amazonaws.com/assets/images/takethenextstep/slider-selector.png");
+        background-repeat: no-repeat !important;
+        background-attachment: scroll !important;
+        background-position: center center !important;
+        z-index: auto;
+        background-size: cover !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        margin-top: .25rem;
+        height: 45/16+rem;
+        width: 45/16+rem;
+    }
+
+    &::-ms-thumb {
+        background: url("https://e-commercepr.s3.amazonaws.com/assets/images/takethenextstep/slider-selector.png");
+        background-repeat: no-repeat !important;
+        background-attachment: scroll !important;
+        background-position: center center !important;
+        z-index: auto;
+        background-size: cover !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        margin-top: .25rem;
+        height: 45/16+rem;
+        width: 45/16+rem;
+    }
+    &::-ms-tooltip { display:none; border: none;}
+    
+    
+}
+.alignInputFlex{
+    align-self: flex-end
+}

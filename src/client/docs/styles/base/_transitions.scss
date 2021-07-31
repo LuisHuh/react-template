@@ -1,0 +1,120 @@
+/**
+ * Transiciones y efectos
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Concentra las transiciones y los efectos
+ */
+
+////
+/// @group base
+////
+
+// Change Image
+@-webkit-keyframes changeImage {
+	0% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 0.25;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	75% {
+		opacity: 0.75;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes changeImage {
+	0% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 0.25;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	75% {
+		opacity: 0.75;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slide-to-left {
+	from {
+		transform: translateX(0);
+		filter: opacity(1);
+	}
+	to {
+		transform: translateX(-50px);
+		filter: opacity(0);
+	}
+}
+
+@keyframes slide-to-right {
+	from {
+		transform: translateX(0);
+		filter: opacity(1);
+	}
+	to {
+		transform: translateX(50px);
+		filter: opacity(0);
+	}
+}
+
+@keyframes slide-to-up {
+	from {
+		margin-top: 50px;
+		filter: opacity(0);
+	}
+	to {
+		margin-top: 0px;
+		filter: opacity(1);
+	}
+}
+
+@keyframes slide-to-down {
+	from {
+		transform: translateY(-50px);
+		filter: opacity(0);
+	}
+	to {
+		transform: translateY(0px);
+		filter: opacity(1);
+	}
+}
+
+@keyframes spinning {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+//  @keyframes slide-left{
+// 	0%{
+// 	   transform: translateX(50px);
+// 	   opacity: 0;
+// 	}
+
+// 	100%{
+// 	   transform: translateX(0px);
+// 	   opacity: 1;
+// 	}
+//  }

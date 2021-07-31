@@ -1,0 +1,72 @@
+$light-gray: #f1edeee6 !default;
+$dark-gray: #6d6d6d !default;
+$rosy-pink: #ea8685 !default;
+
+@mixin wedding-gallery-style {
+	.left,
+	.right {
+		display: block !important;
+	}
+
+	.overflow-tab {
+		width: 90% !important;
+	}
+	
+	.waterfall {
+		padding: 10px 65px;
+		-webkit-column-count: 3;
+		-webkit-column-gap: 10px;
+		-webkit-column-fill: auto;
+		-moz-column-count: 3;
+		-moz-column-gap: 4px;
+		-moz-column-fill: auto;
+		column-count: 4;
+		@media screen and (max-width: 768px) {
+			column-count: 3;
+			-webkit-column-count: 3;
+		}
+		@media screen and (max-width: 39.9375em) {
+			column-count: 2;
+			padding: 10px 8px;
+		}
+
+		column-gap: 5px;
+		column-fill: auto;
+		.block {
+			background-color: $white;
+			display: block;
+			word-wrap: break-word;
+			padding: 5px 5px;
+			-webkit-column-break-inside: avoid;
+			-moz-column-break-inside: avoid;
+			border: solid 1px $light-gray;
+			margin-bottom: 5px;
+		}
+
+		.block:hover {
+			box-shadow: 0px 0px 20px 0px $light-gray;
+			transition: 1s;
+		}
+		header {
+			h1 {
+				font-size: 2rem !important;
+				margin-top: 0 !important;
+				margin-bottom: 0 !important;
+			}
+			h2 {
+				font-size: 1.5rem !important;
+			}
+			@media screen and (max-width: 39.9375em) {
+				h1,
+				h2 {
+					font-size: 21px !important;
+				}
+			}
+		}
+		.checkbox svg {
+			margin-top: 0.8rem;
+			margin-left: 0.6rem;
+			position: absolute;
+		}
+	}
+}

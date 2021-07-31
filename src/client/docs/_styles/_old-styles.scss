@@ -1,0 +1,22 @@
+/**
+* CSS Framework for Sites by Palace Resorts
+* Version 1.0.0
+* https://www.palaceresorts.com/
+* Licensed under MIT Open Source
+*/
+
+// --- Base ---
+// Se importan todos los componentes
+@import 'catalog/global';
+@import 'base';
+@import './../../temp/colors.scss';
+
+// --- Initialization ---
+
+@import './../../temp/footer/awardandlink.scss';
+@import './../../temp/footer/commonlink.scss';
+@import './../../temp/footer/footer.scss';
+@import './../../temp/footer/formnewsletter.scss';
+@import './../../temp/wirefragment/iconwedd.scss';
+@import './../../temp/wirefragment/input.scss';
+@import './../../temp/wirefragment/titlesection.scss';

@@ -1,0 +1,14 @@
+// Variables
+// --------------------------
+
+$pr-font-path:         "#{$typography-path}/palace" !default;
+$pr-font-size-base:    16px !default;
+$pr-font-display:      auto !default;
+$pr-css-prefix:        pr !default;
+$pr-version:           "1.0.0" !default;
+$pr-border-color:      #eee !default;
+$pr-inverse:           #fff !default;
+$pr-li-width:          2em !default;
+$pr-fw-width:          (20em / 16);
+$pr-primary-opacity:   1 !default;
+$pr-secondary-opacity: .4 !default;

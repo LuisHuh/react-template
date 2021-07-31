@@ -1,0 +1,11 @@
+{
+   "data": {
+      "total": "1590.00",
+      "pendiente": "840.00",
+      "pagado": "750.00",
+      "porcentaje": "47.169811"
+   },
+   "message": "OK",
+   "code": 200,
+   "error": false
+}

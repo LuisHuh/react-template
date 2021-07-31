@@ -1,0 +1,161 @@
+/**
+ * @page general
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Aplica solo para plantilla de wedding
+ */
+
+////
+/// @group page
+////
+
+[theme] {
+	.brand i {
+		color: get-color("gray") !important;
+		vertical-align: middle;
+	}
+
+	.top-bar + * {
+		@include large-screen {
+			// margin-top: 75px;
+		}
+		@include medium-screen-down {
+			// margin-top: $navbar-height-mobile;
+		}
+	}
+
+	.bkt-cover-container {
+		min-height: auto;
+		background-size: 100% calc((100vw * 420) / 640);
+		background-position: top;
+
+		.header-movil {
+			padding: 1rem;
+		}
+
+		.back-white {
+			background-color: white;
+		}
+
+		.back-name {
+			background-color: #ffffffcc;
+		}
+
+		.general-panel-large {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		[component="countdown-timer"] {
+			font-size: 20px;
+			[widget="label"] {
+				font-size: 12px;
+			}
+
+			@include medium-screen() {
+				font-size: 30px;
+				[widget="label"] {
+					font-size: 18px;
+				}
+			}
+		}
+		.section-information-weddings {
+			background-color: get-color("primary");
+			color: white;
+
+			@include large-screen() {
+				background-color: get-color("secondary");
+				color: black;
+				i{
+					color: get-color("primary");
+				}
+			}
+		}
+
+		@include medium-screen() {
+			background-size: 100% calc((100vw * 550) / 1920);
+		}
+	}
+
+	[component="sidebar"] {
+		[menuitem].active::before {
+			@media screen and (max-width: 39.9375em) {
+				bottom: -10px;
+			}
+		}
+	}
+
+	.btn-back{
+		&::after{
+			content: ' \1438';
+			font-size: 0.7rem;
+
+			@include large-screen{
+				font-size: 1.1rem;
+			}
+		}
+	}
+}
+
+[theme="wedding-theme"] {
+	[component="grid-container"] {
+		padding: 0;
+	}
+
+	.desktop-banner {
+		display: none;
+	}
+
+	@include medium-screen() {
+		.desktop-banner {
+			display: block;
+		}
+
+		.mobile-banner {
+			display: none;
+		}
+	}
+
+	section[name="status-payment"] {
+		text-align: center;
+		[class^="sp-"]{
+			text-transform: uppercase;
+		}
+
+		.sp-paid {
+			color: get-color("primary");
+		}
+	}
+}
+
+[theme="public-theme"] {
+	[component="footer"] section.resort-section,
+	[component="footer"] section.resort-section .privacy-policies {
+		margin-bottom: auto;
+	}
+}
+
+[theme="catalog-theme"] {
+	.desktop-banner {
+		display: none;
+		@include medium-screen() {
+			display: block;
+		}
+	}
+	.movil-banner {
+		@include medium-screen() {
+			display: none;
+		}
+	}
+
+	[component="gradient-navbar"] {
+		a {
+			margin: 0;
+			padding: 0;
+			p {
+				margin-left: 0;
+			}
+		}
+	}
+}

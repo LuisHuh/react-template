@@ -1,0 +1,61 @@
+/* * * * * * * *
+* TOAST STYLE  *
+* * * * * * * */
+
+/// Color de fondo del Toast.
+/// @type Color
+$toast-background-color: rgba(0, 0, 0, 0.5) !default;
+
+/// Color de texto del Toast.
+/// @type Color
+$toast-color: white !default;
+
+/// Tamaño de las esquinas de los bordes del Toast.
+/// @type Number
+$toast-border-radius: 2px !default;
+
+/* #region TOAST*/
+@mixin web-toast {
+	#toast-container {
+		display: block;
+		position: fixed;
+		z-index: 10000;
+		min-width: 100%;
+		bottom: calc(0% + 60px);
+
+        
+		@include medium-screen {
+            left: 3%;
+			max-width: 90%;
+            min-width: auto;
+		}
+
+		@include large-screen {
+			top: calc(0% + 100px);
+            left: auto;
+			right: 3%;
+			max-width: 86%;
+		}
+	}
+
+	[component="toast"] {
+        top: 35px;
+		width: 100%;
+		margin-top: 10px;
+		position: relative;
+		max-width: 100%;
+		height: auto;
+		min-height: 48px;
+		line-height: 1.5em;
+		background-color: $toast-background-color;
+		padding: 10px 25px;
+		color: $toast-color;
+		border-radius: 0;
+        @include flex(space-between, center);
+		cursor: default;
+        
+        @include medium-screen {
+            border-radius: $toast-border-radius;
+		}
+	}
+}

@@ -1,0 +1,116 @@
+
+
+[component="newletter"] {
+    background-color: get-color('secondary');
+    text-align: center;
+    font-family: 'PlayfairDisplay';
+    font-weight: 300;
+    padding: 1.125rem 1rem;
+    text-transform: none;
+
+    .text-paris {
+        color: get-color('brown');
+        font-size: 1.6rem;
+    }
+
+    .text-rosy {
+        letter-spacing: .4px;
+        font-size: 1.48rem;
+        color: get-color('primary');
+        display: block;
+        font-style: normal;
+        font-stretch: normal;
+        text-align: center;
+        margin-bottom: .375rem;
+    }
+
+    .text-rosy-a {
+        color: get-color('primary') !important;
+        &:hover {
+            color: $rosy-pink;
+            text-decoration: underline;
+        }
+    }
+    .input-group {
+        text-align: center;
+        margin: 0 auto;
+    }
+    p {
+        font-family: Avenir;
+        font-stretch: condensed;
+        font-style: normal;
+        line-height: normal;
+    }
+    @media (min-width: 1024px) {
+        .text-paris {
+            font-size: 22px;
+            display: inline-block;
+        }
+        .text-rosy {
+            font-size: 22px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.5;
+            text-align: center;
+            display: inline-block;
+        }
+
+    }
+
+    @media (min-width: 1200px) {
+        padding: 20px;
+
+        .input-group {
+            margin-top: 5px;
+            margin-left: 30px;
+            input {
+                font-size: 22px;
+            }
+        }
+
+        .text-paris,
+        .text-rosy {
+            font-size: 27px;
+        }
+
+    }
+
+    @media (min-width: 1366px) {
+        .text-paris, .text-rosy {
+            font-size: 29px;
+        }
+    }
+
+    div.terminos {
+        text-align: center;
+        margin: 0 auto;
+
+        label {
+            color: get-color('brown');
+            font-family: 'Avenir';
+            font-size: 1.18rem;
+            display: block;
+            height: auto;
+            margin-bottom: 1em;
+            text-align: left;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        button {
+            font-size: 1.27rem;
+            height: auto;
+            padding: .75rem 1rem .5625rem;
+            font-weight: 700;
+            font-family: 'Avenir';
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            transition: .3s;
+        }
+    }
+}

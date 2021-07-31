@@ -1,0 +1,189 @@
+/**
+ * @mixin web-list-view
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Colleccion de elementos.
+ */
+
+////
+/// @group listview
+////
+
+/// Establece si el color de los elementos se alternaran
+/// @type Boolean
+$listview-collapse: false !default;
+
+/// Establece el tamaño de redondeado del borde de la lista
+/// @type Color
+$listview-border-radius: 2px !default;
+
+/// Color de fondo de la lista
+/// @type Color
+$listview-background: #fff !default;
+
+/// Color de text de la lista
+/// @type Color
+$listview-color: #2c2c2c !default;
+
+/// Color de las lineas divisoras de la lista
+/// @type Color
+$listview-color-line: #e0e0e0 !default;
+
+/// Color de border del contenedor de la lista
+/// @type Color
+$listview-border-color: #e0e0e0 !default;
+
+/// Color de fondo del icono de la lista
+/// @type Color
+$listview-background-icon: #999 !default;
+
+/// Color de texto del icono de la lista
+/// @type Color
+$listview-color-icon: #fff !default;
+
+/// Color de fondo del elemento seleccionado de la lista
+/// @type Color
+$listview-active-background: #26a69a !default;
+
+/// Color de texto del elemento seleccionado de la lista
+/// @type Color
+$listview-active-color: #eafaf9 !default;
+
+/// Color de los enlaces de la lista
+/// @type Color
+$listview-link-color: #26a69a !default;
+
+/// Color de fondo del encabezado de la lista
+/// @type Color
+$listview-header-background: $listview-background !default;
+
+/// Color de texto del encabezado de la lista
+/// @type Color
+$listview-header-color: $listview-color !default;
+
+/// Color de texto del encabezado de la lista
+/// @type Color
+$listview-header-color-line: $listview-color-line !default;
+
+@mixin base-listview {
+	margin: 0.5rem 0 1rem 0;
+	@if $listview-collapse == true {
+		border-top: 1px solid $listview-border-color;
+		border-bottom: 1px solid $listview-border-color;
+	}@else{
+		border: 1px solid $listview-border-color;
+	}
+	border-radius: $listview-border-radius;
+	overflow: hidden;
+	position: relative;
+	list-style: none;
+}
+
+@mixin listview-option {
+	background-color: white;
+	@if $listview-collapse == true {
+		&:nth-child(odd) {
+			background-color: $listview-background;
+			color: $listview-color;
+		}
+	} @else {
+		background-color: $listview-background;
+		color: $listview-color;
+	}
+	line-height: 1.5rem;
+	padding: 10px 20px;
+	margin: 0;
+
+	&:not(:last-of-type) {
+		border-bottom: 1px solid $listview-color-line;
+	}
+
+	&.active {
+		background-color: $listview-active-background;
+		color: $listview-active-color;
+	}
+
+	&.avatar {
+		min-height: 84px;
+		padding-left: 72px;
+		position: relative;
+
+		.avatar {
+			position: absolute;
+			width: 42px;
+			height: 42px;
+			overflow: hidden;
+			left: 15px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		i.avatar {
+			font-size: 18px;
+			line-height: 42px;
+			color: $listview-color-icon;
+			background-color: $listview-background-icon;
+			text-align: center;
+		}
+
+		p {
+			margin: 0;
+			padding: 0;
+			&:not(:first-of-type) {
+				padding-top: 5px;
+			}
+		}
+	}
+}
+
+@mixin listview-a-option {
+	display: block;
+	transition: 0.25s;
+	color: $listview-link-color;
+}
+
+@mixin listview-header-option {
+	background-color: $listview-header-background;
+	color: $listview-header-color;
+	border-bottom: 1px solid $listview-header-color-line;
+	padding: 10px 20px;
+}
+
+@mixin listview-content($selector) {
+	.avatar #{$selector} {
+		margin-left: 10px;
+	}
+
+	#{$selector} {
+		float: right;
+
+		.picture {
+			width: auto;
+			height: 57px;
+		}
+	}
+}
+
+@mixin web-list-view {
+	[component="list-view"] {
+		@include base-listview;
+
+		a {
+			@include listview-a-option;
+		}
+
+		[component="list-header"] {
+			@include listview-header-option;
+
+			~ [component="list-item"] {
+				padding-left: 30px;
+			}
+		}
+
+		[component="list-item"] {
+			@include listview-option;
+		}
+
+		@include listview-content('[component="list-content"]');
+	}
+}

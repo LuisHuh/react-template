@@ -1,0 +1,25 @@
+.our-resorts {
+  display: flex;
+  flex-direction: column;
+  background: url('https://e-commercepr.s3.amazonaws.com/Calidad/imagenes/menu/Flores.png') right no-repeat;
+  background-size: 100px 365px;
+  background-attachment: local;
+  padding: 0.5em 0;
+  text-transform: uppercase;
+  background-color: #FFF;
+
+  [menuitem] {
+    padding: 0.8em 0;
+    margin: 0 8.5em 0 0.2em;
+    display: inline-block;
+    border-bottom: 1px solid lighten($graytext, 50);
+    font-size: 1.125rem;
+    &.active {
+      border-bottom: 2px solid $pinktext;
+    }
+    &.nav-external {
+      padding-left: 1.8125rem;
+      margin: 0 0.2em 0 0.2em;
+    }
+  }
+}

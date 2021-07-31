@@ -1,0 +1,58 @@
+// CSS Framework for Sites by Palace Resorts
+// https://www.palaceresorts.com/
+// Licensed under MIT Open Source
+
+////
+/// @group classes
+////
+
+%clearfix {
+	position: relative;
+
+	&:before,
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+////
+/// Crea las clases para la alineacion del contenido en modo flexbox
+////
+@mixin create-align-items($list) {
+	@each $key, $val in $list {
+		.align-#{$key} {
+			align-items: $val;
+		}
+	}
+}
+
+////
+/// Genera las clases para el tamaño de la tipografia
+/// @param {Number} $start Marca el inicio del intervalo
+/// @param {Number} $end Marca el fin del intervalo
+/// @param {Number} $interval Indica como sera la secuencia
+/// @param {px|rem|em} $unit Unidad de medida
+////
+@mixin create-font-sizes($start: 0, $end: 1, $interval: 2, $unit: px) {
+	@for $current from $start to $end + 1{
+		@if $current % $interval == 0 {
+			.sm-f#{$current}x{
+				font-size: $current + $unit !important;
+			}
+
+			@include medium-screen(){
+				.md-f#{$current}x{
+					font-size: $current + $unit !important;
+				}
+			}
+
+			@include large-screen(){
+				.lg-f#{$current}x{
+					font-size: $current + $unit !important;
+				}
+			}
+		}
+	}
+}

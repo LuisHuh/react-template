@@ -1,0 +1,151 @@
+{
+	
+	"data": [
+        {
+		"idCategory": "1",
+		"cover": "https://s3.amazonaws.com/webfiles_palace/clever/events/assets/cover-amada.jpg",
+		"nombre": "Bloom",
+		"description": "Bloom",
+		"enable_online": "0",
+		"status": "0",
+		"orden_comercial": "9",
+		"direccion": "1",
+		"extra": "{\"banner\": [[\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/banner-bloom.jpg\", \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/banner-bloom_thumb.jpg\"], [\"https: //s3.amazonaws.com/webfiles_palace/clever/products/assets/banner-bloom_mobile.jpg\", \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/banner-bloom_mthumb.jpg\"]]}",
+		"segmento_negocio": "vw_to_bloom"
+	}, {
+		"idCategory": "2",
+		"cover": "https://e-commercepr.s3.amazonaws.com/assets/images/home/Desktop/nohra-flawless.png",
+		"nombre": "Delight",
+		"description": "Cake",
+		"enable_online": "1",
+		"status": "1",
+		"orden_comercial": "1",
+		"direccion": "1",
+		"extra": "{\"logo\": [\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/logo-business-delight.png\",\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/logo-business-delight_thumb.png\"], \"banner\": [[\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/delight_banner_1920x550px.jpg\", \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/delight_banner_1920x550px_thumb.jpg\"], [\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/delight_banner_640x320px.jpg\", \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/delight_banner_640x320px_thumb.jpg\"]], \"portadadesk\": [\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/delight_banner_1920x550px.jpg\"], \"portadamov\": [\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/delight_banner_640x320px.jpg\"]}",
+		"segmento_negocio": "vw_to_delight"
+	}, {
+		"idCategory": "3",
+		"cover": " ",
+		"nombre": "Beauty Parlor",
+		"description": "Beauty Parlor",
+		"enable_online": "0",
+		"status": "1",
+		"orden_comercial": "9",
+		"direccion": "1",
+		"extra": "\"{}\"",
+		"segmento_negocio": "vw_to_beauty_parlor"
+	}, {
+		"idCategory": "4",
+		"cover": "https://e-commercepr.s3.amazonaws.com/Calidad/imagenes/home/Desktop/dj-set-quantum.png",
+		"nombre": "Quantum",
+		"description": "Audiovisual",
+		"enable_online": "1",
+		"status": "1",
+		"orden_comercial": "3",
+		"direccion": "1",
+		"extra": "{\"logo\": [\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/logo-business-quantum.png\", \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/logo-business-quantum_thumb.png\"], \"banner\": [[\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/quantum_banner1920x550px.jpg\", \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/quantum_banner1920x550px_thumb.jpg\"], [\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/quantum_banner_640x320px.jpg\", \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/quantum_banner_640x320px_thumb.jpg\"]]}",
+		"segmento_negocio": "vw_to_quantum"
+	}, {
+		"idCategory": "5",
+		"cover": "https://e-commercepr.s3.amazonaws.com/assets/images/home/Desktop/evoke-decoration.png",
+		"nombre": "Evoke",
+		"description": "Decoration",
+		"enable_online": "1",
+		"status": "1",
+		"orden_comercial": "4",
+		"direccion": "1",
+		"extra": "{\"logo\": [\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/logo-business-evoke.png\", \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/logo-business-evoke_thumb.png\"], \"banner\": [[\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/evoke_banner_1920x550px.jpg\", \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/evoke_banner_1920x550px_thumb.jpg\"], [\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/evoke_banner_640x320px.jpg\", \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/evoke_banner_640x320px_thumb.jpg\"]]}",
+		"segmento_negocio": "vw_to_evoke"
+	}, {
+		"idCategory": "6",
+		"cover": " ",
+		"nombre": "Entertainment",
+		"description": "Entertainment",
+		"enable_online": "0",
+		"status": "1",
+		"orden_comercial": "9",
+		"direccion": "1",
+		"extra": "\"{}\"",
+		"segmento_negocio": "vw_to_entertainment"
+	}, {
+		"idCategory": "7",
+		"cover": " ",
+		"nombre": "Others",
+		"description": "Others",
+		"enable_online": "0",
+		"status": "1",
+		"orden_comercial": "9",
+		"direccion": "1",
+		"extra": "\"{}\"",
+		"segmento_negocio": "vw_to_others"
+	}, {
+		"idCategory": "8",
+		"cover": " ",
+		"nombre": "Design",
+		"description": "Departamento de diseño",
+		"enable_online": "0",
+		"status": "1",
+		"orden_comercial": "9",
+		"direccion": "2",
+		"extra": "\"{}\"",
+		"segmento_negocio": "vw_to_design"
+	}, {
+		"idCategory": "9",
+		"cover": " ",
+		"nombre": "Food & Beverages",
+		"description": "Alimentos y bebidas",
+		"enable_online": "0",
+		"status": "1",
+		"orden_comercial": "9",
+		"direccion": "1",
+		"extra": "\"{}\"",
+		"segmento_negocio": "vw_to_food_beverages"
+	}, {
+		"idCategory": "10",
+		"cover": " ",
+		"nombre": "Photo & Video",
+		"description": "Foto y video",
+		"enable_online": "0",
+		"status": "1",
+		"orden_comercial": "9",
+		"direccion": "1",
+		"extra": "\"{}\"",
+		"segmento_negocio": "vw_to_photo_video"
+	}, {
+		"idCategory": "11",
+		"cover": null,
+		"nombre": "Palace resorts wedding inspirations ",
+		"description": "Palace resorts wedding inspirations ",
+		"enable_online": "0",
+		"status": "1",
+		"orden_comercial": "9",
+		"direccion": "1",
+		"extra": "\"{}\"",
+		"segmento_negocio": ""
+	}, {
+		"idCategory": "12",
+		"cover": "https://e-commercepr.s3.amazonaws.com/assets/images/home/Desktop/amada-bouquet.png",
+		"nombre": "Amada",
+		"description": "Flores",
+		"enable_online": "1",
+		"status": "1",
+		"orden_comercial": "2",
+		"direccion": "1",
+		"extra": "{\"logo\": [\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/logo-business-amada.png\", \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/logo-business-amada_thumb.png\"], \"banner\": [[\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/amada_banner_1920x550px.jpg\", \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/amada_banner_1920x550px_thumb.jpg\"], [\"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/amada_banner_640x320px.jpg\", \"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/amada_banner_640x320px_thumb.jpg\"]]}",
+		"segmento_negocio": "vw_to_amada"
+	}, {
+		"idCategory": "13",
+		"cover": " ",
+		"nombre": "Fireworks",
+		"description": "Fireworks",
+		"enable_online": "0",
+		"status": "1",
+		"orden_comercial": "9",
+		"direccion": "1",
+		"extra": "\"{}\"",
+		"segmento_negocio": "vw_to_fireworks"
+	}],
+	"message": "Offline mode",
+	"code": 200,
+	"error": false
+}

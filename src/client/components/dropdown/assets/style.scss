@@ -1,0 +1,172 @@
+// Variables
+// ---------------------
+// Media Query Ranges
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$extra-large-and-up: "only screen and (min-width : #{$large-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+// Color
+$text-color: #3a3a3a;
+$gray-color: #7d7d7d;//a2a2a2
+$background-color: #eceff1;
+$toolbar-background: white;
+$clear-width: 40px;
+$left-icon: 7px;
+$item-height: 60px;
+$item-border-radius: 6px;
+$swith-color: #26a69a;
+$swith-size: 20px;
+
+// Media Queries
+@mixin medium-screen {
+   @media #{$medium-and-up} {
+      @content;
+   }
+}
+@mixin large-screen {
+   @media #{$large-and-up} {
+      @content;
+   }
+}
+@mixin extra-large-screen {
+   @media #{$extra-large-and-up} {
+      @content;
+   }
+}
+
+%clearfix {
+   &::before,
+   &::after {
+      content: "";
+      display: table;
+      clear: both;
+   }
+}
+
+%box-shadow{
+   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
+              0 3px 1px -2px rgba(0,0,0,0.12),
+              0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+// Dropdown
+// ----------------------
+[component="btn-trigger"]{
+   border: none;
+   border-radius: 2px;
+   display: inline-block;
+   height: 36px;
+   line-height: 36px;
+   padding: 0 16px;
+   text-transform: uppercase;
+   vertical-align: middle;
+   -webkit-tap-highlight-color: transparent;
+   font-size: 14px;
+   outline: none;
+   text-decoration: none;
+   color: #fff;
+   background-color: $swith-color;
+   text-align: center;
+   letter-spacing: .5px;
+   transition: background-color .2s ease-out;
+   cursor: pointer;
+   @extend %box-shadow;
+
+   &:focus,
+   &:active,
+   &:hover{
+      outline: none;
+      color: #fff;
+      background-color: darken($swith-color, 5%);
+   }
+}
+
+[component="dropdown-list"]{
+   background-color: #fff;
+   margin: 0;
+   display: none;
+   min-width: 100px;
+   overflow-y: auto;
+   opacity: 0;
+   position: absolute;
+   left: 0;
+   top: 0;
+   z-index: 9999;
+   transform-origin: 0 0;
+   padding-left: 0;
+   list-style-type: none;
+   @extend %box-shadow;
+
+   li{
+      cursor: pointer;
+      clear: both;
+      color: rgba(0,0,0,0.87);
+      min-height: 30px;
+      line-height: 1.5rem;
+      width: 100%;
+      text-align: left;
+      list-style-type: none;
+      outline: none;
+
+      &.divider{
+         min-height: 0;
+         height: 1px;
+         overflow: hidden;
+         background-color: #e0e0e0;
+      }
+
+      a, span{
+         font-size: 16px;
+         color: #26a69a;
+         display: block;
+         line-height: 22px;
+         padding: 5px 7px;
+         text-decoration: none;
+         text-transform: capitalize;
+         -webkit-tap-highlight-color: transparent;
+      }
+
+      &:hover,
+      &:active{
+         background-color: #eee;
+      }
+
+      &.active{
+         background-color: rgba(0,0,0,0.03);
+      }
+
+      &:hover,
+      &:focus {
+         background-color: rgba(0,0,0,0.08);
+      }
+   }
+}
+
+// Select
+[component="select"]{
+   position: relative;
+   .caret{
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      z-index: 0;
+      fill: $gray-color;
+   }
+}
+
+// Autocomplete
+[component="autocomplete"]{
+   position: relative;
+}

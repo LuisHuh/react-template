@@ -1,0 +1,71 @@
+/**
+* CSS Framework for Sites by Palace Resorts
+* Version 1.0.0
+* https://www.palaceresorts.com/
+* Licensed under MIT Open Source
+*/
+
+////
+// Se importa la base del tema
+////
+@import 'variables/wedding-variables';
+@import 'theme';
+@import '../pages/pages';
+@import '../layouts/all';
+
+////
+// Initialization
+////
+
+// Colors
+@include create-colors($web-palette);
+
+// Fonts
+@include web-typography;
+
+// Icons
+@include awesome-icon-classes($fa-solid: true, $fa-regular: true, $fa-brand: true);
+@include foundation-icon-classes;
+@include all-palace-icons;
+
+// Flex Grid
+@include foundation-xy-grid-classes();
+
+// Form Inputs
+@include web-form-text;
+@include web-checkbox;
+
+
+// Components
+@include lazy-image;
+@include lazy-cover;
+@include foundation-button;
+@include foundation-visibility-classes;
+@include web-menubar;
+@include web-menu-lateral;
+@include web-countdown-timer;
+@include web-card;
+@include web-panel;
+@include web-section-group;
+@include web-tag;
+@include web-table;
+@include web-collapsible-table;
+@include web-collapsible(false);
+@include web-list-view;
+@include web-dropdown;
+@include web-context-menu;
+@include web-badge;
+@include horizontal-progressbar;
+@include progressbar-circle;
+@include amount;
+@include login_view;
+@include table-my-cart;
+@include change_password;
+@include padding-card;
+@include web-modal;
+@include web-toast;
+@include pay-balance;
+@include profile-general-info;
+@include profile-billing-address;
+
+// @include vertical-progress;

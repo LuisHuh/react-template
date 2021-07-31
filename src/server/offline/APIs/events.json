@@ -1,0 +1,61 @@
+{
+   "data": [
+      {
+         "idevent_evento": "228",
+         "idclv_propiedad": "ZMNI",
+         "id_opera": "7361507",
+         "id_group": "99",
+         "idevent_tipo_evento": "9",
+         "description": "Cart",
+         "blockcode": "9864W10762",
+         "status": "1",
+         "type": {
+            "idevent_tipo_evento": "9",
+            "descripcion": "Shopping",
+            "usuario_creacion": "lhuh",
+            "fecha_creacion": "2019-12-02 17:00:15",
+            "usuario_ultima_modificacion": "",
+            "fecha_ultima_modificacion": "2019-12-02 17:00:15",
+            "estado": "1",
+            "default_event_tipo": "0"
+         },
+         "pago": {
+            "idevent_evento": "228",
+            "total": "350.00",
+            "paid": "0.00",
+            "balance": "350.00",
+            "percent": "0.000000"
+         }
+      },
+      {
+         "idevent_evento": "234",
+         "idclv_propiedad": "ZMNI",
+         "id_opera": "7361507",
+         "id_group": "99",
+         "idevent_tipo_evento": "1",
+         "description": "My Wedding Breakfast",
+         "blockcode": "9864W10762",
+         "status": "1",
+         "type": {
+            "idevent_tipo_evento": "1",
+            "descripcion": "WEDDING BREAKFAST",
+            "usuario_creacion": "apena",
+            "fecha_creacion": "0000-00-00 00:00:00",
+            "usuario_ultima_modificacion": "apena",
+            "fecha_ultima_modificacion": "2019-10-29 16:25:05",
+            "estado": "1",
+            "default_event_tipo": "0"
+         },
+         "pago": {
+            "idevent_evento": "234",
+            "total": "1090.00",
+            "paid": "600.00",
+            "balance": "490.00",
+            "percent": "55.045872"
+         }
+      }
+   ],
+   "message": "OK",
+   "code": 200,
+   "error": false
+}

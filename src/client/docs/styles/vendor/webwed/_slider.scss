@@ -1,0 +1,220 @@
+.slider {
+  position: relative;
+  .ItemSlider section * ,.ItemSlider div *{
+    transition: .5s;
+  }
+  .ItemSlider {
+    position: relative !important;
+    left: 0px;
+  }
+
+  .controlArrow {
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+
+    .moveBefore,
+    .moveAfter {
+      position: absolute;
+    }
+  }
+
+  .moveBefore {
+    left: 0px;
+  }
+
+  .moveAfter {
+    right: 0px;
+  }
+
+  .items img {
+    width: 100%;
+  }
+
+  .contentSlider {
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    position: relative;
+  }
+
+  @media (min-width: 1025px) {
+
+    .controlPoints {
+      display: inline-flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .controlPoints * {
+      width: 16px;
+      height: 16px;
+      background-color: #f86290;
+      background-color: var(--light-melon);
+      color: #f86290;
+      color: var(--light-melon);
+      margin-left: 9.5px;
+      margin-right: 9.5px;
+      border-radius: 50%;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      font-size: 2px;
+    }
+
+    .activePoint {
+      //background-color: var(--dark-gray);
+      background-color: #63494a;
+      transition: 0.5s;
+    }
+
+    .ocultar {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 1024px) and (min-width: 0px) {
+    .controlPoints {
+      display: inline-flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .controlPoints * {
+      transition: 0.5s;
+      width: (6/3.2) + vw;
+      height: (6/3.2) + vw;
+      background-color: #f86290;
+      background-color: var(--light-melon);
+      color: #f86290;
+      color: var(--light-melon);
+      margin-left: (4.75/3.2) + vw;
+      margin-right: (4.75/3.2) + vw;
+      border-radius: 50%;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .activePoint {
+      background-color: var(--dark-gray);
+      transition: 0.5s;
+    }
+  }
+}
+
+.slider-sample-test {
+  .contentSlider {
+    background-color: #0000004d;
+  }
+
+  /*  .ItemSlider *{
+    transition: .5s;
+  }*/
+  .ItemSlider.active {
+    width: 240px;
+    height: 240px;
+    margin-top: 0px;
+  }
+
+  .ItemSlider {
+    margin-top: 17px;
+    width: 220px;
+    height: 200px;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+
+    section {
+      height: 100%;
+      width: 100%;
+
+      div {
+        display: flex;
+        font-size: 40px;
+        text-shadow: 0px 0px 6px black;
+        justify-content: center;
+        height: max-content;
+        margin: auto;
+      }
+    }
+  }
+    @media (max-width : 1024px) {
+      #sample-test {
+        position: relative;
+        position: relative;
+        left: -177px;
+      }
+    }
+
+    .contentSlider {
+      width: 960px;
+    }
+
+    #sample-test-0>section {
+      background-color: red;
+    }
+
+    #sample-test-1>section {
+      background-color: blue;
+    }
+
+    #sample-test-2>section {
+      background-color: blueviolet;
+    }
+
+    #sample-test-3>section {
+      background-color: steelblue;
+    }
+
+    #sample-test-4>section {
+      background-color: brown;
+    }
+
+    #sample-test-5>section {
+      background-color: aqua;
+    }
+
+    #sample-test-6>section {
+      background-color: coral;
+    }
+
+    #sample-test-7>section {
+      background-color: darkslategray;
+    }
+
+    #sample-test-8>section {
+      background-color: lime;
+    }
+
+    #sample-test-9>section {
+      background-color: white;
+    }
+  }
+
+  .sample {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+  }
+  .div-sample{
+    background-color: red;
+    @include vwvh("width", 320);
+    @include vwvh("height", 120);
+  }
+
+  .with-form-sample {
+    width: (60/3.2)+vw;
+    height: (60/3.2)+vw;
+    background-color: red;
+  }
+
+  .with-form-em {
+    @include vwvh("height", 60, "!important");
+    @include vwvh("width", 60);
+    background-color: red;
+  }

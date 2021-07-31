@@ -1,0 +1,253 @@
+// CSS Framework for Sites by Palace Resorts
+// https://www.palaceresorts.com/
+// Licensed under MIT Open Source
+
+////
+/// @group mixins
+////
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		display: table; // 2
+		content: " "; // 1
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin ul(
+	$enable-link: true,
+	$padding-inline: 0,
+	$link-padding: 0.5rem,
+	$link-color: $gray,
+	$margin: 0
+) {
+	margin: $margin;
+	list-style-type: none;
+	padding-inline: $padding-inline;
+
+	@if $enable-link {
+		a {
+			display: block;
+			padding: $link-padding;
+			color: $link-color;
+
+			&::after {
+				color: $link-color;
+			}
+		}
+	}
+
+	@content;
+}
+
+@mixin cover(
+	$attachment: false,
+	$position: center,
+	$size: cover,
+	$repeat: no-repeat,
+	$color: false
+) {
+	@if $repeat {
+		background-repeat: $repeat;
+	}
+	@if $attachment {
+		background-attachment: $attachment;
+	}
+	@if $position {
+		background-position: $position;
+	}
+	@if $size {
+		background-size: $size;
+	}
+	@if $color {
+		background-color: $color;
+	}
+}
+
+@mixin position(
+	$position,
+	$left: 0,
+	$top: 0,
+	$right: 0,
+	$bottom: 0,
+	$margin: auto
+) {
+	position: $position;
+	@if $left != false {
+		left: $left;
+	}
+	@if $top != false {
+		top: $top;
+	}
+	@if $right != false {
+		right: $right;
+	}
+	@if $bottom != false {
+		bottom: $bottom;
+	}
+	@if $margin != false {
+		margin: $margin;
+	}
+}
+
+@mixin position-absolute(
+	$left: 0,
+	$top: 0,
+	$right: 0,
+	$bottom: 0,
+	$margin: auto
+) {
+	@include position(absolute, $left, $top, $right, $bottom, $margin);
+}
+// @mixin flex($justify-content: center, $align-items: center, $direction: row)
+@mixin flex($justify-content: false, $align-items: false, $direction: false) {
+	display: flex;
+
+	@if $justify-content {
+		justify-content: $justify-content;
+	}
+
+	@if $align-items {
+		align-items: $align-items;
+	}
+
+	@if $direction {
+		flex-direction: $direction;
+	}
+}
+
+/* $color1 0%,
+$color2 76%,
+$color3 100% */
+@mixin gradient-classes($position, $color...) {
+	background: linear-gradient(
+		$position,
+		$color
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00969696', GradientType=1);
+}
+
+@mixin shadow-classes($type, $offset, $blur, $spread, $color) {
+	-webkit-box-shadow: $type $offset $blur $spread $color;
+	-moz-box-shadow: $type $offset $blur $spread $color;
+	box-shadow: $type $offset $blur $spread $color;
+}
+
+@mixin box-shadow {
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+		0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+@mixin text-shadow {
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+@mixin image-and-gradient($position-image: center, $color...) {
+	@include cover($position: $position-image center);
+
+	&::before{
+		content: '';
+		@include position-absolute;
+		z-index: 0;
+		@include gradient-classes(90deg, $color...);
+	}
+}
+
+/**
+* From repo Wedweb project
+*/
+@mixin vwvh($property, $size, $important: "") {
+	//@media (orientation: landscape) {
+	#{$property}: ($size/16) + rem + " " + $important;
+	//}
+	/*@media (orientation: portrait) {
+	   #{$property}: ($size/3.2) + vw +" "+ $important;
+	}*/
+}
+
+/// Removes the focus ring around an element when a mouse input is detected.
+@mixin disable-mouse-outline {
+	[data-whatinput="mouse"] & {
+		outline: 0;
+	}
+}
+
+/// Border size
+@mixin triangle-border-size($left, $top, $right, $bottom) {
+	border-left-width: $left;
+	border-top-width: $top;
+	border-right-width: $right;
+	border-bottom-width: $bottom;
+}
+
+/// Creates a CSS triangle, which can be used for dropdown arrows, dropdown pips, and more. Use this mixin inside a `&::before` or `&::after` selector, to attach the triangle to an existing element.
+///
+/// @param {Number} $triangle-size - Width of the triangle.
+/// @param {Color} $triangle-color - Color of the triangle.
+/// @param {Keyword} $triangle-direction - Direction the triangle points. Can be `up`, `right`, `down`, or `left`.
+@mixin css-triangle($triangle-size, $triangle-height, $triangle-color, $triangle-direction) {
+	display: block;
+	width: 0;
+	height: 0;
+
+	border: inset $triangle-size;
+
+	content: "";
+
+	@if ($triangle-direction == down) {
+		@include triangle-border-size($triangle-size, $triangle-height, $triangle-size, 0);
+		border-top-style: solid;
+		border-color: $triangle-color transparent transparent;
+	}
+	@if ($triangle-direction == up) {
+		@include triangle-border-size($triangle-size, 0, $triangle-size, $triangle-height);
+		border-bottom-style: solid;
+		border-color: transparent transparent $triangle-color;
+	}
+	@if ($triangle-direction == right) {
+		@include triangle-border-size($triangle-height, $triangle-size, 0, $triangle-size);
+		border-left-style: solid;
+		border-color: transparent transparent transparent $triangle-color;
+	}
+	@if ($triangle-direction == left) {
+		@include triangle-border-size(0, $triangle-size, $triangle-height, $triangle-size);
+		border-left-width: 0;
+		border-right-style: solid;
+		border-color: transparent $triangle-color transparent transparent;
+	}
+}
+
+/// Makes an element visually hidden, but still accessible to keyboards and assistive devices.
+/// @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility Hiding Content for Accessibility
+/// @link http://hugogiraudel.com/2016/10/13/css-hide-and-seek/
+///
+/// @param {Boolean} $enforce - If `true`, use `!important` on applied properties
+@mixin element-invisible($enforce: true) {
+	$important: if($enforce, "!important", null);
+
+	position: absolute #{$important};
+	width: 1px #{$important};
+	height: 1px #{$important};
+	padding: 0 #{$important};
+	overflow: hidden #{$important};
+	clip: rect(0, 0, 0, 0) #{$important};
+	white-space: nowrap #{$important};
+	border: 0 #{$important};
+}
+
+/// Reverses the CSS output created by the `element-invisible()` mixin.
+/// @param {Boolean} $enforce - If `true`, use `!important` on applied properties
+@mixin element-invisible-off($enforce: true) {
+	$important: if($enforce, "!important", null);
+
+	position: static #{$important};
+	width: auto #{$important};
+	height: auto #{$important};
+	overflow: visible #{$important};
+	clip: auto #{$important};
+	white-space: normal #{$important};
+}

@@ -1,0 +1,99 @@
+/**
+ * @mixin CountdownTimer
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Contador de cuenta regresiva.
+ */
+
+////
+/// @group component
+////
+
+$countdown-margin-left: 15px !default;
+$countdown-capitalize: true !default;
+
+@mixin web-countdown-timer {
+	[component="countdown-timer"] {
+		display: flex;
+
+		@if $countdown-capitalize {
+			text-transform: uppercase;
+		}
+
+		[component="clockwise"] {
+			//font-size: 1rem;
+			position: relative;
+
+			&:first-of-type {
+				[widget="time"]::after {
+					content: ":";
+					position: absolute;
+					right: -12px;
+					top: -2px;
+					animation: intermittent 1s ease infinite;
+				}
+			}
+
+			&:not(:first-of-type) {
+				margin-left: $countdown-margin-left;
+				position: relative;
+
+				[widget="time"] {
+					&::before {
+						content: ":";
+						position: absolute;
+						left: calc(-50% + 1.5px);
+						top: -2px;
+						transform: translate(50%, 0%);
+						animation: intermittent 1s ease infinite;
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				[widget="time"]::before {
+					content: none;
+				}
+			}
+
+			> div {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+
+		[widget="message"] {
+			display: none;
+		}
+
+		&.completed {
+			[component="clockwise"]::before {
+				animation: none;
+			}
+
+			&.today {
+				[component="clockwise"] {
+					display: none;
+				}
+
+				[widget="message"] {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@keyframes intermittent {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

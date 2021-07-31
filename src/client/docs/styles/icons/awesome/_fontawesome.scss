@@ -1,0 +1,75 @@
+/*!
+ * Font Awesome Free 5.11.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@import 'variables';
+@import 'mixins';
+@import 'core';
+@import 'larger';
+@import 'fixed-width';
+@import 'list';
+@import 'bordered-pulled';
+@import 'animated';
+@import 'rotated-flipped';
+@import 'stacked';
+@import 'icons';
+@import 'screen-reader';
+@import 'styles';
+
+@mixin awesome-icon-classes(
+   $fa-size: true,
+   $fa-fixed: false,
+   $fa-list: false,
+   $fa-bordered: false,
+   $fa-pulled: false,
+   $fa-animation: false,
+   $fa-transform: false,
+   $fa-stacked: false,
+   $fa-sr: false,
+   $fa-solid: true,
+   $fa-regular: false,
+   $fa-brand: false,
+) {
+   @include fa-core;
+   @include fa-icons;
+
+   @if ($fa-size) {
+      @include fa-size;
+   }
+
+   @if ($fa-fixed) {
+      @include fa-fixed;
+   }
+
+   @if ($fa-list) {
+      @include fa-list;
+   }
+
+   @if ($fa-bordered) {
+      @include fa-bordered;
+   }
+
+   @if ($fa-pulled) {
+      @include fa-pulled;
+   }
+
+   @if ($fa-animation) {
+      @include fa-animation;
+   }
+
+   @if ($fa-transform) {
+      @include fa-transform;
+   }
+
+   @if ($fa-stacked) {
+      @include fa-stacked;
+   }
+
+   @if ($fa-sr) {
+      @include fa-screen-reader;
+   }
+
+   @if ($fa-solid or $fa-regular or $fa-brand) {
+      @include fa-styles($fa-solid, $fa-regular, $fa-brand);
+   }
+}

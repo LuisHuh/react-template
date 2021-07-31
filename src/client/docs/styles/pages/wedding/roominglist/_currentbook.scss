@@ -1,0 +1,32 @@
+$backgrounds: #faddd5!default;
+$col-primary: get-color('primary') !default;
+$col-fifth: #6d4a48 !default;
+
+@include vertical-progress;
+@mixin current-book {
+    #current-book {
+        color: $col-fifth;
+        padding: 1em;
+        background-color: $backgrounds;
+        a {
+            color: $col-primary;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        img {
+            height: 100%;
+            margin: 1em;
+        }
+        .padding-curr-book{
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        @include medium-screen-down {
+            .title {
+                text-align: center;
+            }
+        }
+    }
+}
+

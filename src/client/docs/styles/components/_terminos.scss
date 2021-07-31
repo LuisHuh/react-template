@@ -1,0 +1,31 @@
+
+
+////
+/// @group amount
+////
+
+
+[widget="terminos"]{
+
+
+	[component="collapsible"] {
+		border: none;
+
+		[component="collapsible-header"] {
+			background-color: transparent;
+			color: #ea8585;
+			text-decoration: underline;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+		}
+    }
+    .btncont{
+        
+        text-align: right;
+    }
+
+    .btns{
+        display:inline-block;
+    }
+
+}

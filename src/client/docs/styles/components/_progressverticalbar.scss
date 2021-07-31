@@ -1,0 +1,54 @@
+$dinamic-color: get-color('primary') !default;
+$col-fifth: #6d4a48 !default;
+@mixin vertical-progress {
+    [component='verticalprogress'] {
+        overflow-y: auto;
+        height: 25em;
+        
+        /* left bar */
+        .step {
+            position: relative;
+            padding-top: 0.6em;
+            margin-left: 1em;
+            padding-left: 2em;
+            // height: 4em;
+            /* dot */
+            .dot {
+                i {
+                    position: absolute;
+                    top: 0.6em;
+                    left: -0.5em;
+                    background: rgb(255, 255, 255);
+                    color: rgb(234, 134, 133);
+                    border-radius: 25px;
+                    font-size: 20px;
+                }
+            }
+            .display {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    border-left: 0.15em solid $dinamic-color;
+                    left: -0.2em;
+                    top: 1em;
+                    bottom: -1em;
+                }
+                &.picked {
+                    background: $col-fifth;
+                    border-radius: 0.3em;
+                    color: white;
+                }
+                p {
+                    &.header {
+                        padding-top: 5px;
+                        font-weight: bold;
+                    }
+                    &.footer {
+                        padding-bottom: 5px;
+                    }
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

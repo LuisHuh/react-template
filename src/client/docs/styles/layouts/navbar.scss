@@ -1,0 +1,579 @@
+/**
+ * Layout para los elementos dinánmicos del navbar
+ * Conformado por el logo y 4 áreas de menú
+ */
+$navbarbgcolor: #f1edeee6;
+$graytext: #6d6d6d;
+$dark-melon: #644a49;
+$header-side-margin: calc((100vw - 1200px) / 2);
+
+%menu-item {
+	&:not([after="bridename"]) {
+		cursor: pointer;
+		&::after {
+			content: " ";
+			width: 100%;
+			display: block;
+		}
+		&:hover:after {
+			border-bottom: 1px solid;
+		}
+		&.active,
+		&.active:hover {
+			color: $dark-melon;
+			&:after {
+				border-bottom: 2px solid;
+			}
+		}
+	}
+	&[after="bridename"],
+	&[after="bridename"]:hover {
+		cursor: default;
+	}
+}
+
+// Apariencia de los elementos de menú cuando es el layout de dos columnas
+[layout="2col-1image"] .subitems {
+	grid-template-areas: ". col1 col2 bgimage ." !important;
+	grid-template-columns: calc((100vw - 1200px) / 2) repeat(3, 1fr) calc(
+			(100vw - 1200px) / 2
+		) !important;
+
+	[col] {
+		color: get-color("brown") !important;
+		font-weight: normal !important;
+		line-height: 2.5em !important;
+	}
+
+	:not(.prr.pr-chevron-right.prs) {
+		color: get-color("brown");
+	}
+
+	[col="bgimage"] {
+		grid-column: 4/6 !important;
+	}
+}
+
+%subitems-style {
+	.subitems {
+		position: absolute;
+		right: 0;
+		width: 100%;
+		background-color: white;
+		display: none;
+
+		grid-template-areas: ". col1 col2 col3 col4 bgimage .";
+		// grid-template-columns: calc((100vw - 1200px) / 2) repeat(4, auto) auto calc((100vw - 1200px) / 2);
+		grid-template-columns: calc((100vw - 1200px) / 2) 1.3fr repeat(3, 1fr) 1fr calc(
+				(100vw - 1200px) / 2
+			);
+		grid-template-rows: repeat(3, auto);
+		text-align: left;
+
+		.prr.pr-chevron-right.prs {
+			@extend %pink-text;
+		}
+
+		[col] {
+			display: inline-block;
+			line-height: 2rem;
+			padding: 1em 0;
+			a {
+				color: get-color("brown");
+
+				&.parent {
+					font-weight: bold;
+					@extend %pink-text;
+				}
+				&:hover {
+					@extend %pink-text;
+					border-bottom: 2px solid;
+				}
+			}
+
+			ul {
+				list-style: none;
+				text-align: left;
+				margin: 0;
+				padding: 0;
+
+				li:hover {
+					transition: 0.5s;
+				}
+			}
+		}
+
+		[col="1"] {
+			grid-area: col1;
+		}
+
+		[col="2"] {
+			grid-area: col2;
+		}
+
+		[col="3"] {
+			grid-area: col3;
+		}
+
+		[col="4"] {
+			grid-area: col4;
+		}
+
+		[col="bgimage"] {
+			grid-area: bgimage;
+			background-repeat: no-repeat;
+			background-position: center left;
+			background-size: auto 100%;
+			grid-column: 6/8;
+			border: none !important;
+			margin-bottom: 0 !important;
+		}
+	}
+}
+
+%menu-flex-row-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	// justify-content: flex-end;
+	align-content: center;
+	align-items: center;
+	align-self: auto;
+
+	> [menuitem] {
+		margin: 0.4em;
+
+		&:first-child {
+			margin-left: 0 !important;
+		}
+
+		&:last-child {
+			margin-right: 0 !important;
+		}
+	}
+}
+
+%border-blur-effect-base {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	content: " ";
+	display: block;
+	height: 2em;
+}
+
+%border-blur-effect-before {
+	&:before {
+		@extend %border-blur-effect-base;
+		top: 0;
+		background-image: linear-gradient(0, transparent, #efeced4a, #efeced);
+	}
+}
+
+%hide-on-mobile {
+	@include medium-screen-down {
+		display: none;
+	}
+}
+
+%hide-on-desktop {
+	@include large-screen {
+		display: none;
+	}
+}
+
+%pink-text {
+	color: get-color("primary");
+}
+
+header[layout="navbar"] {
+	background-color: $navbarbgcolor;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	font-family: Avenir;
+	font-weight: 300;
+	position: sticky;
+	top: 0;
+	min-height: 45.06px;
+	z-index: 6;
+
+	@include large-screen {
+		height: 99.5px;
+	}
+
+	> div {
+		padding: 0 1em;
+
+		@include large-screen {
+			padding: 0;
+			max-width: $global-width;
+		}
+
+		// Icono del sitio
+		span.logo {
+			display: inline;
+			cursor: pointer;
+			min-height: 15px;
+			@extend %pink-text;
+			width: fit-content;
+			filter: opacity(0.8);
+			line-height: 0;
+			position: absolute;
+			> a {
+				display: inline-flex;
+			}
+
+			@include medium-screen-down {
+				font-size: 3.7em;
+				margin-top: -0.4rem;
+			}
+
+			@include large-screen {
+				grid-area: 1 / 2 / 3 / 2;
+				font-size: 7.3em;
+				color: lighten($black, 20);
+				margin-top: -10px;
+			}
+		}
+
+		// Menús de navegación
+		nav {
+			text-align: right;
+
+			&[position="top"] {
+				font-size: 14px;
+				@extend %menu-flex-row-container;
+				@extend %pink-text;
+				@extend %hide-on-mobile;
+
+				@include large-screen {
+					grid-area: 1/3;
+				}
+
+				[menuitem] {
+					margin: 0;
+					padding: 0.1em 0.5em;
+					margin-bottom: 0.5em;
+					&:not(:nth-last-child(1)):not(:nth-last-child(2)) {
+						@extend %menu-item;
+					}
+				}
+
+				.left-border {
+					border-left: 1px solid get-color("primary");
+				}
+				.margin-right {
+					// margin-right: auto;
+					margin-right: 160px;
+				}
+			}
+
+			&[position="bottom"] {
+				color: get-color("gray");
+				font-size: 16px;
+				@extend %menu-flex-row-container;
+				@extend %hide-on-mobile;
+
+				@include large-screen {
+					grid-area: 2/3;
+				}
+
+				> [menuitem] {
+					margin: 0;
+					padding: 0.5em;
+					margin-top: 8px;
+					@extend %menu-item;
+
+					&:hover:after {
+						border-bottom: 2px solid !important;
+					}
+					&.active {
+						color: $dark-gray;
+						&:after {
+							border-bottom-color: $graytext !important;
+						}
+					}
+
+					&:not(:first-child) {
+						border-left: 1px solid;
+					}
+
+					&[submenu]:hover {
+						cursor: pointer;
+
+						.subitems {
+							margin-top: 9.2px;
+							cursor: default;
+							display: grid !important;
+
+                            &.get-inspired,
+							&.todo-list {
+								display: block !important;
+							}
+
+							&.contact-planner {
+								background-color: get-color("secondary");
+								display: block !important;
+								> div {
+									width: 60%;
+									max-width: 790px;
+									margin-left: auto;
+									margin-right: auto;
+									padding: 1rem;
+								}
+							}
+						}
+					}
+				}
+
+				@extend %subitems-style;
+			}
+
+			&[position="mobile"] {
+				@extend %hide-on-desktop;
+				text-align: right;
+				align-items: center;
+				align-content: center;
+				align-self: center;
+				padding: 0.11em;
+				color: get-color("primary");
+
+				a {
+					font-size: 1.125rem;
+					font-weight: 300;
+					vertical-align: middle;
+
+					&#ourResorts > i {
+						font-size: 1rem;
+						margin-bottom: 0.7rem;
+					}
+
+					&#toggledrawer {
+						font-size: 2rem;
+					}
+				}
+			}
+
+			&[position="top"],
+			&[position="mobile"] {
+				[menuitem="callus-dropdown"],
+				[menuitem="language-dropdown"] {
+					[component="btn-trigger"] {
+						color: inherit;
+						background: transparent;
+						padding: 0;
+					}
+
+					[component="dropdown-list"] {
+						width: fit-content;
+						min-width: fit-content;
+						a {
+							text-align: right;
+							.link {
+								@extend %pink-text;
+								display: inline;
+								&:hover {
+									border-bottom: 1px solid;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+[component="modal"].modalNavBar {
+	.modal-content {
+		padding: 0;
+		min-height: 230px;
+		width: 312px;
+
+		> .modal-flex {
+			.body {
+				width: 100%;
+				padding: 0;
+				padding-bottom: 30px;
+				.title {
+					margin-top: 10.5px;
+				}
+				h2 {
+					margin: 12px auto 22.5px auto;
+				}
+				.message {
+					margin-bottom: 24.5px;
+				}
+
+				.container-body {
+					padding-top: 30px;
+				}
+				.container-body,
+				.footer {
+					width: 90%;
+					padding-left: 25%;
+					text-align: center;
+				}
+				.footer {
+					margin-bottom: 32.5px;
+				}
+			}
+		}
+	}
+	@include medium-screen-down {
+		.modal-content {
+			max-height: 275px;
+		}
+	}
+	@include large-screen {
+		.modal-content {
+			width: 560px;
+			height: 460px;
+
+			.close {
+				right: 30px;
+				top: 30px;
+				font-size: 30px;
+			}
+
+			> .modal-flex {
+				.body {
+					padding-bottom: 30px;
+
+					.title {
+						margin-top: -25.5px;
+					}
+					h2 {
+						margin: 25px auto 40px auto;
+					}
+					.message {
+						margin-bottom: 40px;
+					}
+					.container-body {
+						padding-top: 90px;
+					}
+					.container-body,
+					.footer {
+						width: 90%;
+						padding-left: 155px;
+					}
+					.footer {
+						margin-bottom: 85px;
+					}
+				}
+			}
+		}
+	}
+
+	&.confirmLogout {
+		.modal-content {
+			> .modal-flex {
+				.body {
+					background-position: left;
+					background-repeat: no-repeat;
+					background-position-y: 0;
+					background-size: contain;
+				}
+			}
+		}
+	}
+	&.toDoList {
+		.modal-content {
+			> .modal-flex {
+				.container-body {
+					text-align: left;
+					padding-top: 65px;
+					i.pr-chevron-right {
+						color: get-color("primary");
+					}
+				}
+				.container-body,
+				.footer {
+					padding-left: 1rem;
+					padding-right: 1rem;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+	}
+	&.getInspired {
+		.modal-content {
+		>.modal-flex {
+			.container-body {
+			text-align: left;
+			padding-top: 15px;
+			.subtitle-1 {
+				text-align: center;
+			}
+			b {
+				color: $dark-melon;
+			}
+			ul{
+				background-color: white;
+				list-style: none;
+				padding-left: 0;
+				overflow-y: auto;
+				max-height: 140px;
+				@include medium-screen-down {
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+			}
+			i.pr-chevron-right{
+				color: get-color("primary");
+			}
+			}
+			.container-body,
+			.footer {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			margin-left: auto;
+			margin-right: auto;
+			}
+		}
+		}
+
+		@include medium-screen-down {
+			.modal-content {
+				min-height: 300px;
+				max-height: 315px;
+			}
+		}
+	}
+	&.contactPlanner {
+		.modal-content {
+			background-color: get-color("secondary");
+			> .modal-flex {
+				.container-body {
+					padding-top: 65px;
+				}
+				.container-body,
+				.footer {
+					padding-left: 1rem;
+					padding-right: 1rem;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+		@include medium-screen {
+			.modal-content {
+				max-height: 275px;
+				width: 520px;
+				> .modal-flex {
+					.container-body > .planner-detail {
+						padding-left: 1rem;
+						padding-right: 1rem;
+						> [component="cell"]:nth-child(1) {
+							margin-right: 25px;
+							margin-left: 25px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

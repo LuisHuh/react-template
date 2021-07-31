@@ -1,0 +1,282 @@
+/**
+ * @component Wizard
+ * @version 1.0.0
+ * @author lhuh
+ * @summary Estilos de wizard
+ */
+
+////
+/// @group component
+////
+
+/// Color de fondo del encabezado del wizard
+/// @type Color
+$wizard-header-background: #cecece !default;
+
+/// Color de fondo en cada step del encabezado
+/// @type Color
+$wizard-step-icon-background: #ffffff !default;
+
+/// Color de texto en cada step del encabezado
+/// @type Color
+$wizard-step-icon-color: #3d3d3d !default;
+
+/// Color de la etiqueta en cada step del encabezado
+/// @type Color
+$wizard-step-color: #383838 !default;
+
+/// Color del step activo
+/// @type Color
+$wizard-active-color: rgb(15, 162, 207) !default;
+
+/// Color del icono en el step activo
+/// @type Color
+$wizard-active-icon-color: $wizard-step-icon-color !default;
+
+/// Color de fondo activo del step en el encabezado
+/// @type color
+$wizard-active-icon-background: $wizard-active-color !default;
+
+/// Tamaño de texto para la etiqueta del step
+/// @type Number
+$wizard-step-size: 12px !default;
+
+/// Tamaño de texto para el icono del step
+/// @type Number
+$wizard-step-icon-size: 14px !default;
+
+@mixin wizard-nav {
+  @include clearfix;
+  padding: 1em 0;
+
+  li {
+    /* @include flex(center, center); */
+    position: relative;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+
+    @include large-screen() {
+      display: grid;
+    }
+
+    align-items: center;
+    grid-template-columns: auto min-content max-content auto;
+  }
+}
+
+@mixin wizard-icon {
+  position: relative;
+  background-color: $wizard-step-icon-background;
+  color: $wizard-step-icon-color;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  font-size: $wizard-step-icon-size;
+  grid-column: 2/2;
+
+  span {
+    @include position-absolute(50%, 50%, false, false, false);
+    transform: translate(-50%, -50%);
+  }
+}
+
+[component="wizard"] {
+  position: relative;
+
+  ul {
+    @include ul;
+
+    &[component="w-navigation"] {
+      @include wizard-nav;
+    }
+  }
+
+  .active {
+    [component="w-icon"] {
+      background-color: $wizard-active-icon-background;
+      color: $wizard-active-icon-color;
+
+      +[component="w-label"] {
+        color: $wizard-active-color;
+      }
+    }
+  }
+
+  .completed {
+    @extend .active;
+  }
+
+  [component="w-icon"] {
+    @include wizard-icon;
+
+    +[component="w-label"] {
+      font-size: $wizard-step-size;
+      color: $wizard-step-color;
+
+      @include large-screen() {
+        grid-column: 3;
+        font-size: 24px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  [component="w-header"] {
+    background-color: $wizard-header-background;
+  }
+
+  [component="w-navigation"] {
+    /* max-width: calc(100% - 250px); */
+    margin: 0 auto;
+
+    [component="w-step"] {
+      [component="w-icon"] {
+        min-height: 2em;
+        font-size: 1.5em;
+        max-height: 2em;
+        max-width: 2em;
+        min-width: 2em;
+        width: fit-content;
+
+        @include large-screen() {
+          grid-column: 2/2;
+        }
+      }
+    }
+
+    /* [component="w-step"].active *{
+			color: $wizard-active-color !important;
+		} */
+  }
+
+  [component="w-body"] {
+    [component="w-content"] {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  [component="w-footer"] {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    background-color: $wizard-active-color;
+    height: 55px;
+    @include flex(center, center);
+
+    @include large-screen() {
+      position: relative;
+      background-color: transparent;
+    }
+
+    >button {
+      margin: 0;
+      min-width: 30px;
+
+      @include large-screen() {
+        min-width: 120px;
+      }
+
+      &:focus,
+      &:hover,
+      &.active {
+        background-color: transparent;
+        outline: none;
+
+        @include large-screen() {
+          background-color: $wizard-active-color;
+        }
+      }
+
+      @mixin w-cancel($absolute: true,
+        $size: 0,
+        $padding: 0.7rem,
+        $radius: 50%,
+        $background: transparent,
+        $color: white,
+        $border: 1px solid) {
+        @if $absolute {
+          @include position-absolute(10%, false, false, false);
+        }
+
+        @else {
+          position: relative;
+          left: unset;
+          margin: 0;
+        }
+
+        font-size: $size;
+        padding: $padding;
+        border-radius: $radius;
+        background-color: $background;
+        color: $color;
+        border: $border;
+      }
+
+      &.w-cancel {
+        @include w-cancel;
+
+        i {
+          font-size: 1rem;
+        }
+
+        @include large-screen() {
+          @include w-cancel(false,
+            1.25rem,
+            0.7rem,
+            $global-radius,
+            white,
+            $wizard-active-color);
+          margin-right: 2rem;
+
+          i {
+            display: none;
+          }
+        }
+      }
+
+      &.w-next-pay {
+        @include large-screen() {}
+      }
+    }
+  }
+}
+
+// Estilos para resaltar el input cuando es un campo obligatorio
+[displayerror] {
+
+  // Cuando el error es en un componente input
+  input {
+    // background-color: #ffffbf;
+    border-color: #ea8685;
+    transition: .5s;
+  }
+
+  // Cuando el error es en un componente select
+  &[component="select"] {
+    &::after {
+      color: darkred;
+      content: attr(required-text);
+      display: contents;
+    }
+
+    // Esto alinea .caret al centro de la línea
+    svg.caret {
+      top: 35%;
+    }
+  }
+
+  &::after {
+    color: darkred;
+    content: attr(required-text);
+    display: contents;
+  }
+}

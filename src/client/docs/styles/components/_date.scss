@@ -1,0 +1,36 @@
+
+
+////
+/// @group amount
+////
+
+
+[widget="date"]{
+
+    .datebold{
+        font-weight: bold;
+    }
+
+        .listdate{
+            list-style:none !important;
+            text-align: center !important;
+            padding-left: 0;
+
+        }
+        .deskdate{
+            display: block;
+        }
+
+        .moviledate{
+            display: none;
+        }
+
+    @media(max-width: 1024px){
+        .deskdate{
+            display: none;
+        }
+        .moviledate{
+            display: block;
+        }
+    }
+}

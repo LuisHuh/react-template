@@ -1,0 +1,25 @@
+/*!
+ * Font Awesome Free 5.11.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+@import "brands.scss";
+@import "regular.scss";
+@import "solid.scss";
+
+@mixin fa-styles($solid: true, $regular: false, $brands: false) {
+	// Solid icon styles
+	@if ($solid) {
+		@include fa-style-solid();
+   }
+   
+   // Regular icon styles
+	@if ($regular) {
+		@include fa-style-regular();
+   }
+   
+   // Solid icon styles
+	@if ($brands) {
+		@include fa-style-brand();
+	}
+}

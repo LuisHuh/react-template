@@ -1,0 +1,54 @@
+[component = "fullcalendar"]{
+    
+    .containerbuttons{
+        display: flex;
+        background-color: var(--rosy-pink);
+        width: 100% !important;
+
+        #previous{
+            background: var(--rosy-pink);
+            border: unset;
+            /*margin-right: 8px;*/
+        }
+        #previous:hover{
+                background-color: var(--white);
+                color: var(--rosy-pink);
+            }
+        
+        #next{
+            background: var(--rosy-pink);
+            border: unset;
+        }
+
+        #next:hover{
+            background-color: var(--white);
+            color: var(--rosy-pink);
+        }
+    }
+
+    .container-selects{
+        display: flex;
+        select.calendar-control[name="monthPicker"]{
+            font-size: 18px !important;
+            background: var(--rosy-pink);
+            border: solid 1px var(--rosy-pink);
+            border-radius: 1px;
+            color: var(--white);
+            margin-right: 8px;
+        }
+
+        select.calendar-control[name="yearPicker"]{
+            font-size: 18px !important;
+            background: var(--rosy-pink);
+            border: solid 1px var(--rosy-pink);
+            border-radius: 1px;
+            color: var(--white);
+        }
+    }
+
+    .clever-calendar .calendar-day:not([disabled]) .day-number {
+        color: var(--dark-gray);
+    }
+
+
+}

@@ -1,0 +1,184 @@
+
+/**
+ * Fonts Typography
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Se configuran las tipografías con sus respectivos archivos
+ */
+
+////
+/// @group base
+/////
+
+
+@font-face {
+   font-family: 'Miso';
+   src: url('#{$typography-path}/miso/Miso-Light.otf');
+   src: url('#{$typography-path}/miso/Miso-Light.otf') format('opentype'),
+      url('#{$typography-path}/miso/Miso-Light.woff2') format('woff2');
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Miso';
+   src: url('#{$typography-path}/miso/Miso-Regular.otf');
+   src: url('#{$typography-path}/miso/Miso-Regular.otf') format('opentype'),
+      url('#{$typography-path}/miso/Miso-Regular.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Miso';
+   src: url('#{$typography-path}/miso/Miso-Bold.otf');
+   src: url('#{$typography-path}/miso/Miso-Bold.otf') format('opentype'),
+      url('#{$typography-path}/miso/Miso-Bold.ttf') format('truetype');
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('#{$typography-path}/roboto/Roboto-Light.ttf');
+   src: url('#{$typography-path}/roboto/Roboto-Light.ttf') format('truetype');
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('#{$typography-path}/roboto/Roboto-Regular.ttf');
+   src: url('#{$typography-path}/roboto/Roboto-Regular.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('#{$typography-path}/roboto/Roboto-Bold.ttf');
+   src: url('#{$typography-path}/roboto/Roboto-Bold.ttf') format('truetype');
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Avenir';
+   src: url('#{$typography-path}/avenir/light/Avenir-Light.eot');
+   src: url('#{$typography-path}/avenir/light/Avenir-Light.eot?#iefix') format('embedded-opentype'),
+       url('#{$typography-path}/avenir/light/Avenir-Light.woff2') format('woff2'),
+       url('#{$typography-path}/avenir/light/Avenir-Light.woff') format('woff'),
+       url('#{$typography-path}/avenir/light/Avenir-Light.ttf') format('truetype');
+       /* url('#{$typography-path}/avenir/light/Avenir-Light.svg#Avenir-Light') format('svg'); */
+   font-weight: 100;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Avenir';
+   src: url('#{$typography-path}/avenir/book/Avenir-Book.eot');
+   src: url('#{$typography-path}/avenir/book/Avenir-Book.eot?#iefix') format('embedded-opentype'),
+       url('#{$typography-path}/avenir/book/Avenir-Book.woff2') format('woff2'),
+       url('#{$typography-path}/avenir/book/Avenir-Book.woff') format('woff'),
+       url('#{$typography-path}/avenir/book/Avenir-Book.ttf') format('truetype');
+       /* url('#{$typography-path}/avenir/book/Avenir-Book.svg#Avenir-Book') format('svg'); */
+   font-weight: 300;
+   font-style: normal;
+}
+
+
+@font-face {
+   font-family: 'Avenir';
+   src: url('#{$typography-path}/avenir/roman/Avenir-Roman.eot');
+   src: url('#{$typography-path}/avenir/roman/Avenir-Roman.eot?#iefix') format('embedded-opentype'),
+       url('#{$typography-path}/avenir/roman/Avenir-Roman.woff2') format('woff2'),
+       url('#{$typography-path}/avenir/roman/Avenir-Roman.woff') format('woff'),
+       url('#{$typography-path}/avenir/roman/Avenir-Roman.ttf') format('truetype');
+       /* url('#{$typography-path}/avenir/roman/Avenir-Roman.svg#Avenir-Roman') format('svg'); */
+   font-weight: 500;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Avenir';
+   src: url('#{$typography-path}/avenir/heavy/Avenir-Heavy.eot');
+   src: url('#{$typography-path}/avenir/heavy/Avenir-Heavy.eot?#iefix') format('embedded-opentype'),
+       url('#{$typography-path}/avenir/heavy/Avenir-Heavy.woff2') format('woff2'),
+       url('#{$typography-path}/avenir/heavy/Avenir-Heavy.woff') format('woff'),
+       url('#{$typography-path}/avenir/heavy/Avenir-Heavy.ttf') format('truetype');
+       /* url('#{$typography-path}/avenir/heavy/Avenir-Heavy.svg#Avenir-Heavy') format('svg'); */
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Avenir';
+   src: url('#{$typography-path}/avenir/black/Avenir-Black.eot');
+   src: url('#{$typography-path}/avenir/black/Avenir-Black.eot?#iefix') format('embedded-opentype'),
+       url('#{$typography-path}/avenir/black/Avenir-Black.woff2') format('woff2'),
+       url('#{$typography-path}/avenir/black/Avenir-Black.woff') format('woff'),
+       url('#{$typography-path}/avenir/black/Avenir-Black.ttf') format('truetype');
+       /* url('#{$typography-path}/avenir/black/Avenir-Black.svg#Avenir-Black') format('svg'); */
+   font-weight: 900;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Open Sans Condensed';
+   src: url('#{$typography-path}/opensans/OpenSansCondensed-Bold.eot');
+   src: url('#{$typography-path}/opensans/OpenSansCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+       url('#{$typography-path}/opensans/OpenSansCondensed-Bold.woff2') format('woff2'),
+       url('#{$typography-path}/opensans/OpenSansCondensed-Bold.woff') format('woff'),
+       url('#{$typography-path}/opensans/OpenSansCondensed-Bold.ttf') format('truetype');
+       /* url('#{$typography-path}/opensans/OpenSansCondensed-Bold.svg#OpenSansCondensed-Bold') format('svg'); */
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Open Sans Condensed';
+   src: url('#{$typography-path}/opensans/OpenSansCondensed-Light.eot');
+   src: url('#{$typography-path}/opensans/OpenSansCondensed-Light.eot?#iefix') format('embedded-opentype'),
+       url('#{$typography-path}/opensans/OpenSansCondensed-Light.woff2') format('woff2'),
+       url('#{$typography-path}/opensans/OpenSansCondensed-Light.woff') format('woff'),
+       url('#{$typography-path}/opensans/OpenSansCondensed-Light.ttf') format('truetype');
+       /* url('#{$typography-path}/opensans/OpenSansCondensed-Light.svg#OpenSansCondensed-Light') format('svg'); */
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Parisienne';
+   src: url('#{$typography-path}/parisienne/Parisienne-Regular.eot');
+   src: url('#{$typography-path}/parisienne/Parisienne-Regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$typography-path}/parisienne/Parisienne-Regular.woff2') format('woff2'),
+       url('#{$typography-path}/parisienne/Parisienne-Regular.woff') format('woff'),
+       url('#{$typography-path}/parisienne/Parisienne-Regular.ttf') format('truetype');
+       /* url('#{$typography-path}/parisienne/Parisienne-Regular.svg#Parisienne-Regular') format('svg'); */
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Playfair Display';
+   src: url('#{$typography-path}/playfairdisplay/PlayfairDisplay-Italic.eot');
+   src: url('#{$typography-path}/playfairdisplay/PlayfairDisplay-Italic.eot?#iefix') format('embedded-opentype'),
+       url('#{$typography-path}/playfairdisplay/PlayfairDisplay-Italic.woff2') format('woff2'),
+       url('#{$typography-path}/playfairdisplay/PlayfairDisplay-Italic.woff') format('woff'),
+       url('#{$typography-path}/playfairdisplay/PlayfairDisplay-Italic.ttf') format('truetype');
+       /* url('#{$typography-path}/playfairdisplay/PlayfairDisplay-Italic.svg#PlayfairDisplay-Italic') format('svg'); */
+   font-weight: normal;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: 'Playfair Display';
+   src: url('#{$typography-path}/playfairdisplay/PlayfairDisplay-Regular.eot');
+   src: url('#{$typography-path}/playfairdisplay/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$typography-path}/playfairdisplay/PlayfairDisplay-Regular.woff2') format('woff2'),
+       url('#{$typography-path}/playfairdisplay/PlayfairDisplay-Regular.woff') format('woff'),
+       url('#{$typography-path}/playfairdisplay/PlayfairDisplay-Regular.ttf') format('truetype');
+       /* url('#{$typography-path}/playfairdisplay/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular') format('svg'); */
+   font-weight: normal;
+   font-style: normal;
+}

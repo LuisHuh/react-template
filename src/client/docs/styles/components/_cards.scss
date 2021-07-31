@@ -1,0 +1,118 @@
+/**
+ * @mixin card
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Card y panel.
+ */
+
+////
+/// @group component
+////
+
+$card-background: #c9c9c9 !default;
+$card-color: #3a3a3a !default;
+$card-border: 1px solid #3a3a3a !default;
+$card-border-radius: 0 !default;
+$card-background-position-x: -7px !default;
+
+$card-panel-background: $card-background !default;
+$card-panel-color: $card-color !default;
+$card-panel-border: $card-border !default;
+$card-panel-border-radius: $card-border-radius !default;
+
+@mixin card($background, $color, $border, $radius, $padding: 1rem) {
+	background: $background;
+	color: $color;
+	border: $border;
+	border-radius: $radius;
+	padding: $padding;
+	width: 100%;
+}
+
+@mixin web-card {
+	[component="card"] {
+		@include card(
+			$card-background,
+			$card-color,
+			$card-border,
+			$card-border-radius
+		);
+
+		&[type="banner"] {
+			position: relative;
+			min-height: 150px;
+			//@include image-and-gradient(-7px, transparent 30%, $card-background 60%);
+			@include image-and-gradient(
+				$card-background-position-x,
+				transparent 12%,
+				$card-background 20%
+			);
+			background-size: contain;
+			background-position-x: -350px;
+
+			* {
+				z-index: 1;
+			}
+
+			@include large-screen() {
+				background-position-x: $card-background-position-x;
+			}
+		}
+
+		&[type="menu"] {
+			height: calc((95.63vw * 150) / 300);
+			@extend [type="banner"];
+			background-size: cover;
+			background-position-x: $card-background-position-x;
+			&::before {
+				@include gradient-classes(
+					90deg,
+					transparent 30%,
+					$card-background 60%
+				);
+			}
+
+			[widget="tag"] {
+				position: absolute;
+				left: 0;
+			}
+
+			@include medium-screen{
+				height: calc((44.55vw * 300) / 533);
+			}
+
+			@include large-screen() {
+				height: calc((44.55vw * 300) / 533);
+			}
+
+			@include extra-large-screen() {
+				height: calc(
+					(((#{rem-calc($global-width)} - 380px) / 2) * 300) / 533
+				);
+			}
+		}
+	}
+
+	/* [component="card-menu"] {
+		&[disabled] {
+			filter: grayscale(1);
+			[component="card"] {
+				background-position-x: 0;
+				&::before {
+					content: none;
+				}
+			}
+		}
+	} */
+}
+
+@mixin web-panel {
+	[component="panel"] {
+		@include card(
+			$card-panel-background,
+			$card-panel-color,
+			$card-panel-border,
+			$card-panel-border-radius
+		);
+	}
+}

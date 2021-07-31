@@ -1,0 +1,35 @@
+$badge-min-width: 3rem !default;
+$badge-padding: 0.2rem !default;
+$badge-font-size: 10px !default;
+$badge-md-font-size: 14px !default;
+$badge-radius: $global-radius !default;
+$badge-background-color: get-color("primary") !default;
+$badge-color: get-color("brown") !default;
+
+@mixin web-badge {
+	span[component="badge"] {
+		min-width: $badge-min-width;
+		padding: $badge-padding;
+		text-align: center;
+		font-size: $badge-font-size;
+		line-height: 22px;
+		height: 22px;
+		color: lighten($badge-color, 10%);
+		box-sizing: border-box;
+      border-radius: $badge-radius;
+      
+      @include medium-screen(){
+         font-size: $badge-md-font-size;
+      }
+
+		&.new {
+			background-color: $badge-background-color;
+			color: white;
+      }
+      
+      &.floating{
+         float: right;
+         margin-left: 14px;
+      }
+	}
+}

@@ -1,0 +1,260 @@
+[component="FormNewsletter"] {
+
+    @media (max-width : 1024px) {
+
+      
+        .content-check {
+            max-height: 0;
+        }
+
+        .open-form {
+            @include vwvh("max-height", 368);
+        }
+
+        .content-check {
+            @include vwvh("width", 266);
+            @include vwvh("margin-top", 10);
+            margin: auto;
+        }
+
+        [component="inputwedd"] {
+            .checks {
+                @include vwvh("margin-right", 6.5);
+            }
+
+            p {
+                font-family: Avenir; //OpenSans;
+                @include vwvh("font-size", 14);
+                @include vwvh("margin-top", 3);
+                margin-bottom: 0px;
+                font-weight: 300;
+                font-stretch: condensed;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: left;
+                color: var(--dark-gray);
+
+                a {
+                    color: var(--light-melon);
+                }
+            }
+
+            div{
+                input{
+                    width: 80%;
+                    margin: auto;
+                    display: block;
+                }
+            }
+        }
+
+        form {
+            width: 100%;
+        }
+
+        .content-check {
+            transition: .5s;
+            overflow: hidden;
+            width: 84%;
+        }
+
+        .input-text-block input {
+            @include vwvh("font-size", 18);
+            @include vwvh("width", 250);
+            @include vwvh("margin-left", 36);
+            color: var(--dark-gray) !important;
+        }
+
+
+        background-color: var(--light-melon-full); //var(--gray-weddings);
+        @include vwvh("padding-top", 18);
+        @include vwvh("padding-bottom", 37);
+
+        .text-paris {
+            font-family: PlayfairDisplay;
+            @include vwvh("font-size", 21, "!important"); 
+            @include vwvh("letter-spacing", .53);
+            color: var(--dark-melon);
+            text-align: center;
+            @include vwvh("letter-spacing", .4);
+        }
+
+        .text-rosy {
+            font-family: PlayfairDisplay;
+            @include vwvh("font-size", 21);
+            @include vwvh("letter-spacing", .4);
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            text-align: center;
+            color: $rosy-pink !important;
+            @include vwvh("margin-bottom", 6);
+            text-transform: capitalize;
+        }
+
+        .input-field-newsletter{
+            display: grid;
+        }
+        .text-rosy-a {
+            color: $rosy-pink !important;
+        }
+
+        .btn-submit {
+            border: none;
+            @include vwvh("width", 125);
+            @include vwvh("height", 30);
+            @include vwvh("border-radius", 2);
+            background-color: var(--light-melon);
+            color: var(--white);
+            font-weight: bold;
+            margin: auto;
+            display: block;
+            font-family: OpenSans;
+            @include vwvh("font-size", 14);
+        }
+
+        .btn-submit:hover {
+            color: var(--light-melon);
+            background: var(--white);
+            text-decoration: unset;
+            border-style: solid;
+            @include vwvh("border-width", 2);
+            border-color: var(--light-melon);
+        }
+
+        .checks {
+            @include vwvh("padding-top", 5);
+            @include vwvh("padding-bottom", 5);
+            @include vwvh("padding-left", 5);
+        }
+
+        .content-submit{
+            margin-top: .8rem;
+        }
+
+        .real-label{
+            padding-top: 0.2rem;
+          }
+
+    }
+
+    @media (min-width : 1025px) {
+        background-color: $light-gray;
+        padding: 20px;
+
+        .content-check {
+            max-height: 0;
+        }
+
+        .open-form {
+            max-height: 170px;
+        }
+
+        @media (max-width: 1242px) and (min-width: 0px) {
+            .input-field-newsletter {
+                [component="inputwedd"] {
+                    display: -webkit-inline-box;
+                }
+            }
+        }
+
+        .content-submit {
+         
+            [component="inputwedd"] {
+                padding: 22px;
+            }
+        }
+
+        .content-check {
+            /*height: 120px;*/
+            overflow: hidden;
+            transition: 0.8s;
+        }
+
+        .input-field-newsletter {
+            display: -webkit-box;
+
+            .input-text-block {
+                margin-top: 5px;
+                margin-left: 30px;
+            }
+
+            /*input{
+            margin-left: 20px;
+            width: 360px;
+        }*/
+        }
+
+        .input-text-block input {
+            font-size: 28px;
+            width: 110%;
+            color: var(--dark-gray) !important;
+        }
+
+        .text-paris {
+            font-family: PlayfairDisplay;
+            font-size: 30px !important;
+            letter-spacing: 0.53px;
+            color: var(--dark-gray);
+        }
+        .answer-hidde {
+            display: none;
+        }
+
+
+        .text-rosy {
+            font-family: PlayfairDisplay; //Miso
+            font-size: 30px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 0.94;
+            letter-spacing: 0.4px;
+            text-align: center;
+            color: var(--light-melon) !important;
+            text-transform: capitalize;
+        }
+
+        .text-rosy-a {
+            color: var(--light-melon);
+        }
+
+        .text-rosy-a:hover {
+            color: var(--light-melon);
+            text-decoration: underline;
+        }
+
+        .btn-submit {
+            border: none;
+            width: 125px;
+            height: 30px;
+            border-radius: 2px;
+            background-color: var(--light-melon);
+            color: var(--white);
+            font-weight: bold;
+            margin: auto;
+            display: block;
+            font-family: OpenSans;
+        }
+
+        .btn-submit:hover {
+            color: var(--light-melon);
+            background: var(--white);
+            text-decoration: unset;
+            border-style: solid;
+            border-width: 2px;
+            border-color: var(--light-melon);
+        }
+
+        .checks {
+            [type="checkbox"]+span:not(.lever) {
+                font-size: 21px !important;
+            }
+            margin-right: 10px;
+            [component="inputwedd"] {
+                margin-top: 10px;
+            }
+        }
+    }
+}

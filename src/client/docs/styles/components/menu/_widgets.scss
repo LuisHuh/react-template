@@ -1,0 +1,94 @@
+/**
+ * @mixin menu-item
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Estilo principal de los menus
+ */
+
+////
+/// @group page
+////
+
+@mixin menu-icon-triangle(
+	$direction,
+	$border-color: black,
+	$background-color: white
+) {
+	&::before,
+	&::after {
+		position: absolute;
+
+		@if $direction == left or $direction == right {
+			top: 50%;
+			margin: auto 0;
+			transform: translateY(-50%);
+		}
+
+		@if $direction == up or $direction == down {
+			left: 50%;
+			margin: 0 auto;
+			transform: translateX(-50%);
+		}
+	}
+
+	&::before {
+		@include css-triangle(0.5rem, 0.7rem, $border-color, $direction);
+
+		@if $direction == left {
+			left: -8px;
+		} @else if $direction == right {
+			right: -8px;
+		} @else if $direction == up {
+			top: -8px;
+		} @else {
+			bottom: -8px;
+		}
+	}
+
+	&::after {
+		@include css-triangle(0.4rem, 0.6rem, $background-color, $direction);
+
+		@if $direction == left {
+			left: -5px;
+		} @else if $direction == right {
+			right: -6px;
+		} @else if $direction == up {
+			top: -6px;
+		} @else {
+			bottom: -6px;
+		}
+	}
+}
+
+@mixin menu-item(
+	$background,
+	$color,
+	$arrow-direction,
+	$text-align: center,
+	$border-radius: 3px
+) {
+	li {
+		position: relative;
+		padding: 0.1rem;
+		text-align: $text-align;
+
+		a {
+			background-color: $background;
+			color: $color;
+			border-radius: $border-radius;
+			cursor: pointer;
+		}
+
+		&.active {
+			@include menu-icon-triangle($arrow-direction, $background, $color);
+
+			a {
+				background-color: $color;
+				color: $background;
+				border: 1px solid $background;
+			}
+		}
+
+		@content;
+	}
+}

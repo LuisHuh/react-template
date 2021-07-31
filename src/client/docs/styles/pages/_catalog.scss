@@ -1,0 +1,154 @@
+[page="catalog"] {
+	@include wedding-gallery-style;
+	[component="tabstwo"] {
+		position: sticky;
+		top: 3.6rem;
+		z-index: 2;
+		padding: 0 1rem;
+		padding-top: 1rem;
+
+		@include medium-screen() {
+			top: 92.5px;
+		}
+	}
+}
+
+[page="catalog-details"] {
+	.panel-detail {
+		$panel-detail-color: get-color("primary");
+		$border-panel-detail-color: get-color("secondary");
+		$border-panel-detail: 1px solid $border-panel-detail-color;
+		$space-top: 3rem;
+
+		max-width: 45rem;
+		margin: 0 auto;
+		margin-top: $space-top;
+		padding: 0;
+		border-color: $border-panel-detail-color;
+
+		.panel-header {
+			border-bottom: $border-panel-detail;
+
+			[component="button"] {
+				padding: 1.6rem;
+				margin: 0;
+				min-width: auto;
+				background-color: transparent;
+				color: $panel-detail-color;
+				border-right: $border-panel-detail;
+			}
+		}
+
+		.panel-body {
+			padding: 1rem;
+			text-align: center;
+			.logo img {
+				width: 45%;
+			}
+
+			.divider {
+				width: 65%;
+				margin: 1.6rem auto;
+			}
+
+			.detail-price{
+				display: block;
+				margin-top: $space-top;
+			}
+
+			.action{
+				margin-top: $space-top;
+			}
+			.detail{
+				color: #ea8685!important;
+				display: contents;
+			}
+			.detail-title{
+				display: flex;
+			}
+			.quantum{
+				font-size: 16px!important;
+				font-style: italic!important;
+			}
+			.link{
+				font-weight: 700!important;
+			}
+			.quantum_dec{
+				display: contents;
+			}
+		}
+
+		[component="collapsible"] {
+			border: none;
+	
+			[component="collapsible-header"] {
+				background-color: transparent;
+				color: #ea8585;
+				text-decoration: underline;
+				flex-direction: row-reverse;
+				justify-content: center;
+			}
+		}
+	}
+
+	.description-detail{
+		color: #ea8685!important;
+	}
+
+
+	#quant_ {
+		max-width: 100%;
+		width: max-content;
+		background-color: #ffc6da!important;
+		margin-bottom: 15px !important;
+
+		.ItemSlider {
+			// width: max-content; //width: 170px;
+			padding: 20px 20px;
+		}
+
+		section>img {
+			height: 80px;
+		}
+		.img{
+			max-width: 100%;
+		}
+	}
+
+
+	.slider-quant_ {
+		width: 100%;
+		.controlArrow {
+			z-index: 4;
+
+			display: block;
+			.moveBefore,
+			.moveAfter {
+				z-index: 2;
+				.chevron-carousel-right,.chevron-carousel-left{
+					height: 4rem;
+					width: 1.2rem;
+				}
+			}
+		}
+
+		.ItemSlider {
+			padding-left: 10/16+rem;
+			padding-right: 10/16+rem;
+			width: max-content;
+			max-width: 100%;
+		}
+
+		.contentSlider {
+			display: flex;
+			background-color: #f4f4f4ed;
+			padding: 15/16+rem 0px 15/16+rem 0px;
+			width: 100%;
+		}
+	}
+
+	.slider.container.slider-quant_ {
+		background-color: var(--light-melon-full);
+	}
+
+}

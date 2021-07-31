@@ -1,0 +1,13 @@
+// Base Class Definition
+// -------------------------
+
+@mixin fa-core {
+  .#{$fa-css-prefix},
+  .fas,
+  .far,
+  .fal,
+  .fad,
+  .fab {
+    @include icon-core;
+  }
+}

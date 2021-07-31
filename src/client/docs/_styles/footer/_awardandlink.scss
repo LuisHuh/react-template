@@ -1,0 +1,118 @@
+[component="awardsandlinks"] {
+    .footer-ourawards {
+        background-color: var(--white);
+    }
+
+    .hr-pink {
+        border-color: var(--light-melon);
+        width: 50%;
+    }
+    .awards {
+        font-family: Avenir; //OpenSans;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: condensed;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: var(--dark-gray);
+        text-align: center;
+    }
+
+    .final-footer {
+        background-color: var(--dark-gray);
+    }
+
+    .list-footer {
+        margin: unset;
+        padding: unset;
+        color: var(--white);
+        font-family: Avenir;
+        list-style: none;
+        display: inline-flex;
+        text-align: center;
+        width: 83%;
+        margin: auto;
+    }
+
+    @media (max-width : 1024px) {
+        hr {
+            background-color: var(--light-melon);
+            border-color: var(--light-melon);
+            color: var(--light-melon);
+            border-style: solid;
+            @include vwvh("border-width", .5);
+        }
+
+        .tripadvisor-content {
+            position: relative;
+            @include vwvh("bottom", 6.72);
+        }
+
+        .footer-ourawards {
+            @include vwvh("height", 219);
+        }
+
+        .hr-pink {
+            width: 50%;
+            float: right;
+        }
+
+        .awards {
+            @include vwvh("font-size", 28);
+            color: #6d6e71;
+        }
+
+        .final-footer {
+            @include vwvh("height", 60);
+        }
+
+        .list-footer {
+            @include vwvh("font-size", 14);
+        }
+
+        .link-footer {
+            @include vwvh("padding-left", 30);
+            @include vwvh("padding-right", 30);
+        }
+    }
+
+    @media (min-width: 1025px) {
+
+        .tripadvisor-content,
+        .five-content,
+        .four-content {
+            position: relative;
+            margin-top: -38px;
+        }
+
+        .footer-ourawards {
+            height: 219px;
+        }
+
+        .hr-pink {
+            width: 50%;
+            top: 10px;
+            border-top: 1px;
+            position: relative;
+        }
+
+        .awards {
+            font-size: 28px;
+        }
+
+        .final-footer {
+            height: 60px;
+        }
+
+        .list-footer {
+            font-size: 14px;
+        }
+
+        .link-footer {
+            padding: 0 30px;
+            color: white;
+        }
+    }
+
+}

@@ -1,0 +1,21 @@
+{
+	"data": {
+		"dropdownData": {
+			"ZCJG": "Moon Palace Jamaica",
+			"ZMGR": "The Grand at Moon Palace Cancun",
+			"ZMNI": "Moon Palace Cancun",
+			"ZHLB": "Le Blanc Spa Resort Cancun",
+			"ZPLB": "Le Blanc Spa Resort Los Cabos",
+			"ZRPL": "Playacar Palace",
+			"ZHBP": "Beach Palace",
+			"ZRCZ": "Cozumel Palace",
+			"ZHIM": "Isla Mujeres Palace",
+			"ZHSP": "Sun Palace"
+		},
+		"dropdownHtml": "<select><option value=\"\" disabled selected>Select...</option></select>",
+		"dropdownDataActive": []
+	},
+	"message": "Offline mode",
+	"code": 200,
+	"error": false
+}

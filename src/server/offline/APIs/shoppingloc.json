@@ -1,0 +1,14 @@
+{
+    "data":[{
+       "idevent_evento":"228",
+       "evento":"Shopping",
+       "idevent_evento_locacion":"202",
+       "description":"Cart",
+       "locacion":"Online",
+       "fecha_inicia_evento":"2020-07-08 08:46:00",
+       "fecha_fin_evento":"2022-07-15 08:46:00"
+    }],
+    "message":"Offline mode",
+    "code":200,
+    "error":false
+ }

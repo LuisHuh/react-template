@@ -1,0 +1,95 @@
+{
+	"data":[
+		{
+			"codigo_promocion":"DECOR25",
+			"description":"Free Wedding Essentials",
+			"comentarios":" Promocion 20 USD",
+			"cantidad":"2000.00",
+			"group":"No",
+			"status":"1",
+			"idevent_evento_promocion":"20",
+			"idevent_promocion":"6",
+			"id_group":"99",
+			"usuario_asigna":"rcan",
+			"usuario_autoriza":" gadrian",
+			"estado_solicitud":"2",
+			"agrupar":"0",
+			"moneda":"USD",
+			"idevent_tipo_promocion":"2",
+			"min_noches":"0",
+			"booking_window_inicio":"2019-03-01",
+			"booking_window_fin":"2020-08-31",
+			"travel_window_inicio":"2019-05-01",
+			"travel_window_fin":"2021-12-23",
+			"expresion_logica":"[TOTAL_ROOM_NIGHTS]*[AMOUNT]",
+			"wording":{
+				"1":{
+					"wording": "<ul><li>Bride and groom will earn $20.00 USD credit for every night of the wedding group’s stay. Credit can be used toward the purchase of wedding essentials from the Amada Flower Design Studio, Delight Cake Studio, Evoke Décor Studio, and Quantum Audiovisual Studio catalogs. Only applicable at Palace Resorts properties – Beach Palace, Cozumel Palace, Isla Mujeres Palace, Moon Palace Cancun, Moon Palace Jamaica, Playacar Palace, The Grand at Moon Palace Cancun, and Sun Palace.</li></ul>",
+					"terms_and_conditions": "Only applicable to new wedding groups with a signed group contract. Applicable under the Advanced Booking Policy. Bride and groom earn $20.00 USD credit for every paid room night of main travel group dates within the contracted wedding room block. Earned credit can only be used toward the purchase of wedding extras featured in our Amada Flower Design Studio and Delight Cake Studio catalogs. Earned credit cannot be used toward wedding extras by outside vendors or any other extras not included in our Amada Flower Design Studio and Delight Cake Studio catalogs. Reservations with overlapping dates qualify - only dates within promotion can be considered for added value. If credit goes un-used during stay, it cannot be refunded, exchanged for other services, or applied to a future stay and will be forfeited. Not applicable to reservations with employee rate, travel agent rate, FAMS, and complimentary or compensatory stays. Not redeemable for cash. This promotion is not transferable to guests in other rooms. Reservations less than three (3) nights will not qualify for any promotions. Minimum night stay requirement per property must be met in order to qualify. The following dates require a 5-night minimum stay: March 28, 2021 – April 4, 2021. Black-out dates apply. The following black-out dates apply: December 23, 2020 – January 3, 2021. Palace Resorts reserves the right to change or discontinue this promotion at any time and without prior notice. Information is subject to change. Other terms and conditions may apply.\n\n"
+					},
+				"2":{
+					"wording": "<ul><li>Los novios obtendrán un crédito de $ 20.00 USD por cada noche de estancia por habitación del grupo de bodas. El crédito se puede utilizar para la compra de artículos esenciales para bodas de los catálogos Amada Flower Design Studio, Delight Cake Studio, Evoke Décor Studio, y Quantum Audiovisual Studio. Solo aplicable en las propiedades de Palace Resorts: Beach Palace, Cozumel Palace, Isla Mujeres Palace, Moon Palace Cancún, Moon Palace Jamaica, Playacar Palace, The Grand at Moon Palace Cancún y Sun Palace.\n</li></ul>",
+					"terms_and_conditions": "Solo aplicable a nuevos grupos de bodas con contrato grupal firmado. Combinable con la Política de reserva anticipada. Los novios obtienen un crédito de $ 20.00 USD por cada habitación por noche pagada dentro las fechas del viaje del grupo principal dentro del contrato. El crédito ganado solo se puede utilizar para la compra de extras de boda que aparecen en los catálogos de Amada Flower Design Studio, Delight Cake Studio, Evoke Décor Studio y Quantum Audiovisual Studio. El crédito ganado no puede ser utilizado para extras de boda por proveedores externos o cualquier otro extra no incluido en nuestros catálogos Amada Flower Design Studio, Delight Cake Studio, Evoke Décor Studio y Quantum Audiovisual Studio. Las reservas con fechas superpuestas califican; solo las fechas dentro de la promoción pueden considerarse para valor agregado. Si el crédito no se utiliza durante la estadía, no se puede reembolsar, cambiar por otros servicios o aplicar a una estadía futura y se perderá. No aplica reservas con tarifa para empleados, tarifa de agente de viajes, FAMS y estancias en cortesía o compensatorias. No canjeable por efectivo. Esta promoción no es transferible a huéspedes en otras habitaciones. Las reservas de menos de tres (3) noches no calificarán para ninguna promoción. Se debe cumplir el requisito de estadía mínima por propiedad para calificar. Se aplican fechas bloqueo. Palace Resorts se reserva el derecho de cambiar o descontinuar esta promoción en cualquier momento y sin previo aviso. La información está sujeta a cambios. Pueden aplicarse otros términos y condiciones.\n\n"
+					}
+				},
+			"propiedades":["ZHSP","ZMGR","ZMNI","ZMSU","ZHBP","ZHIM","ZRPL","ZRCZ","ZCJG"],
+			"path_image":"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/pago_internet01022020.jpg"},{"codigo_promocion":"POP","description":"Preview Paradise Mexico","comentarios":" Promocion POP","cantidad":"1500.00","group":"No","status":"1","idevent_evento_promocion":"21","idevent_promocion":"3","id_group":"99",
+			"usuario_asigna":"gadrian",
+			"usuario_autoriza":"gadrian",
+			"estado_solicitud":"2",
+			"agrupar":"0",
+			"moneda":"USD",
+			"idevent_tipo_promocion":"1",
+			"min_noches":"0",
+			"booking_window_inicio":"1000-01-01",
+			"booking_window_fin":"2030-12-31",
+			"travel_window_inicio":"1000-01-01",
+			"travel_window_fin":"2020-12-23",
+			"expresion_logica":"([TOTAL_ROOM_NIGHTS]*[RATES])-([TOTAL_ROOM_NIGHTS]*[TOTAL_PERQUISITE])",
+			"wording":{
+				"1":{
+					"wording":"Is your group considering a a destination wedding at Palace Resorts in Mexico? Here's their chance to experience our offerings  BEFORE they get married. Let us treat the future bride and groom to a free two-night stay at either Moon Palace Cancun, The Grand at Moon Palace Cancun, Beach  Palace and see how dream weddings are brought to life. During this visit, they'll learn all about Palace Resorts Weddings, meet with planners and suppliers, check out our stunning wedding locations, and see first-hand why our award-winning  properties make picture-perfect weddings.\n\nPreview Paradise events in Mexico include:\nComplimentary two-night stay at host resort*\nComplimentary room upgrade**\nSite inspection of host resort\nMini bridal show\nPreview stunning wedding locations and decor options\nFood and cake tasting\nMeet with suppliers\n\nSchedule of Preview Paradise Dates in 2020:\nJuly 31 (The Grand at Moon Palace Cancun)\nSeptember 25 (Beach Palace)\nDecember 4 (Moon Palace Cancun).",
+					"terms_and_conditions":"Preview Paradise promotion nights are subject to availability during the specified dates. *Stay is credited toward wedding extras with  your final wedding invoice upon confirming wedding. Couples must book a minimum of 10 rooms for a 3-night stay under a group  contract for their wedding in order to receive credit for their preview-wedding stay. The total value of the Preview Paradise 2-night stay  will be credited toward their master account once their wedding takes place on property. A $20 per person/per night fee applies to the  credit. **Complimentary room upgrade is subject to availability. Preview Paradise stays apply only at designated properties. Credit will  be processed on-site. Airfare and roundtrip airport transfer not included. No refunds. Additional nights are charged at published rates.  Black-out dates apply and all requests are subject to availability. Available in Mexico. PROMO CODE: \"POP\". Information subject to  change. Additional terms and conditions may apply."},
+				"2":{
+					"wording":"¿Tu grupo está considerando una boda en Palace Resorts? Esta es la oportunidad vivir la experiencia Palace ANTES de casarse. Deje a los novios en nuestras manos, les ofrecemos una estancia gratuita de dos noches para que vean como se hacen realidad su boda de ensueño. Durante esta visita, aprenderán todo sobre las bodas en Moon Palace Cancún, The Grand at Moon Palace Cancún, Beach  Palace, se reunirán con coordinadores de bodas y proveedores, visitarán nuestras impresionantes locaciones de bodas y verán de primera mano por qué nuestras propiedades hacen bodas de ensueño.\n\nLos eventos de Una mirada al paraíso en México incluyen:\nEstancia de cortesía de dos noches en el resort anfitrión *\nAscenso de categoría de habitación en cortesía **\nInspección del resort\nMini showroom de bodas, una vista previa de las impresionantes locaciones de bodas y las opciones de decoración.\nDegustación de comida y pasteles\nReunirse con proveedores\n\nCalendario de las fechas preliminares de Una mirada al paraíso en 2020:\n31 de julio (The Grand at Moon Palace Cancún)\n25 de septiembre (Beach Palace)\n4 de diciembre (Moon Palace Cancún)",
+					"terms_and_conditions":"Las noches de la promoción Una Mirada al Paraíso están sujetas a disponibilidad durante las fechas especificadas.\n  * La estancia se acredita para los extras de la boda con la factura final de la boda al confirmar la boda.\nLas parejas deben reservar un mínimo de 10 habitaciones por una estancia de 3 noches bajo contrato grupal para su boda para recibir el crédito por su estancia previa a la boda. Se acreditará el valor total de la estancia de 2 noches Una Mirada al Paraíso en la cuenta principal una vez que su boda se lleve a cabo en la propiedad. Se aplica una tarifa de $ 20 por persona / noche al crédito.\n  ** El ascenso de categoría de habitación en cortesía está sujeto a disponibilidad. Las estancias de Una Mirada al Paraíso se aplican solo en las propiedades designadas.\n  El crédito se procesará en el sitio. El pasaje aéreo no está incluido. No aplican reembolsos. Las noches adicionales se cobran según las tarifas publicadas.\n  Aplican fechas bloqueadas y todas las solicitudes están sujetas a disponibilidad. Disponible en Moon Palace Cancun, The Grand at Moon Palace Cancun, Beach Palace. CÓDIGO PROMOCIONAL: \" POP \".\n*** La promoción debe solicitarse dentro de los 20 días anteriores a las fechas de viaje para confirmar la\nsala de exposición. **** La degustación de pasteles de boda está limitada a tres (3) sabores. CÓDIGO PROMOCIONAL: \"POP\". La información está sujeta a cambios en cualquier tiempo y sin previo aviso. Se pueden aplicar términos y condiciones adicionales.\nSi la promoción u otros valores agregados no se utilizan durante la estancia, no se pueden reembolsar, canjear por otros servicios ni aplicar a un futuro y se perderá. Esta promoción no es transferible a huéspedes en otras habitaciones. El código de promoción se debe informar al momento de reserva para que la reserva sea ingresada correctamente en nuestro sistema y confirmada por el Departamento de Bodas. Los errores u omisiones en la tarifa no serán aceptados y son responsabilidad del operador turístico."}
+					},
+			"propiedades":["ZMGR","ZMNI","ZMSU","ZHBP"],
+			"path_image":"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/pago_internet01022020.jpg"},
+			{"codigo_promocion":"COCTAIL",
+			"description":"Complimentary group benefit Petite",
+			"comentarios":"Complimentary group benefit Petite",
+			"cantidad":"5.00",
+			"group":"No",
+			"status":"1",
+			"idevent_evento_promocion":"25",
+			"idevent_promocion":"7",
+			"id_group":"99",
+			"usuario_asigna":"rcan",
+			"usuario_autoriza":" ",
+			"estado_solicitud":"1",
+			"agrupar":"0",
+			"moneda":"USD",
+			"idevent_tipo_promocion":"3",
+			"min_noches":"0",
+			"booking_window_inicio":"1000-01-01",
+			"booking_window_fin":"1000-01-01",
+			"travel_window_inicio":"1000-01-01",
+			"travel_window_fin":"1000-01-01",
+			"expresion_logica":"[HOURS]",
+			"wording":{
+				"1":{
+					"wording": "<p>Rooms Booked 10 - 19 rooms (or 30 - 59 room nights) </p><ul><li>1 - hour private cocktail reception</li></ul><p> Rooms Booked 20 - 24 rooms (or 60 - 74 room nights) </p><ul><li>2 - hour private function </li></ul><p>Rooms Booked 25 - 35 (or 75 - 107 room nights) </p><ul><li>9 hours of private events </li></ul><p>Rooms Booked 36 - 50 rooms (or 108 - 152 room nights) </p><ul><li>10 hours of private events </li></ul><p>Rooms Booked 51 - 99 rooms (or 153 - 299 room nights) </p><ul><li>15 hours of private events </li></ul><p>Rooms Booked 100 or more rooms (or 300+ room nights)</p><ul><li> Unlimited days of events (5 hours max per day) </li></ul>",
+					"terms_and_conditions": "<p><span>Complimentary benefits only apply to new groups with a signed contract. Not applicable to Flex Groups.Not applicable to Meetings, Incentive Groups, Conventions or Corporate Events (MICE), or to any group for which Meetings and Conventions space will be requested. For private events, no event day may have less than three (3) complimentary hours or more than five (5) complimentary hours, unless the group has earned less than three (3) complimentary hours total. Shorter events, as well as additional hours, are available for an extra charge. Room reservations must be for three (3) nights or more in order to count towards benefits. Event hours are between 8:00 AM and 11:59 PM. Any event that extends past midnight (12:00 AM) will incur an additional charge and complimentary hours cannot be used. Applies to groups with a minimum of 20 people. Applies to 50 or more rooms arriving at the same time.</span> </p>"
+					},
+				"2":{
+					"wording": "<p><span>Habitaciones reservadas 10-19 habitaciones (o 30-59 cuartos noches)\n    </span></p>\n<ul>\n    <li><span>Cóctel de recepción de 1 hora\n        </span></li>\n</ul>\n<p><span>Habitaciones reservadas 20-24 habitaciones (o 60-74 cuartos noches)\n    </span></p>\n<ul>\n    <li><span>evento de 2 horas\n        </span></li>\n</ul>\n<p><span>Habitaciones reservadas de 25 a 35 (o de 75 a 107 cuartos noches)\n    </span></p>\n<ul>\n    <li><span>9 horas de eventos</span></li>\n</ul>\n<p><span>\n        Habitaciones reservadas 36-50 habitaciones (o 108-152 cuartos noches)</span></p>\n<ul>\n    <li><span>10 horas de eventos </span></li>\n</ul>\n<p><span>\n        Habitaciones reservadas 51 - 99 habitaciones (o 153 - 299 cuartos noches)\n    </span></p>\n<ul>\n    <li><span>15 horas de eventos</span></li>\n</ul>\n<p><span>\n        Habitaciones reservadas 100 o más habitaciones (o más de 300 noches de habitación)\n    </span></p>\n<ul>\n    <li><span>Días ilimitados de eventos (5 horas máximo por día)</span>\n    </li>\n</ul>",
+					"terms_and_conditions": "<p><span>Los beneficios en cortesía solo se aplican a grupos nuevos con un contrato firmado. No aplica a Grupos Flex, No aplica a Reuniones, Grupos de Incentivos, Convenciones o Eventos Corporativos (MICE), ni a ningún grupo para el cual se solicitará espacio para Reuniones y Convenciones. Para los eventos, ningún día de evento puede tener menos de tres (3) horas en cortesía o más de cinco (5) horas en cortesía, a menos que el grupo haya ganado menos de tres (3) horas en cortesía en total. Los eventos más cortos, así como las horas adicionales, están disponibles por un cargo adicional. Las reservas de habitaciones deben ser de tres (3) noches o más para que se consideren dentro de los beneficios. El horario del evento es entre las 8:00 a.m. y las 11:59 p.m. Cualquier evento que se extienda más allá de la medianoche (12:00 a. M.) Incurrirá en un cargo adicional y no se podrán utilizar las horas en cortesía. Aplica para grupos con un mínimo de 20 personas. Se aplica a 50 o más habitaciones que lleguen al mismo tiempo.</span> </p>"
+					}
+			},
+			"propiedades":["ZHSP","ZMNI","ZMSU","ZHBP","ZHIM","ZRPL","ZRCZ"],
+			"path_image":"https://s3.amazonaws.com/webfiles_palace/clever/products/assets/pago_internet01022020.jpg"}],
+			"message":"Offline mode",
+			"code":200,
+			"error":false
+}

@@ -1,0 +1,28 @@
+/**
+ * @mixin banner
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Imagen principal de la pagina.
+ */
+
+////
+/// @group banner
+////
+
+@mixin banner {
+	[component="banner"] {
+		img {
+			opacity: 0;
+			-webkit-transition: all 0.1s ease-in-out;
+			-moz-transition: all 0.1s ease-in-out;
+			-o-transition: all 0.1s ease-in-out;
+			transition: all 0.1s ease-in-out;
+
+			&.active {
+				opacity: 1;
+				-webkit-animation: changeImage 2s linear 0s normal forwards;
+				animation: changeImage 2s linear 0s normal forwards;
+			}
+		}
+	}
+}

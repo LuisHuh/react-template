@@ -1,0 +1,103 @@
+/**
+ * @mixin varios
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Componentes globales
+ */
+
+////
+/// @group component
+////
+
+$section-group-sizes: ("sm", "md", "lg", "xlg") !default;
+
+$section-group-positions: (
+	left: flex-start,
+	center: center,
+	right: flex-end,
+) !default;
+
+@mixin size-align($size, $align, $value) {
+	&[#{$size}-align="#{$align}"] {
+		align-items: $value;
+	}
+}
+
+@mixin web-section-group {
+	section[name="group"] {
+		@include flex(center, center, column);
+		height: 100%;
+
+		@each $size in $section-group-sizes {
+			@each $key, $pos in $section-group-positions {
+				@if $size == "md" {
+					@include medium-screen() {
+						@include size-align($size, $key, $pos);
+					}
+				} @else if $size == "lg" {
+					@include large-screen() {
+						@include size-align($size, $key, $pos);
+					}
+				} @else if $size == "xlg" {
+					@include extra-large-screen() {
+						@include size-align($size, $key, $pos);
+					}
+				} @else {
+					@include size-align($size, $key, $pos);
+				}
+			}
+		}
+	}
+}
+
+$tag-background-color: rgba(255, 255, 255, 0.8) !default;
+@mixin web-tag {
+	[widget="tag"] {
+		background-color: $tag-background-color;
+		padding: 0.5rem;
+		text-transform: capitalize;
+	}
+}
+
+
+
+
+@mixin card-text {
+	
+
+	@include large-screen(){
+		[padding="text"] {
+			padding-left: 13px;
+			height: 8px;
+		}
+	}
+	   
+   	@include medium-screen(){
+		[padding="text"] {
+			padding-left: 13px;
+			height: 8px;
+		}
+   	}
+}
+
+
+@mixin padding-card {
+	[padding="card"] {
+		padding-top: 10px;		
+	}
+
+	@include large-screen(){
+		[padding="card"] {
+			padding-top: 10px;				
+		}
+	}
+	   
+   	@include medium-screen(){
+		[padding="card"] {
+			padding-top: 10px;	
+		}
+   	}
+}
+
+
+

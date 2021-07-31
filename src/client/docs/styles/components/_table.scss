@@ -1,0 +1,191 @@
+/**
+ * @class Table
+ * @version 2.0.0
+ * @author lhuh
+ * @summary Tabla y Tabla collapsible
+ */
+
+////
+/// @group Table
+////
+
+/// Nombre del contenedor de la tabla
+/// @type string
+$table-container: "table-container" !default;
+
+/// Tamaño de la fuente en modo mobile
+/// @type number
+$table-font-size: 12px !default;
+
+/// Tamaño de la fuente de los encabezados en modo mobile
+/// @type number
+$table-thead-font-size: 14px !default;
+
+/// Tamaño de la fuente en modo escritorio
+/// @type number
+$table-font-size-desktop: 18px !default;
+
+/// Color de la fila de la tabla
+/// @type color
+$table-row-background: #f2f2f2 !default;
+
+/// Color de borde para la tabla
+/// @type color
+$table-border-color: #5c3c3c !default;
+
+@mixin element-table($include: true) {
+	@if $include {
+		width: 100%;
+		display: block;
+		font-size: $table-font-size;
+	}
+
+	@include large-screen() {
+		display: table;
+		border-collapse: collapse;
+		font-size: $table-font-size-desktop;
+	}
+}
+
+@mixin element-thead($include: true) {
+	@if $include {
+		display: none;
+		@include large-screen() {
+			display: table-header-group;
+			font-size: $table-thead-font-size;
+
+			td {
+				background-color: #644a49 !important;
+				color: #ffffff;
+				vertical-align: top;
+			}
+		}
+	}
+}
+
+@mixin element-body($include: true) {
+	@if $include {
+		display: block;
+
+		@include large-screen() {
+			display: table-row-group;
+		}
+	}
+}
+
+@mixin element-tr($include: true) {
+	@if $include {
+		display: flex;
+		flex-flow: row wrap;
+		align-content: flex-start;
+		border-top: 1px solid $table-border-color;
+		background-color: white;
+		/* padding: 0 0.5rem; */
+
+		&:nth-child(odd) {
+			background-color: $table-row-background;
+		}
+
+		&:last-child {
+			border-bottom: 1px solid $table-border-color;
+		}
+
+		@include large-screen() {
+			display: table-row;
+		}
+	}
+}
+
+@mixin element-td($include: true) {
+	@if $include {
+		flex: 0 0 auto;
+		min-height: 0px;
+		min-width: 0px;
+		width: 50%;
+
+		&:not(.status):not(.action) {
+			&::before {
+				content: attr(colname);
+				font-weight: 600;
+			}
+		}
+
+		&.full {
+			width: 100%;
+		}
+
+		@include large-screen() {
+			width: auto !important;
+			display: table-cell;
+			padding: 0.5rem 1rem;
+			vertical-align: middle;
+
+			&::before {
+				content: "" !important;
+			}
+		}
+	}
+}
+
+@mixin web-table() {
+	[component="#{$table-container}"] {
+		width: 100%;
+		overflow-x: auto;
+	}
+
+	table {
+		@include element-table;
+
+		thead {
+			@include element-thead;
+		}
+
+		tbody {
+			@include element-body;
+		}
+
+		tr {
+			@include element-tr;
+		}
+
+		td {
+			@include element-td;
+		}
+
+		th {
+			@extend td;
+			font-weight: 400;
+		}
+	}
+}
+
+@mixin web-collapsible-table() {
+	table[type="collapsible"] {
+		td:not(th) {
+			padding: 0;
+		}
+
+		tr {
+			border-top: none;
+
+			&:nth-child(odd) {
+				background-color: white;
+			}
+
+			&:nth-child(4n + 1),
+			&:nth-child(4n + 2) {
+				background-color: $table-row-background;
+			}
+
+			&:nth-child(2n + 1) {
+				border-top: 1px solid $table-border-color;
+			}
+		}
+
+		.content{
+			td{
+				width: 100%;
+			}
+		}
+	}
+}

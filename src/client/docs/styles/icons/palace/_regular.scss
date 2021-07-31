@@ -1,0 +1,45 @@
+/* 
+ * Palace Icons v 1.0.0
+ * Made by Luis Enrique Huh Puc
+ * Private License
+ */
+ 
+$pr-regular: (
+	bars-circle: \f050,
+	bars: \f051,
+	chats: \f052,
+	checkbox-checked: \f053,
+	checkbox: \f054,
+	checked: \f055,
+	circle: \f056,
+	close-circle: \f057,
+	close: \f058,
+	comment: \f059,
+	dot-circle: \f05a,
+	ellipsis-v: \f05b,
+	envelope-circle: \f05c,
+	envelope: \f05d,
+	facebook: \f05e,
+	heart: \f05f,
+	hotel: \f060,
+	instagram: \f061,
+	phone-circle: \f062,
+	phone: \f063,
+	pinterest: \f064,
+	plane-arrival: \f065,
+	plane-departure: \f066,
+	plus: \f067,
+	rose: \f068,
+	shopping-cart: \f069,
+	twitter: \f06a,
+	youtube: \f06b,
+);
+
+@mixin icon-style-regular {
+	.#{$pr-css-prefix}r {
+		font-family: "Palace Icons";
+		font-weight: 400;
+		@include icon-core;
+		@include generate-contents($pr-css-prefix, $pr-regular);
+	}
+}

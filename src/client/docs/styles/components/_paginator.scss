@@ -1,0 +1,55 @@
+$pink: get-color("primary") !default;
+$white: get-color("white") !default;
+$rosy-pink: #ea8685;
+
+[component="paginator"] {
+    width: 100%;
+    margin: 2em auto;
+    user-select: none;
+    text-align: center;
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+        color: $rosy-pink;
+        display: inline-block;
+        text-align: center;
+        vertical-align: sub;
+        width: 1.3em;
+        height: 1.3em;
+
+        a {
+            display: inline-block;
+            line-height: 30px;
+        }
+
+        &:not(.active):not(.disabled):hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        &.active {
+            color: $white;
+            background-color: $rosy-pink;
+            border-radius: 50%;
+            cursor: default;
+        }
+
+        &.disabled a {
+            cursor: default;
+            color: #cbcbcb;
+        }
+    }
+    [component="paginator-first"],
+    [component="paginator-last"] {
+        width: auto !important;
+    }
+
+    @include large-screen() {
+        li {
+            width: 1.5em;
+            height: 1.5em;
+            line-height: 1.8em;
+        }
+    }
+}

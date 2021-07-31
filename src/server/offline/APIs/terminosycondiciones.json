@@ -1,0 +1,14 @@
+{
+	"data":{
+	"postDataResp":{
+			"iddef_sap_sociedad":"3",
+			"acepta_termino":"1",
+			"estado":1,
+			"blockid":"7310211",
+			"idevent_grupo":"99",
+			"currentidsap":false
+		}},
+			"message":"Offline mode",
+			"code":200,
+			"error":false
+}

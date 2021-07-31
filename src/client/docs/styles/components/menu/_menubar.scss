@@ -1,0 +1,64 @@
+/**
+ * @class MenuBar
+ * @version 2.0.0
+ * @author alanjimenez, lhuh
+ * @summary Menubar con elementos deslizables
+ */
+
+////
+/// @group menubar
+////
+
+/// Fuente para el menubar
+/// @type Font
+$menubar-lateral-family: inherit !default;
+
+/// Tamaño de la fuente
+/// @type Number
+$menubar-lateral-font-size: 1rem !default;
+
+/// Estilo de la fuente
+/// @type Number
+$menubar-lateral-font-weight: 200 !default;
+
+/// Fondo de los elementos del menu
+/// @type Background
+$menubar-background: black !default;
+
+/// Color de los textos del menu
+/// @type Color
+$menubar-color: white !default;
+
+@mixin web-menubar {
+	[component="menubar"] {
+		font-family: $menubar-lateral-family;
+		font-size: $menubar-lateral-font-size;
+		font-weight: $menubar-lateral-font-weight;
+		@include ul;
+		@include flex(center, stretch, row);
+
+		@include menu-item($menubar-background, $menubar-color, down) {
+			position: relative;
+			display: none;
+			flex-grow: 1;
+			flex-basis: 0;
+			width: calc(100% / 3);
+
+			&.enabled {
+				display: inline-block;
+			}
+
+			&[action="left"] {
+				order: 1;
+			}
+
+			&[action="cent"] {
+				order: 2;
+			}
+
+			&[action="right"] {
+				order: 3;
+			}
+		}
+	}
+}

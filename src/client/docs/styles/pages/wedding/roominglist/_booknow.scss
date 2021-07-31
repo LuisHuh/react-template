@@ -1,0 +1,92 @@
+$col-primary: get-color('primary') !default;
+$col-text: white;
+$col-fifth: #7c5d5b !default;
+$font-size: 0.8em;
+@mixin book-now {
+    @media (max-width: 1024px) and (min-width: 0px) {
+        [component='booknow'] {
+            display: none;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        [component='booknow'] {
+            z-index: 99;
+            position: absolute;
+            top: 25em;
+            left: 6em;
+            right: 6em;
+            border-radius: 0.5em;
+            background-color: $col-fifth;
+            color: $col-text;
+            [component='select'] {
+                position: relative;
+                &::after {
+                    content: ' | ';
+                    height: 25px;
+                    width: 25px;
+                    font-size: 20px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto 0;
+                }
+                input {
+                    border: transparent;
+                    font-size: $font-size;
+                    font-weight: bold;
+                    color: $col-text;
+                    &::placeholder {
+                        color: $col-text;
+                        font-weight: initial;
+                    }
+
+                    margin: auto;
+                }
+                svg {
+                    fill: $col-text !important;
+                }
+            }
+            .shrink {
+                &:first-child {
+                    width: initial;
+                    align-self: center;
+                    padding-left: 1em;
+                    &::after {
+                        content: '|';
+                        margin-left: 1em;
+                        font-size: xx-large;
+                    }
+                }
+                &:last-child {
+                    button {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+            .auto {
+                font-size: $font-size;
+                position: relative;
+                height: initial;
+
+                label,
+                div {
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    width: 100%;
+                }
+                label {
+                    inline-size: max-content;
+                    top: 0;
+                }
+                div {
+                    margin-top: 1em;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}

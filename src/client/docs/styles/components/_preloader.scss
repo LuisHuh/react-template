@@ -1,0 +1,157 @@
+[component="preloader"] {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 100000;
+  width: 100vw;
+  display: grid;
+  top: 0;
+  grid-template-columns: auto;
+  height: 100vh;
+  left: 0;
+  text-align: center;
+  align-items: center;
+}
+
+// Variables del loader
+$loader-logo-space: 20px;
+$loader-width: 100px;
+$loader-color1: #ea8685;
+$loader-color2: #de5d5c;
+$loader-color3: #c14645;
+$loader-color4: #de5d5c;
+
+
+[widget="market-loader"] {
+  position: relative;
+
+  .mk-logo {
+    position: absolute;
+    top: 0; //$loader-logo-space;
+    left: $loader-logo-space;
+    bottom: $loader-logo-space;
+    right: $loader-logo-space;
+    margin: auto;
+
+    svg {
+      animation: loader-pulse 5s ease-in-out infinite, color-logo 6s ease-in-out infinite;
+      width: $loader-width;
+      filter: drop-shadow(1px 1px 6px #888);
+    }
+  }
+
+  .mk-loader {
+    position: relative;
+    margin: auto;
+    width: $loader-width;
+
+    svg {
+      animation: rotate 2s linear infinite;
+      height: 100%;
+      transform-origin: center center;
+      width: 100%;
+      filter: drop-shadow(1px 1px 6px #888);
+      margin: auto;
+
+      circle {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        animation: dash 1.7s ease-in-out infinite, color 6s ease-in-out infinite;
+        stroke-linecap: round;
+      }
+    }
+  }
+}
+
+// Cuando el body está bloqueado
+.blockedbyloader {
+  overflow: hidden;
+
+  .with-aside-container {
+    filter: blur(2px);
+    box-sizing: border-box;
+  }
+}
+
+// Animaciones
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes color {
+
+  100%,
+  0% {
+    stroke: $loader-color1;
+  }
+
+  40% {
+    stroke: $loader-color2;
+  }
+
+  66% {
+    stroke: $loader-color3;
+  }
+
+  80%,
+  90% {
+    stroke: $loader-color4;
+  }
+}
+
+@keyframes color-logo {
+
+  100%,
+  0% {
+    fill: $loader-color1;
+    /* stroke: #039be5; */
+  }
+
+  40% {
+    fill: $loader-color2;
+    /* stroke: #008744; */
+  }
+
+  66% {
+    fill: $loader-color3;
+    /* stroke: #ffa700; */
+  }
+
+  80%,
+  90% {
+    fill: $loader-color4;
+    /* stroke: #ed3d90; */
+  }
+}
+
+@keyframes loader-pulse {
+  0% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}

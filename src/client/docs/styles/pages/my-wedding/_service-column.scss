@@ -1,0 +1,68 @@
+/**
+ * @page My Wedding
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Seccion de My Wedding
+ */
+
+////
+/// @group page
+////
+
+@mixin service-column {
+	.service-column {
+		.service-row {
+			@include flex($align-items: center);
+			padding: 0.5rem;
+
+			&:last-of-type {
+				justify-content: space-around;
+			}
+
+			> [component="trigger-icon"] {
+				font-size: 1rem;
+				i {
+					transition: all 0.3s ease-in-out;
+				}
+			}
+
+			> [component="cover"] {
+				margin: 0 0.5rem;
+			}
+
+			> [component="grid-x"] {
+				width: 100%;
+
+				[widget="amount"] {
+					display: inline-block;
+				}
+			}
+		}
+
+		.custom-visibility {
+			@include large-screen {
+				display: none;
+			}
+		}
+
+		.btn-remove {
+			text-transform: capitalize;
+			text-decoration: underline;
+			text-align: left;
+			margin: 0;
+			padding: 0;
+			min-width: auto;
+			min-height: auto;
+			font-weight: 300;
+			font-size: 12px;
+			
+			@include large-screen{
+				font-size: 20px;
+			}
+		}
+
+		.btn-link {
+			@extend .btn-remove;
+		}
+	}
+}

@@ -1,0 +1,42 @@
+// General colors
+:root {
+    //--rosy-pink: #f86290;
+    --light-pink: #f984a8;
+    --dark-gray: #644a49; //#323232;
+    --black: #000000;
+    --gray-weddings: #e3e3e3;
+    --light-gray: #FEDFD9; //#f2f2f2;
+    --white: #ffffff;
+    --light-gray-trans: rgb(242, 242, 242, .01);
+    --light-gray-trans-m: rgb(242, 242, 242, .9);
+    --dark-gray-full: #979797;
+    --light-gray-dream: rgb(50, 50, 50, .6);
+    --dark-gray-opct: rgb(50, 50, 50, .6);
+    --pale-pink: #ffc6da;
+    --gray-nav: #6d6d6d;
+
+    --rosy-pink: #ea8685; //light melon
+    --light-melon: #ea8685;
+    --melon-footer-commonlinks: #FF8788;
+
+    --light-melon-full: #FEDFD9;
+    --light-melon-mdl: #f6927b;
+    --dark-melon: #644a49;
+    --melon-op01: #63494a1a;
+    /*opacidad .1*/
+    --melon-op03: #f6927b4d;
+    /*opacidad .3*/
+    --melon-op05: #f6927b80;//rgba(100,74,73,0.8);
+    --melon-op08: #644a48cc;
+    /*opacidad .5*/
+    --gray-op09: #f1edeee6;
+    --dark-gray-md: #5a5a5a;
+    --light-melon-op8:#ea8684cc;
+}
+
+$dark-gray:var(--dark-gray);
+$rosy-pink:var(--rosy-pink);
+$black:var(--black);
+$white:var(--white);
+$light-pink:var(--light-pink);
+$light-gray:var(--light-gray)

@@ -1,0 +1,100 @@
+// CSS Framework for Sites by Palace Resorts
+// https://www.palaceresorts.com/
+// Licensed under MIT Open Source
+
+@import "../components/grid/unit";
+@import "../components/grid/breakpoint";
+
+////
+/// @group mixins
+////
+
+// Landscape - Horizontal
+// Portrait - Vertical
+
+// Media Query Ranges
+
+// Media Queries Mixins
+@mixin medium-screen {
+	@include breakpoint("medium") {
+		@content;
+	}
+}
+
+@mixin medium-screen-landscape {
+	@include medium-screen {
+		@include breakpoint(landscape) {
+			@content;
+		}
+	}
+}
+
+@mixin medium-screen-portrait {
+	@include medium-screen {
+		@include breakpoint(portrait) {
+			@content;
+		}
+	}
+}
+
+@mixin large-screen {
+	@include breakpoint("large") {
+		@content;
+	}
+}
+
+@mixin large-screen-landscape {
+	@include large-screen {
+		@include breakpoint(landscape) {
+			@content;
+		}
+	}
+}
+
+@mixin large-screen-portrait {
+	@include large-screen {
+		@include breakpoint(portrait) {
+			@content;
+		}
+	}
+}
+
+@mixin extra-large-screen {
+	@include breakpoint("xlarge") {
+		@content;
+	}
+}
+
+@mixin extra-large-screen-landscape {
+	@include extra-large-screen {
+		@include breakpoint(landscape) {
+			@content;
+		}
+	}
+}
+
+@mixin extra-large-screen-portrait {
+	@include extra-large-screen {
+		@include breakpoint(portrait) {
+			@content;
+		}
+	}
+}
+
+@mixin small-screen-down {
+	@include breakpoint(small down) {
+		@content;
+	}
+}
+
+@mixin medium-screen-down {
+	@include breakpoint(medium down) {
+		@content;
+	}
+}
+
+@mixin large-screen-down {
+	@include breakpoint(large down) {
+		@content;
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"data": [
+		{
+			"idSubcategory": "8",
+			"description": "SWEET CAKES",
+			"idHotel": "ZRPL",
+			"idCategory": "2"
+		},
+		{
+			"idSubcategory": "9",
+			"description": "SIGNATURE CAKES",
+			"idHotel": "ZRPL",
+			"idCategory": "2"
+		},
+		{
+			"idSubcategory": "10",
+			"description": "Sugar Delights",
+			"idHotel": "ZRPL",
+			"idCategory": "2"
+		},
+		{
+			"idSubcategory": "11",
+			"description": "Sweet Tables",
+			"idHotel": "ZRPL",
+			"idCategory": "2"
+		},
+		{
+			"idSubcategory": "156",
+			"description": "CAKE STANDS",
+			"idHotel": "ZRPL",
+			"idCategory": "2"
+		},
+		{
+			"idSubcategory": "157",
+			"description": "FAVORS",
+			"idHotel": "ZRPL",
+			"idCategory": "2"
+		}
+	],
+	"message": "OK",
+	"code": 200,
+	"error": false
+}

@@ -1,0 +1,206 @@
+$pinktext: #ea8685 !default;
+$graytext: #6d6d6d;
+$white: #FFF;
+$navbarbgcolor: #efeced;
+
+[component="sidebar"] {
+  @include medium-screen-down {
+    display: flex;
+    overflow-x: auto;
+    width: 100vw !important;
+    padding: 0;
+    padding-bottom: 5px;
+  }
+
+  @include large-screen {
+    margin-left: auto;
+  }
+
+  .sidebar-left-control,
+  .sidebar-right-control {
+    display: flex;
+    align-items: center;
+    padding: 0 0.4em;
+    cursor: pointer;
+  }
+
+  .sidebar-left-control {
+    left: 0;
+    display: flex;
+    @include large-screen {
+      display: none;
+    }
+  }
+
+  .sidebar-right-control {
+    right: 0;
+    display: flex;
+    @include large-screen {
+      display: none;
+    }
+  }
+
+  .sidebar-content {
+    position: sticky;
+    margin-left: 1em;
+    font-family: "Avenir";
+    top: 10rem;
+    // z-index: 9;
+    // background: #FFF;
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    width: 240px !important;
+    height: fit-content;
+    column-gap: 1vw;
+    margin-top: 77px;
+    font-weight: 500;
+
+    @include medium-screen-down {
+      display: flex;
+      overflow-x: auto;
+      margin-top: unset !important;
+      // margin-bottom: 1em;
+      width: 100% !important;
+      padding: 0;
+      font-size: 0.75rem;
+    }
+
+
+    @media screen and (max-width: 64em) and (min-width: 52.5rem) {
+      display: initial;
+      text-align: center;
+    }
+
+    [role="navigation"] {
+      @include medium-screen-down {
+        display: inline-grid;
+        // height: auto;
+        position: relative;
+        margin: 1em .1em;
+        width: 125px;
+        min-width: 125px;
+        max-width: 125px;
+        align-items: center;
+        align-content: center;
+        padding: .5em 0;
+        word-spacing: 125px;
+
+        &.auto-space {
+          word-spacing: normal;
+        }
+
+        // Mostrar el contenido en dos columnas
+        .twocol {
+          display: grid;
+          align-items: center;
+          grid-template-columns: auto min-content;
+          margin-left: 20px;
+          margin-right: 20px;
+
+          &>.col1 {
+            grid-column: 1;
+          }
+
+          &>.col2 {
+            grid-column: 2;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+
+
+      // display: block;
+      position: sticky;
+      background: $pinktext;
+      color: $white;
+      margin: 1px 0;
+      // padding: 0.2em;
+      width: 240px;
+      text-align: center;
+      border-radius: 4px;
+      display: grid;
+      height: 56px;
+      align-content: center;
+      // font-weight: bold;
+
+      i {
+        font-size: 1.3rem;
+      }
+
+      [component="badge"].super {
+        left: -0.7em;
+        top: -0.9em;
+        font-size: 0.875rem;
+        padding-top: 2px;
+
+        @include medium-screen {
+          left: -0.7em;
+          top: -0.7em;
+          font-size: 0.75rem;
+          padding-top: 3px;
+        }
+      }
+
+      /* Large only */
+      &.active {
+        /* Large and up */
+        border: 1px solid;
+        color: $pinktext !important;
+        background: $white !important;
+
+        @include large-screen {
+          @include menu-icon-triangle(right, $pinktext, $white);
+          &::before {
+            right: -10px !important;
+          }
+  
+          &::after {
+            right: -8px !important;
+          }
+        }
+
+        /* Small only */
+        @include medium-screen-down {
+          @include menu-icon-triangle(down, $pinktext, $white);
+          &::before {
+            bottom: -10px !important;
+          }
+
+          &::after {
+            bottom: -8px !important;
+          }
+        }
+
+        [component="badge"] {
+          background: $pinktext;
+          color: $white;
+        }
+      }
+
+      &[menuitem="/my-wishlist"] .col1:after{
+        content: " "
+      }
+
+      @include medium-screen {
+        i {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@include large-screen {
+  aside+.with-aside-container {
+    width: calc(100% - 275px - 2em) !important;
+    margin-left: 20px !important;
+    max-width: calc(1366px - 275px - 2em);
+    margin-right: auto;
+  }
+}
+
+.with-aside-container {
+  width: 100%;
+}

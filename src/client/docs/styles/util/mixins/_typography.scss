@@ -1,0 +1,77 @@
+// CSS Framework for Sites by Palace Resorts
+// https://www.palaceresorts.com/
+// Licensed under MIT Open Source
+
+////
+/// @group mixins
+////
+
+$global-font-family: "Roboto" !default;
+$global-font-headers: $global-font-family !default;
+$global-font-body: $global-font-family !default;
+
+@mixin web-typography(
+	$font-headers: $global-font-headers,
+	$font-body: $global-font-family
+) {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $font-headers;
+	}
+
+	html {
+		font-family: $font-body;
+	}
+}
+
+////
+/// Encabezados
+/// @group typography
+////
+@mixin create-headers($map) {
+	@each $key, $value in $map {
+		#{$key},
+		.#{$key} {
+			font-size: $value;
+			line-height: 110%;
+			margin: ($value / 1.5) 0 ($value / 2.5) 0;
+		}
+	}
+}
+
+////
+/// Paragrafos
+/// @group typography
+////
+@mixin body-fonts($font, $size) {
+	font-family: $font;
+	font-size: $size;
+}
+
+@mixin create-body($map) {
+	$i: 1;
+	$j: 1;
+	@each $key, $value in $map {
+		.title-#{$i} {
+			@include body-fonts($global-font-body, nth($value, 1));
+		}
+
+		.subtitle-#{$i} {
+			display: block;
+			@include body-fonts($global-font-body, nth($value, 2));
+		}
+
+		@each $size in $value {
+			.paragraph-#{$j} {
+				@include body-fonts($global-font-body, $size);
+			}
+			$j: $j + 1;
+		}
+
+		$i: $i + 1;
+	}
+}

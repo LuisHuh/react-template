@@ -1,0 +1,73 @@
+$rosy-pink: #ea8685;
+[component="GradientBar"] {
+   width: 100%;
+   //text-align: center;
+   margin: 0 auto;
+   background-color: white;
+ 
+   //  >big {
+   //     color: var(--dark-melon);
+   //     //font-family: PlayfairDisplayItalic;
+   //  }
+ 
+   //  >small {
+   //     font-family: Miso;
+   //     color: var(--light-melon);
+   //  }
+ 
+   //  >small,
+   //  >small {
+   //     display: inline-block;
+   //  }
+ 
+ }
+ 
+ [component="GradientBar"],
+ .titleSlidetabs {
+    background-image: linear-gradient(to top, #ffffff, #fcded7, #fcded7, #ffffff);
+    //font-family: PlayfairDisplayItalic; //Parisienne;
+    font-size: 12px;
+    font-weight: normal;
+    //color: var(--dark-melon);
+    text-transform: capitalize;
+ }
+
+ .description{
+   text-align: left;
+   margin-left: 10%;
+   font-size: 24px;
+   margin-top: 2.5%;
+ }
+
+ .information{
+   color:$rosy-pink;
+   align-items: center;
+ }
+ 
+ [component="GradientBar"] span,
+ .titleSlidetabs span {
+    font-family: Miso;
+    font-size: 32px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    // color: var(--rosy-pink);
+    text-transform: uppercase;
+ }
+
+ 
+ .titleSlidetabs span,
+ [component="GradientBar"] span {
+    font-family: Miso;
+    // font-size: (16/3.2)+vw;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase;
+ }

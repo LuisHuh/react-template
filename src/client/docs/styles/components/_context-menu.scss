@@ -1,0 +1,42 @@
+$context-menu-color: get-color("primary") !default;
+$context-menu-hover-color: white !default;
+
+@mixin web-context-menu {
+	[component="context-menu"] {
+		position: relative;
+		&::before {
+			content: "";
+			@include position-absolute;
+			z-index: 2;
+		}
+
+		&::after {
+			content: "\f05b";
+			font-family: "Palace Icons";
+			font-size: 2rem;
+			@include position-absolute(false, 3.4%, 3.4%, false);
+			z-index: 4;
+			color: $context-menu-color;
+			cursor: pointer;
+		}
+
+		&:hover {
+			&::before {
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+
+			&::after {
+				content: "\f058";
+				font-size: 1rem;
+				right: 5%;
+				top: 6.2%;
+				color: $context-menu-hover-color;
+			}
+		}
+
+		[component="menu-options"] {
+			@include position-absolute;
+			z-index: 2;
+		}
+	}
+}

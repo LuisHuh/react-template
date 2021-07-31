@@ -1,0 +1,33 @@
+{
+   "url": "http://localhost:9000/api/auth/user-info/apena",
+   "data": {
+      "username": "apena",
+      "username_sistema_externo": "apena",
+      "no_colaborador": "0",
+      "name": "Adan Peña",
+      "idfrm_tipo_usuario": "1",
+      "password": "12345678",
+      "session": "1",
+      "auth_key": "_iwu700zzm",
+      "access_token": "rWBxotix7sSfs2qjOIflPzZMpXRD52wbSleJhBYc4o4sLsAtEXMcdZsaQxVC49Iri1hC5YoT5bWtZtFBwsOimExWPlinjlsYJtl4jInunZY41mqdWvuaFbffub1QNxZV2jU0Q/KfOZKimshugh8LYF1rWKts9peYnWiw8kzo4ssLT8AN6hI+e24AFRzOoKURDEwe+QD44m47S1KfUl4DZ90rE6vnBtK2o3kfNXBSTS01P788GNVycygJhT31lpX/phRGBkS4gqPxIz/2mGEeXIqzMXVp72Jd2QmUNkcZjQeiwPfo3t5jpzraCeG6BjbAUk3FMYoVDEXpS4lWo0AE52vNP7dmcT/Dal4A8Bcm8KjHjMQLFpZycZB77r5tUOuVh9deO7Wj79rbYLGgB7kcqYm21jKJa5m9lteG1UPX7DuXmE7XTAXh6NNBucb94RzquqSL4yVACM/Yu9HiAIY2OAhkKcQBeZjIzs/cmHiF9T9OgLAhNoBnSXyI0/JluTTCd5SgzLD/Gaosc0lVSRDij8KRjkccsd6j6GTWWhzLIA2oyvhlDfSXvywYUoX5XXGQCMYaovo5GaqLM/8CQcls0XdHHNc0VrTlHc1HVZvpxsEtaKNh3qQJmPzCofkrjY863sHwJ76LI1Qm6ETO8j0Wmb1TvHvZuRuonNDnGpjTQWOEErBtVGG24H+rUVc3Ap4J6+ARkSgVOeYiB3chaI0jcbR5XG4HpS57uPqgp7VmOE0L0m+IPqukPnUPAnTbaui4AuxRGx4/+qlefWhJeUCo07CHOiq/TeV6V5xKck6OtP83QUci93qmUiodXlXGxaemf+094Cx5ZCcI+Rkg/PVOijZtOJoWxwyTKO3zrigCSQHRuFJVRwLuZV+RNVPlfEhCaUHxv6eCYh8Wjjo8UOungQ32mn4MahVgntJHsskQJUkg9cDmL2b3wdnkdKm6dxdfXuuD",
+      "tittle": "user_rates",
+      "email": "apena@palaceresorts.com",
+      "tipo_autenticacion": "1",
+      "interno": "1",
+      "bloqueado": "0",
+      "logged_in_ip": "10.1.88.243",
+      "estado": "1",
+      "numero_accesos_erroneos": "0",
+      "fecha_ultimo_acceso_erroneo": "1000-01-01 00:00:00",
+      "fecha_creacion": "2018-01-29 00:00:00",
+      "usuario_creacion": "admin",
+      "usuario_ultima_modificacion": "",
+      "fecha_ultima_modificacion": "2020-09-15 12:09:07",
+      "content": "application",
+      "type": "json",
+      "code": 200
+   },
+   "message": "OK",
+   "code": 200,
+   "error": false
+}

@@ -1,0 +1,17 @@
+.vscode/
+.sass-cache/
+node_modules/
+config/linker
+src/server/.cache/
+src/server/.logs/
+src/server/.uploads/
+npm-debug.log
+src/client/.sass-cache/
+nohup.out
+ping.html
+dist
+.DS_Store
+.DS_Store?
+._*
+*.log
+*.code-workspace

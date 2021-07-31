@@ -1,0 +1,41 @@
+[c="amountselector"] {
+
+  .button-container {
+    display: inline-flex;
+    flex-direction: row;
+    margin: 0.5em 0 1em 0;
+    column-gap: 1.8em;
+    flex-wrap: wrap;
+
+    button {
+      min-width: 6em;
+      font-weight: 500;
+      text-transform: none;
+    }
+    .input-group {
+      margin: 0;
+      >input {
+        max-width: 12.3rem;
+      }
+    }
+    @media (min-width: 375px) and (max-width: 768px) {
+      column-gap: 0.7em;
+      .input-group >input {
+        max-width: none;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      column-gap: 0.9em;
+      .input-group >input {
+        max-width: none;
+      }
+    }
+
+    @include large-screen {
+      column-gap: 0.25em;
+      .input-group >input {
+        max-width: 10.7rem;
+      }
+    }
+  }
+}

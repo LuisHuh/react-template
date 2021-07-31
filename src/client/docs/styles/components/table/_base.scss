@@ -1,0 +1,98 @@
+@mixin classic-table(
+    $clrHead: #6d4a48,
+    $clrBodyI: #ffffff,
+    $clrBodyP: #f2f2f2,
+    $borderP: #6d4a48,
+    $borderI: #6d4a4880
+) {
+    cv-t-container {
+        overflow: hidden;
+        .data-section {
+            margin: 1em 0;
+            overflow: auto;
+        }
+        cv-table {
+            cv-thead {
+                background-color: $clrHead;
+                cv-th {
+                    color: white !important;
+                }
+            }
+            cv-tbody {
+                cv-tr {
+                    cv-td {
+                        color: $clrHead !important;
+                        padding: 1.5em 1em;
+                    }
+                    &:nth-child(even) {
+                        background: $clrBodyI;
+                        border-bottom: 1px solid $borderI;
+                    }
+                    &:nth-child(odd) {
+                        background: $clrBodyP;
+                        border-bottom: 1px solid $borderP;
+                    }
+                }
+            }
+        }
+        .paginator-container {
+            ul.paginator {
+                padding: unset;
+                margin: 1em 0;
+                display: inline-flex;
+                li {
+                    background-color: white !important;
+                    &:first-child,
+                    &:last-child {
+                        display: none !important;
+                    }
+                    &:nth-child(2),
+                    &:nth-last-child(2) {
+                        margin: 0 1em;
+                    }
+                    a {
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin collapsible-table(
+    $clrHead: #6d4a48,
+    $clrBodyI: #ffffff,
+    $clrBodyP: #f2f2f2,
+    $borderP: #6d4a48,
+    $borderI: #6d4a4880
+) {
+    @include classic-table($clrHead, $clrBodyI, $clrBodyP, $borderP, $borderI);
+    cv-t-container {
+        overflow: hidden;
+        .data-section {
+            overflow: auto;
+            cv-table {
+                cv-tbody {
+                    cv-tr.active{
+                        border-bottom: unset !important;
+                    }
+                    tr.expanded-container div{
+                        margin: 0.5em;
+                    }
+                    cv-tr.tr-row:nth-of-type(2n + 1),
+                    tr.expanded-container:nth-of-type(2n + 1) {
+                        background-color: $clrBodyP; // gris
+                        border-bottom: 1px solid $borderP;
+                    }
+                    cv-tr.tr-row:nth-of-type(2n + 2),
+                    tr.expanded-container:nth-of-type(2n + 2) {
+                        background-color: $clrBodyI; // blanco
+                        border-bottom: 1px solid $borderI;
+                    }
+                }
+            }
+        }
+    }
+}

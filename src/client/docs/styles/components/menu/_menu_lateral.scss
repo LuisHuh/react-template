@@ -1,0 +1,93 @@
+/**
+ * @class MenuBar
+ * @version 1.0.0
+ * @author lhuh
+ * @summary Menu con elementos deslizables
+ */
+
+////
+/// @group menulateral
+////
+
+/// Fuente para el menu
+/// @type Font
+$menu-lateral-family: inherit !default;
+
+/// Tamaño de la fuente
+/// @type Number
+$menu-lateral-font-size: 1rem !default;
+
+/// Estilo de la fuente
+/// @type Number
+$menu-lateral-font-weight: 200 !default;
+
+/// Color de la fuente del menu
+/// @type Color
+$menu-lateral-color: white !default;
+
+/// Fondo de los elementos del menu
+/// @type Background
+$menu-lateral-background: black !default;
+
+$menu-mobile-width: 0px;
+
+$menu-medium-width: 200px;
+
+$menu-large-width: 250px;
+
+@mixin web-menu-lateral() {
+	[component="menu-lateral"] {
+		margin: 0;
+		@include clearfix;
+
+		[component="menubar"]{
+			margin-bottom: 1.5rem;
+		}
+
+		> [component="menus"] {
+			font-family: $menu-lateral-family;
+			font-size: $menu-lateral-font-size;
+			font-weight: $menu-lateral-font-weight;
+			float: left;
+			width: $menu-mobile-width;
+			display: none;
+
+			@include ul($link-padding: 1rem, $padding-inline: 1rem);
+			@include menu-item($menu-lateral-background, $menu-lateral-color, right);
+		}
+
+		> [component="content"] {
+			float: right;
+			padding: 0;
+			width: calc(100% - #{$menu-mobile-width});
+		}
+
+		@include medium-screen(){
+			[component="menubar"]{
+				display: none;
+			}
+
+			> [component="menus"]{
+				display: block;
+				width: $menu-medium-width;
+			}
+			
+			> [component="content"] {
+				width: calc(100% - #{$menu-medium-width});
+			}
+		}
+
+		@include large-screen(){
+			margin: 1rem;
+
+			> [component="menus"]{
+				display: block;
+				width: $menu-large-width;
+			}
+			
+			> [component="content"] {
+				width: calc(100% - #{$menu-large-width});
+			}
+		}
+	}
+}

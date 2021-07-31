@@ -1,0 +1,3 @@
+{
+  "watch": ["config/global.js", "src/server/"]
+}

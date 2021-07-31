@@ -1,0 +1,518 @@
+// CSS Framework for Sites by Palace Resorts
+// https://www.palaceresorts.com/
+// Licensed under MIT Open Source
+
+////
+/// @group forms
+////
+
+/// Establece el espacio entre columnas
+/// @type Number
+$input-gutter: 30px !default;
+
+/// Establece la altura del input
+/// @type Number
+$input-height: 3rem !default;
+
+/// Establece la altura del input en escritorios
+/// @type Number
+$input-desktop-height: 3rem !default;
+
+/// Establece el color del borde
+/// @type Color
+$input-border-color: #607d8b !default;
+
+/// Establece el estilos del borde
+/// @type Border
+$input-border: 1px solid $input-border-color !default;
+
+/// Establece el estilo de las esquinas del elemento
+/// @type Border
+$input-border-radius: 0 !default;
+
+/// Establece el fondo de color
+/// @type Color
+$input-background: #fff !default;
+
+/// Establece el color de error
+/// @type Color
+$input-error-color: get-color("alert") !default;
+
+/// Establece el color cuando es valido
+/// @type Color
+$input-success-color: get-color("success") !default;
+
+/// Establece el color cuando se hace focus en el elemento
+/// @type Color
+$input-focus-color: get-color("secondary") !default;
+
+/// Establece el tamaño del texto
+/// @type Number
+$input-font-size: 16px !default;
+
+/// Establece la distancia del margen hacia abajo
+/// @type Number
+$input-margin-bottom: 8px;
+
+/// Establece el margen
+/// @type number
+$input-margin: 0 0 $input-margin-bottom 0 !default;
+
+/// Establece el padding
+/// @type Number
+$input-padding: 0 !default;
+
+/// Establece el tamaño del texto para el label
+/// @type Number
+$label-font-size: 0.8rem !default;
+
+/// Establece el tamaño del texto en escritorio
+/// @type Number
+$label-desktop-font-size: 0.8rem !default;
+
+/// Establece el color de texto cuando el elemento esta deshabilitado
+/// @type Color
+$input-disabled-color: rgba(0, 0, 0, 0.42) !default;
+
+/// Establece el color del borde cuando el elemento esta deshabilitado
+/// @type Color
+$input-disabled-solid-color: #949494 !default;
+
+/// Establece el borde cuando el elemento esta deshabilitado
+/// @type Border
+$input-disabled-border: 1px dotted $input-disabled-color !default;
+
+/// Establece el estilo del borde cuando el elemento es invalido
+/// @type Border
+$input-invalid-border: 1px solid $input-error-color !default;
+
+/// Establece el nivel de sombreado de un elemento
+/// @type Box Shadow
+$input-box-shadow: 0 1px 0 0 !default;
+
+/// Calcula el ancho y alto total de un elemento.
+/// @type Box Sizing
+$input-box-sizing: content-box !default;
+
+/// Establece el tamaño del icono
+/// @type Number
+$input-icon-size: 2rem;
+
+/// Establece el color del texto como marcador
+/// @type Color
+$placeholder-text-color: lighten($input-border-color, 20%) !default;
+
+/// Establece el color de la etiqueta del input
+/// @type Color
+$label-color: $input-border-color !default;
+
+/// Permite modificar el espacio de coordenadas del modelo de formato visual
+/// @type Transform
+$label-transform: translateY(12px) !default;
+
+/// Permite modificar el espacio de coordenadas del modelo de formato visual
+/// @type Transform
+$label-active-transform: translateY(-14px) scale(0.8) !default;
+
+/* Validation Sass Placeholders */
+%valid-input-style {
+	border: 1px solid $input-success-color;
+	box-shadow: $input-box-shadow $input-success-color;
+}
+%invalid-input-style {
+	border: $input-invalid-border;
+	box-shadow: $input-box-shadow $input-error-color;
+}
+%hidden-text {
+	color: transparent;
+	user-select: none;
+	pointer-events: none;
+}
+%custom-success-message {
+	content: attr(data-success);
+	color: $input-success-color;
+}
+%custom-error-message {
+	content: attr(data-error);
+	color: $input-error-color;
+}
+%input-after-style {
+	display: block;
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 0;
+	opacity: 0;
+	transition: 0.2s opacity ease-out, 0.2s color ease-out;
+}
+
+@function inpt-top-calc($height, $icon-size) {
+	@if unit($height) == "px" {
+		$height: rem-calc($height);
+		@return ($height - $icon-size) / 2;
+	} @else {
+		@return ($height - $icon-size) / 2;
+	}
+}
+
+@mixin helper-text {
+	&::after {
+		opacity: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	position: relative;
+	min-height: 18px;
+	display: block;
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.54);
+}
+
+@mixin validate-helper-text($isSibling: true) {
+	$operator: if($isSibling, "~", ">");
+	// Hide helper text on data message
+	&[validate][valid] #{$operator} .helper-text[data-success],
+	&:focus[validate][valid] #{$operator} .helper-text[data-success],
+	&[validate][invalid] #{$operator} .helper-text[data-error],
+	&:focus[validate][invalid] #{$operator} .helper-text[data-error] {
+		@extend %hidden-text;
+	}
+
+	// Custom Success Message
+	&[validate][valid] #{$operator} .helper-text:after,
+	&:focus[validate][valid] #{$operator} .helper-text:after {
+		@extend %custom-success-message;
+	}
+
+	// Custom Error message
+	&[validate][invalid] #{$operator} .helper-text:after,
+	&:focus[validate][invalid] #{$operator} .helper-text:after {
+		@extend %custom-error-message;
+	}
+}
+
+@mixin form-element {
+	// General Styles
+	background-color: $input-background;
+	border: $input-border;
+	border-radius: $input-border-radius;
+	outline: none;
+	height: $input-height;
+	width: 100%;
+	font-size: $input-font-size;
+	margin: $input-margin;
+	padding: $input-padding;
+	box-shadow: none;
+	box-sizing: $input-box-sizing;
+	transition: box-shadow 0.3s, border 0.3s;
+
+	@include large-screen() {
+		height: $input-desktop-height;
+	}
+
+	// Disabled input style
+	&:disabled,
+	&[readonly="readonly"] {
+		color: $input-disabled-color;
+		border: $input-disabled-border;
+	}
+
+	// Disabled label style
+	&:disabled + label,
+	&[readonly="readonly"] + label {
+		color: $input-disabled-color;
+	}
+
+	// Focused input style
+	&:focus:not([readonly]) {
+		border: 1px solid $input-focus-color;
+		box-shadow: $input-box-shadow $input-focus-color;
+	}
+
+	// Focused label style
+	&:focus:not([readonly]) + label {
+		color: $input-focus-color;
+	}
+
+	// helper text
+	@include validate-helper-text;
+
+	// Valid Input Style
+	&[validate][valid],
+	&:focus[validate][valid] {
+		@extend %valid-input-style;
+	}
+
+	// Custom Success Message
+	&:focus[validate][valid] ~ label {
+		color: $input-success-color;
+	}
+
+	// Invalid Input Style
+	&[validate][invalid],
+	&:focus[validate][invalid] {
+		@extend %invalid-input-style;
+	}
+
+	// Custom Error message
+	&:focus[validate][invalid] ~ label {
+		color: $input-error-color;
+	}
+
+	// Full width label when using validate for error messages
+	&.validate + label {
+		width: 100%;
+	}
+
+	// Form Message Shared Styles
+	& + label:after {
+		@extend %input-after-style;
+	}
+}
+
+@mixin label {
+	color: $label-color;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: $label-font-size;
+	cursor: text;
+	transition: transform 0.2s ease-out, color 0.2s ease-out;
+	transform-origin: 0% 100%;
+	text-align: initial;
+	transform: $label-transform;
+
+	&:not(.label-icon).active {
+		transform: $label-active-transform;
+		transform-origin: 0 0;
+	}
+
+	@include medium-screen() {
+		font-size: $label-desktop-font-size;
+	}
+}
+
+@mixin input-group {
+	// Inline styles
+	&.inline {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 5px;
+
+		input,
+		.select-dropdown {
+			margin-bottom: 1rem;
+		}
+	}
+
+	position: relative;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+
+	& > label {
+		@include label;
+	}
+
+	// Autofill + date + time inputs
+	&
+		> input[type]:-webkit-autofill:not(.browser-default):not([type="search"])
+		+ label,
+	& > input[type="date"]:not(.browser-default) + label,
+	& > input[type="time"]:not(.browser-default) + label {
+		transform: $label-active-transform;
+		transform-origin: 0 0;
+	}
+
+	.helper-text {
+		@include helper-text;
+	}
+
+	// Prefix Icons
+	.prefix {
+		position: absolute;
+		width: $input-height;
+		font-size: $input-icon-size;
+		transition: color 0.2s;
+		top: inpt-top-calc($input-height, $input-icon-size);
+
+		@include large-screen() {
+			top: inpt-top-calc($input-desktop-height, $input-icon-size);
+		}
+
+		&.active {
+			color: $input-focus-color;
+		}
+	}
+
+	.prefix ~ input,
+	.prefix ~ textarea,
+	.prefix ~ label,
+	.prefix ~ .validate ~ label,
+	.prefix ~ .helper-text,
+	.prefix ~ .autocomplete-content {
+		margin-left: 3rem;
+		width: 92%;
+		width: calc(100% - 3rem);
+	}
+
+	.prefix ~ label {
+		margin-left: 3rem;
+	}
+
+	@include medium-screen-down {
+		.prefix ~ input {
+			width: 86%;
+			width: calc(100% - 3rem);
+		}
+	}
+
+	@include small-screen-down {
+		.prefix ~ input {
+			width: 80%;
+			width: calc(100% - 3rem);
+		}
+	}
+}
+
+@mixin file-input {
+	position: relative;
+
+	.file-path-wrapper {
+		overflow: hidden;
+		/* padding-left: 10px; */
+	}
+
+	input.file-path {
+		width: 100%;
+	}
+
+	[component="button"] {
+		$btn-padding: 1rem;
+		height: $input-height;
+		@include large-screen() {
+			height: $input-desktop-height;
+			/* line-height: $input-height - px-calc($btn-padding / 2); */
+		}
+
+		&[position="left"] {
+			float: left;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		&[position="right"] {
+			float: right;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+
+	span {
+		cursor: pointer;
+	}
+
+	input[type="file"] {
+		// Needed to override webkit button
+		&::-webkit-file-upload-button {
+			display: none;
+		}
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		font-size: 20px;
+		cursor: pointer;
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+
+	[position="left"] {
+		+ .file-path-wrapper input {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			border-left: none;
+		}
+	}
+
+	[position="right"] {
+		+ .file-path-wrapper input {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			border-right: none;
+		}
+	}
+}
+
+@mixin form-group {
+	position: relative;
+	@include flex;
+	& > * {
+		flex-grow: 1;
+		&:not(:last-of-type) {
+			margin-right: 0.9375rem;
+		}
+
+		&:not(:first-of-type) {
+			margin-left: 0.9375rem;
+		}
+	}
+
+	& > label {
+		@include label;
+		transform: translateY(-10px) scale(0.9);
+		transform-origin: 0 0;
+	}
+
+	& > .helper-text {
+		@include helper-text;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: translateY(-15px);
+		transform-origin: 0 0;
+	}
+
+	// helper text
+	@include validate-helper-text(false);
+}
+
+@mixin web-form-text() {
+	[component="group"] {
+		@include form-group;
+	}
+
+	/* Style Placeholders */
+	::placeholder {
+		color: $placeholder-text-color;
+	}
+
+	input:not([type]),
+	#{text-inputs()},
+	textarea {
+		@include form-element;
+	}
+
+	textarea {
+		height: auto;
+		padding: 0.5rem;
+	}
+
+	.input-group {
+		@include input-group;
+	}
+
+	.file-input {
+		@include file-input;
+		@extend .input-group;
+		margin-top: 1rem;
+		margin-bottom: 0;
+		/* margin: 0; */
+	}
+}

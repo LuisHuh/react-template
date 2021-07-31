@@ -1,0 +1,18 @@
+// CSS Framework for Sites by Palace Resorts
+// https://www.palaceresorts.com/
+// Licensed under MIT Open Source
+
+////
+/// @group functions
+////
+
+/* $web-typography: () !default; */
+
+@function get-typography($key) {
+	@if map-has-key($web-typography, $key) {
+		@return map-get($web-typography, $key);
+	} @else {
+		@warn 'given #{$key} is not available in web-typography';
+		@return $key;
+	}
+}

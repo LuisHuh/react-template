@@ -1,0 +1,31 @@
+[component="gradient"] {
+    position: relative;
+    &:before {
+        content: "";
+        height: 25px;
+        z-index: 1;
+        @include position-absolute($top: -1%,
+            $bottom: false,
+            $margin: false);
+        @include gradient-classes(0deg,
+            transparent 30%,
+            $lazy-image-background 60%);
+        @include large-screen {
+            height: 60px;
+        }
+    }
+    &:after {
+        content: "";
+        height: 25px;
+        z-index: 1;
+        @include position-absolute($top: false,
+            $bottom: -1%,
+            $margin: false);
+        @include gradient-classes(-180deg,
+            transparent 30%,
+            $white 80%);
+        @include large-screen {
+            height: 60px;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+/**
+ * @mixin lazy-image
+ * @version 1.0.0
+ * @author Luis Enrique Huh Puc
+ * @summary Estilos de la imagen cargada para optimizar pagina.
+ */
+$lazy-image-background: #efeced !default;
+$lazy-image-sm-width: 50px !default;
+$lazy-image-md-width: 64px !default;
+$lazy-image-lg-width: 100px !default;
+
+////
+/// @group image
+////
+
+@mixin lazy-image {
+	.lazy-image {
+		position: relative;
+		line-height: 0;
+		width: 100%;
+
+		.thumb {
+			width: calc(100% + 20px);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			transition: opacity ease-in 500ms;
+			filter: blur(5px);
+			clip-path: inset(0);
+			opacity: 0;
+			max-width: 100%;
+		}
+
+		&.loading {
+			.thumb {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@mixin lazy-cover {
+	[component="cover"] {
+		@extend .lazy-image;
+		width: $lazy-image-sm-width;
+		height: $lazy-image-sm-width;
+		background-color: white;
+
+		@include medium-screen() {
+			width: $lazy-image-md-width;
+			height: $lazy-image-md-width;
+		}
+
+		@include large-screen() {
+			width: $lazy-image-lg-width;
+			height: $lazy-image-lg-width;
+		}
+
+		.image {
+			width: inherit;
+			height: inherit;
+			transform: scale(0.9);
+			@include cover($size: contain, $color: white);
+		}
+
+		.thumb {
+			@extend .image;
+		}
+	}
+}

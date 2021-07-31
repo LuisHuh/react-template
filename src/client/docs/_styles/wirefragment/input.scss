@@ -1,0 +1,767 @@
+[component="inputwedd"] {
+  input {
+    outline: none;
+  }
+
+  .checks {
+    cursor: pointer;
+  }
+
+  .checksImage {
+    position: absolute;
+    cursor: pointer;
+    margin-top: 10px;
+    left: 10px;
+  }
+
+  @media (max-width: 1024px) {
+
+    /**********************************ESTILO PARA LOS INPUT TEXT EMAIL PASSWORD SEARCH TEL TEST AREA***************************************/
+
+    .alertMsg{
+      width: 100%;
+      text-align: center;
+    }
+
+    .alertMsg label {
+      text-align: left;
+      color: red;
+      @include vwvh("font-size", 14);
+      @include vwvh("margin-top", 20);
+      font-family: Avenir;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    textarea {
+      border-style: solid;
+      border-color: var(--light-melon);
+      font-weight: 300;
+      font-stretch: condensed;
+      font-style: normal;
+      line-height: normal;
+      @include vwvh("border-width", 1);
+      @include vwvh("height", 30);
+      @include vwvh("border-radius", 2);
+      @include vwvh("padding-left", 10);
+      @include vwvh("padding-right", 10);
+      @include vwvh("padding-top", 4);
+      @include vwvh("font-size", 14);
+      @include vwvh("letter-spacing", 0.45);
+      //@include vwvh("border",60,"!important");
+      -webkit-appearance: none;
+    }
+
+
+  }
+
+  /*******Escritorio********/
+  @media (min-width: 1025px) {
+
+
+    .alertMsg{
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .alertMsg label {
+      text-align: left;
+      color: red;
+      font-size: 21px;
+      font-family: Avenir;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+    }
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    textarea {
+      border: 1px solid #f86290 !important;
+      border: 1px solid var(--light-melon) !important;
+      border-radius: 4px;
+      border: solid 1px var(--light-melon);
+      font-size: 21px;
+      padding: 7px 10px 6px 10px;
+      font-family: Avenir;
+      color: var(--dark-melon);
+    }
+
+    input.alert_input {
+      border: 3px solid red !important;
+    }
+
+    input[type="button"]:disabled:hover {
+      background-color: var(--light-melon) !important;
+      color: var(--white) !important;
+      cursor: not-allowed !important;
+    }
+
+    .check-box {
+      position: relative;
+      display: flex ;
+      
+    }
+
+  }
+
+  /*******************Fin input text************************/
+
+  /********************Inicia input Button*************************/
+  .svg-icon-white.width-icon,
+  .svg-icon-pink.width-icon {
+    transition: 0.5s;
+  }
+
+  :hover {
+    [component="iconwedd"] {
+      .svg-icon-white.width-icon {
+        color: var(--light-melon);
+        fill: var(--light-melon);
+      }
+
+      .svg-icon-pink.width-icon {
+        color: var(--white);
+        fill: var(--white);
+      }
+    }
+  }
+
+ 
+
+  [component="iconwedd"]:hover {
+    .svg-icon-white.width-icon {
+      color: var(--white);
+      fill: var(--white);
+    }
+
+    .svg-icon-pink.width-icon {
+      color: var(--light-melon);
+      fill: var(--light-melon);
+    }
+  }
+
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  a[type="button"],
+  button,
+  a.btn {
+    font-weight: bold;
+    font-family: Avenir;
+    text-transform: uppercase;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--light-melon);
+    transition: 0.3s;
+
+    &.pink {
+      background-color: var(--light-melon);
+    }
+
+    &.white {
+      background-color: var(--white);
+      color: var(--light-melon);
+    }
+
+    &.white:hover {
+      background-color: var(--light-melon);
+      color: var(--white);
+    }
+
+    &.pink:hover {
+      background-color: var(--white);
+      color: var(--light-melon);
+    }
+
+    @media (max-width: 1024px) {
+      /**Movil***/
+      @include vwvh("font-size", 16);
+      @include vwvh("border-radius", 4);
+      text-align: center;
+      @include vwvh("border-width", 1);
+      width: auto;
+      @include vwvh("min-width", 80);
+      @include vwvh("padding-top", 12);
+      height: auto;
+      @include vwvh("padding-bottom", 9);
+      @include vwvh("padding-left", 16);
+      @include vwvh("padding-right", 16);
+
+      &.width-icon {
+        @include vwvh("padding-left", 38, "!important");
+        @include vwvh("padding-right", 15, "!important");
+      }
+    }
+
+    @media (min-width: 1025px) {
+      border-radius: 4px;
+      padding-top: 9px;
+      padding-bottom: 5.5px;
+      border-width: 1px;
+     
+      width: auto;
+      min-width: 140px;
+      justify-content: center;
+      padding-left: 30px;
+      padding-right: 30px;
+      font-size: 16px;
+
+      &.width-icon {
+        padding-left: (65) + px !important;
+        padding-right: (25) + px !important;
+      }
+
+
+
+
+    }
+  }
+
+  a.btn {
+    //@extend: flex;
+    width: max-content;
+  }
+
+  /********************Termina input Button*************************/
+
+  /********************Inicia input checKBox*************************/
+  input[type="radio"]+.check-box,
+  .check-box.checked,
+  input[type="checkbox"]+.check-box,
+  .check-box.checked {
+    .checked {
+      opacity: 1;
+      position: relative;
+    }
+
+    .un-checked {
+      opacity: 0;
+      position: absolute;
+    }
+  }
+
+  input[type="radio"]:checked+.check-box,
+  .check-box.checked,
+  input[type="checkbox"]:checked+.check-box,
+  .check-box.checked {
+    .checked {
+      opacity: 0;
+      position: absolute;
+    }
+
+    .un-checked {
+      opacity: 1;
+      position: relative;
+    }
+  }
+
+ 
+
+  @media (max-width: 1024px) {
+    .checkText {
+      @include vwvh("font-size", 20);
+      color: var(--dark-melon);
+      @include vwvh("padding-left", 10);
+      @include vwvh("padding-right", 10);
+      font-family: PlayfairDisplay; //Miso
+      @include vwvh("bottom", 25);
+      position: relative;
+    }
+
+    .checks {
+      @include vwvh("margin-right", 9);
+      display: inline-block;
+    }
+  
+    .check-box {
+      position: relative;
+      display: flex;
+
+   
+      a{
+        display: inline;
+      }
+    }
+  }
+
+  /*******Escritorio********/
+  @media (min-width: 1025px) {
+    .checkText {
+      font-size: 30px;
+      color: var(--dark-melon);
+      padding-left: 15px;
+      padding-right: 15px;
+      font-family: PlayfairDisplay; //Miso
+      bottom: 36px;
+      position: relative;
+    }
+  }
+
+  /********************Termina input checKBox*************************/
+
+  /********************Inicia input href*************************/
+  .button-ref {
+    text-transform: uppercase;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    border-style: solid;
+    font-family: Avenir;
+    border-color: var(--light-melon);
+    transition: 0.3s;
+    font-weight: bold;
+
+    &.pink {
+      background-color: var(--light-melon);
+    }
+
+    &.white {
+      background-color: var(--white);
+      color: var(--light-melon);
+    }
+
+    &.white:hover {
+      background-color: var(--light-melon);
+      color: var(--white);
+    }
+
+    &.pink:hover {
+      background-color: var(--white);
+      color: var(--light-melon);
+    }
+
+    @media (max-width: 1024px) {
+      /**Movil***/
+      @include vwvh("border-radius", 2);
+      @include vwvh("padding-top", 2);
+      @include vwvh("padding-bottom", 2.5);
+      text-align: center;
+      @include vwvh("height", 30);
+      @include vwvh("border-width", 1);
+      width: auto;
+      @include vwvh("min-width", 99.5);
+      @include vwvh("padding-left", 8);
+      @include vwvh("padding-right", 8);
+    }
+
+    @media (min-width: 1025px) {
+      border-radius: 4px;
+      padding-top: 12.5px;
+      padding-bottom: 9.5px;
+      border-width: 1px;
+      //height: 40px;
+      width: auto;
+      min-width: 140px;
+      padding-left: 30px;
+      padding-right: 30px;
+      font-size: 16px;
+    }
+  }
+
+  /********************Termina input href*************************/
+
+  /*******************Select con estilo************************/
+  @media (max-width: 1024px) {
+    .search {
+      position: sticky;
+      top: 0px;
+      background-color: var(--white);
+    }
+
+    .content-select {
+      position: relative;
+      /*@include vwvh("margin-bottom", 20);*/
+    }
+
+    .view-selec {
+      font-family: Avenir;
+      @include vwvh("font-size", 18);
+      font-weight: 300;
+      font-stretch: condensed;
+      font-style: normal;
+      line-height: normal;
+      @include vwvh("letter-spacing", .45);
+      text-align: left;
+      color: rgba(50, 50, 50, 0.6);
+      text-transform: capitalize;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .caption-select {
+      position: relative;
+      display: flex;
+      background-color: var(--white);
+      @include vwvh("height", 30);
+      padding: unset;
+      border-style: none;
+      cursor: pointer;
+      width: 100%;
+
+      select {
+        position: absolute;
+        opacity: 0;
+        filter: alpha(opacity=50);
+
+        /* Netscape */
+        -moz-opacity: 0;
+      
+        /* Safari 1.x */
+        -khtml-opacity: 0;
+      
+        /* Good browsers */
+        opacity: 0;
+        z-index: -1;
+        height: 0px;
+        -webkit-appearance: none;
+      }
+    }
+
+    .view-selec-arrow * {
+      transition: 0.5s;
+    }
+
+    .view-selec-arrow {
+      @include vwvh("width", 30);
+      @include vwvh("height", 30);
+      @include vwvh("border-width", 1);
+      border-style: solid;
+      border-color: var(--light-melon);
+      background-color: var(--white);
+      //@include vwvh("top",0);
+      position: absolute;
+      @include vwvh("right", 0);
+      @include vwvh("border-bottom-right-radius", 2);
+      @include vwvh("border-top-right-radius", 2);
+
+      [component="iconwedd"] {
+        .chevron-up {
+          position: absolute;
+          @include vwvh("left", 7);
+          @include vwvh("top", 8.5);
+          @include vwvh("width", 17);
+          @include vwvh("height", 12);
+          transform: rotate(179deg);
+        }
+      }
+    }
+
+    .view-selec-arrow.open {
+      [component="iconwedd"] {
+        .chevron-up {
+          @include vwvh("top", 7.5);
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .select-weddings {
+      position: relative;
+    }
+
+    .options {
+      position: absolute;
+      overflow: auto;
+      max-height: 0;
+      background-color: white;
+      transition: 0.5s;
+      width: 100%;
+      z-index: 0;
+      border-color: var(--light-melon);
+      border-style: solid;
+      @include vwvh("border-width", 0.5);
+      @include vwvh("top", 32);
+      @include vwvh("border-radius", 4);
+      opacity: 0;
+
+      input {
+        border-color: var(--light-melon);
+        @include vwvh("border-width", .5);
+        @include vwvh("height", 30);
+        @include vwvh("font-size", 20);
+        @include vwvh("letter-spacing", 0.7);
+        font-family: Avenir;
+        color: var(--dark-melon);
+        margin: 0vw 0vw;
+        width: 100%;
+        border-radius: 0px;
+        border-left-style: none !important;
+        border-right: none !important;
+        text-transform: capitalize;
+        color: var(--dark-melon);
+      }
+
+      p {
+        color: var(--dark-melon);
+        margin: auto;
+        @include vwvh("border-width", 0.5);
+        border-color: var(--light-gray-dream);
+        text-align: left;
+        @include vwvh("padding-left", 14);
+        @include vwvh("padding-right", 14);
+        font-family: Avenir; //Avenir;
+        @include vwvh("font-size", 18);
+        text-transform: capitalize;
+        line-height: normal;
+        @include vwvh("padding-top", 11);
+        @include vwvh("padding-bottom", 11);
+      }
+
+      .selec-option {
+        border-left-style: solid;
+        @include vwvh("border-width", 3);
+        @include vwvh("padding-left", 10);
+        border-color: var(--light-melon);
+        color: darkgray;
+      }
+
+      p:hover {
+        background-color: var(--gray-weddings);
+      }
+    }
+
+    .options.open {
+      height: max-content;
+      @include vwvh("max-height", 270);
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .text-selec {
+      color: var(--dark-melon);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .search {
+      position: sticky;
+      top: 0px;
+      background-color: var(--white);
+    }
+
+    .content-select {
+      position: relative;
+    }
+
+    .view-selec {
+      font-family: Avenir;
+      font-size: 28px;
+      font-weight: 300;
+      font-stretch: condensed;
+      font-style: normal;
+      line-height: normal;
+      text-align: left;
+      color: rgba(50, 50, 50, 0.6);
+      text-transform: capitalize;
+      width: 100%;
+      overflow: hidden;
+      border-style: none !important;
+    }
+
+    .caption-select {
+      position: relative;
+      display: flex;
+      border-radius: (4) + px;
+      border: solid (1) + px var(--light-melon);
+      background-color: var(--white);
+      padding-top: (0) + px;
+      padding-bottom: (0) + px;
+      padding-left: (0) + px;
+      padding-right: (0) + px;
+      cursor: pointer;
+      width: 100%;
+      border-style: none;
+
+      select {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        height: 0px;
+      }
+    }
+
+    .view-selec-arrow * {
+      transition: 0.5s;
+    }
+
+    .view-selec-arrow {
+      width: (60) + px;
+      height: (44) + px;
+      border: solid (1) + px var(--light-melon);
+      background-color: var(--white);
+      top: (0) + px;
+      position: absolute;
+      right: (0) + px;
+      border-bottom-right-radius: (4) + px;
+      border-top-right-radius: (4) + px;
+
+      [component="iconwedd"] {
+        .chevron-up {
+          position: absolute;
+          left: (18) + px;
+          top: (11.5) + px;
+          width: (24) + px;
+          height: (17) + px;
+          transform: rotate(179deg);
+        }
+      }
+    }
+
+    .view-selec-arrow.open {
+      [component="iconwedd"] {
+        .chevron-up {
+          top: (7.5) + px;
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .select-weddings {
+      position: relative;
+    }
+
+    .options {
+      position: absolute;
+      overflow: auto;
+      max-height: 0;
+      background-color: white;
+      transition: 0.5s;
+      width: 100%;
+      z-index: 0;
+      border-color: var(--light-melon);
+      border-style: solid;
+      border-width: (1) + px;
+      top: (44) + px;
+      border-radius: (4) + px;
+      opacity: 0;
+
+      input {
+        width: 100%;
+        border-radius: unset;
+        border-style: solid;
+        border-style: solid;
+        border-color: var(--light-melon);
+        border-width: 0.5px;
+        height: 30px;
+        font-size: 20px;
+        letter-spacing: 0.7px;
+        font-family: Avenir;
+        color: var(--dark-melon);
+        border-left-style: none !important;
+        border-top-style: none !important;
+        border-right-style: none !important;
+      }
+
+      .search {
+        height: max-content;
+      }
+
+      p {
+        margin: auto;
+        font-family: Avenir; //Avenir;
+        font-size: (21) + px;
+        text-transform: capitalize;
+        border-width: (1) + px;
+        border-color: var(--light-gray-dream);
+        text-align: left;
+        padding-left: (14) + px;
+        padding-right: (14) + px;
+        cursor: pointer;
+        line-height: normal;
+        color: var(--dark-melon);
+      }
+
+      .selec-option {
+        border-left-style: solid;
+        border-width: (3) + px;
+        padding-left: (10) + px;
+        border-color: var(--light-melon);
+        color: darkgray;
+      }
+
+      p:hover {
+        background-color: var(--gray-weddings);
+      }
+    }
+
+    .options.open {
+      height: max-content;
+      max-height: (270) + px;
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .text-selec {
+      color: var(--dark-melon);
+    }
+  }
+
+  /******* view more ********/
+  @media (min-width: 1025px) {
+    .view-more {
+      font-family: Avenir;
+      font-size: 21px;
+      font-weight: bold;
+      font-stretch: condensed;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: var(--light-melon);
+      text-decoration: underline;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .chevron-right {
+      width: 10px;
+      height: 14px;
+      margin-left: 9px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .view-more {
+      font-family: Avenir;
+      @include vwvh("font-size", 14);
+      font-weight: bold;
+      font-stretch: condensed;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: var(--light-melon);
+      text-decoration: underline;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .chevron-right {
+      @include vwvh("width", 8);
+      @include vwvh("height", 12);
+      @include vwvh("margin-left", 5);
+    }
+
+  }
+}

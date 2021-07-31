@@ -1,0 +1,42 @@
+// Estilos para loader del PDF
+.file-loader {
+   @include position(fixed);
+   display: none;
+	z-index: 10;
+   background-color: rgba(0, 0, 0, 0.38);
+
+   &.loading{
+      display: block;
+   }
+   
+	.content-loader {
+		position: relative;
+		padding: 5px;
+		width: 100px;
+		background: white;
+		border-radius: 5px;
+		top: 50%;
+		left: 50%;
+      transform: translate(-50%, -50%);
+      @include flex(center, center, column);
+
+		i {
+			animation: spinning infinite 1s linear;
+			margin-left: -25px;
+			font-size: 34px;
+         display: block;
+         
+			&:last-of-type {
+				font-size: 27px;
+				margin-left: 27px;
+				margin-top: -15px;
+				animation-direction: reverse;
+			}
+		}
+
+		.label-loader {
+			font-size: 17px;
+			margin-top: 10px;
+		}
+	}
+}
